@@ -1,40 +1,11 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
+import DenckHeader from './headers/DenckHeader'
+import DenckFooter from './footers/DenckFooter'
 import CookieBanner from './common/CookieBanner'
 
-// Import headers and footers with error handling
-let TransformationHeader, CoachHeader, TransformationFooter, CoachFooter
-
-try {
-  TransformationHeader = require('./headers/TransformationHeader').default
-} catch (error) {
-  console.warn('TransformationHeader not found, using fallback')
-  TransformationHeader = () => <div>Header Loading...</div>
-}
-
-try {
-  CoachHeader = require('./headers/CoachHeader').default
-} catch (error) {
-  console.warn('CoachHeader not found, using fallback')
-  CoachHeader = () => <div>Header Loading...</div>
-}
-
-try {
-  TransformationFooter = require('./footers/TransformationFooter').default
-} catch (error) {
-  console.warn('TransformationFooter not found, using fallback')
-  TransformationFooter = () => <div>Footer Loading...</div>
-}
-
-try {
-  CoachFooter = require('./footers/CoachFooter').default
-} catch (error) {
-  console.warn('CoachFooter not found, using fallback')
-  CoachFooter = () => <div>Footer Loading...</div>
-}
-
-export default function Layout({ children, title, description, siteType = 'transformation' }) {
+export default function Layout({ children, title, description }) {
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
   
@@ -51,7 +22,7 @@ export default function Layout({ children, title, description, siteType = 'trans
         </Head>
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
             <p className="text-gray-600">Loading...</p>
           </div>
         </div>
@@ -59,21 +30,9 @@ export default function Layout({ children, title, description, siteType = 'trans
     )
   }
   
-  // Determine which site we're on based on the route
-  const isCoachingSite = router.pathname.startsWith('/frankfurt-business-coach')
-  const isLegalPage = ['/impressum', '/datenschutz', '/agb'].includes(router.pathname)
-  
-  // For legal pages, use transformation theme by default unless explicitly coaching
-  const currentSiteType = isCoachingSite ? 'coaching' : 'transformation'
-  
   // Default titles and descriptions
-  const defaultTitle = currentSiteType === 'coaching' 
-    ? 'Frankfurt Business Coach - Mario Egartner'
-    : 'Transformationskontinuum - Excellence in Transformation'
-    
-  const defaultDescription = currentSiteType === 'coaching'
-    ? 'Professionelles Business Coaching in Frankfurt. Mario Egartner begleitet Sie bei beruflichen und privaten Herausforderungen.'
-    : 'C5 Business Partner - Ihr Spezialist für Organisationsentwicklung, Teamdynamik und strategische Transformation.'
+  const defaultTitle = 'DENCK Consulting - KI-Beratung für den Mittelstand'
+  const defaultDescription = 'Wir machen Künstliche Intelligenz für Ihr Unternehmen nutzbar. KI-Strategieberatung, Prozessautomatisierung und Datenanalyse für nachhaltigen Erfolg.'
 
   const pageTitle = title ? `${title} | ${defaultTitle}` : defaultTitle
   const pageDescription = description || defaultDescription
@@ -85,14 +44,14 @@ export default function Layout({ children, title, description, siteType = 'trans
         <meta name="description" content={pageDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="Mario Egartner" />
+        <meta name="author" content="DENCK Consulting" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="de_DE" />
-        <meta property="og:site_name" content="Mario Egartner - Excellence in Transformation" />
+        <meta property="og:site_name" content="DENCK Consulting - KI-Beratung" />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -106,7 +65,7 @@ export default function Layout({ children, title, description, siteType = 'trans
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         
         {/* Theme Color */}
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#3b82f6" />
         
         {/* Additional SEO */}
         <meta name="language" content="de" />
@@ -116,27 +75,17 @@ export default function Layout({ children, title, description, siteType = 'trans
         <meta name="ICBM" content="50.1109, 8.6821" />
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-gray-50">
-        {/* Dynamic Header based on site type */}
-        {(currentSiteType === 'coaching' && !isLegalPage) ? (
-          <CoachHeader />
-        ) : (
-          <TransformationHeader />
-        )}
+      <div className="min-h-screen flex flex-col bg-white">
+        <DenckHeader />
         
         {/* Main Content */}
         <main className="flex-grow">
           {children}
         </main>
         
-        {/* Dynamic Footer based on site type */}
-        {(currentSiteType === 'coaching' && !isLegalPage) ? (
-          <CoachFooter />
-        ) : (
-          <TransformationFooter />
-        )}
+        <DenckFooter />
         
-        {/* Cookie Banner - appears on all pages */}
+        {/* Cookie Banner */}
         <CookieBanner />
       </div>
     </>
