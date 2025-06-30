@@ -1,0 +1,10 @@
+{
+    "name": "Telefonieren.ai",
+    "short_name": "Telefonieren.ai",
+    "description": "Die KI-Telefonie Lösung der Zukunft ist hier.",
+    "start_url": "/dashboard",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#F75C03"
+  }
+  
