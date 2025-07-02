@@ -1,6 +1,7 @@
 // src/pages/index.js
 import HeroSection from '../components/home/HeroSection'
 import ProblemSolutionSection from '../components/home/ProblemSolutionSection'
+import UseCasesSection from '../components/home/UseCasesSection'
 import ServicesSection from '../components/home/ServicesSection'
 import ProcessSection from '../components/home/ProcessSection'
 import TestimonialsSection from '../components/home/TestimonialsSection'
@@ -11,6 +12,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ProblemSolutionSection />
+      <UseCasesSection />
       <ServicesSection />
       <ProcessSection />
       <TestimonialsSection />

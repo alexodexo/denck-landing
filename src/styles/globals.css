@@ -95,6 +95,33 @@ h1, h2, h3, h4, h5, h6 {
   @apply bg-white rounded-xl shadow-sm border border-navy-100 p-8 hover:shadow-lg transition-shadow duration-300;
 }
 
+/* Use Cases Section Scrollbar */
+.use-cases-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.use-cases-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Use Case Card Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(251, 191, 36, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(251, 191, 36, 0.5);
+  }
+}
+
+.use-case-glow:hover {
+  animation: glow 2s infinite;
+}
+
 /* Animations */
 @keyframes fade-in {
   from {
@@ -147,4 +174,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Focus Styles */
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-navy-500 focus:ring-offset-2;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .use-case-card {
+    width: 280px;
+  }
 }
