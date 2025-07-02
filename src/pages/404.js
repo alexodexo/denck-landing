@@ -1,34 +1,17 @@
+// src/pages/404.js
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { ArrowLeft, Home, Building2, User, Phone, Mail, Search, MapPin } from 'lucide-react'
+import { ArrowLeft, Home, Mail, Search, Bot } from 'lucide-react'
 
 export default function Custom404() {
   const router = useRouter()
 
-  const quickLinks = [
-    {
-      title: 'C5 Business Partner',
-      description: 'Unternehmensberatung & Organisationsentwicklung',
-      href: '/transformationskontinuum',
-      icon: Building2,
-      color: 'primary'
-    },
-    {
-      title: 'Frankfurt Business Coach', 
-      description: 'Individuelles Coaching & Beratung',
-      href: '/frankfurt-business-coach',
-      icon: User,
-      color: 'navy'
-    }
-  ]
-
   const popularPages = [
-    { name: 'Über uns', href: '/transformationskontinuum/ueber-uns' },
-    { name: 'Leistungen', href: '/transformationskontinuum/leistungen' },
-    { name: 'Coaching Services', href: '/frankfurt-business-coach/leistungen' },
-    { name: 'Preise', href: '/frankfurt-business-coach/preise' },
-    { name: 'Kontakt', href: '/transformationskontinuum/kontakt' },
-    { name: 'Mario Egartner', href: '/frankfurt-business-coach/coach' }
+    { name: 'Startseite', href: '/' },
+    { name: 'Leistungen', href: '/leistungen' },
+    { name: 'Kontakt', href: '/kontakt' },
+    { name: 'Impressum', href: '/impressum' },
+    { name: 'Datenschutz', href: '/datenschutz' }
   ]
 
   return (
@@ -77,49 +60,6 @@ export default function Custom404() {
         </div>
       </section>
 
-      {/* Quick Navigation */}
-      <section className="section-padding bg-white">
-        <div className="container-width">
-          <div className="text-center mb-16">
-            <h2 className="section-title">Wohin möchten Sie?</h2>
-            <p className="section-subtitle">
-              Wählen Sie den passenden Bereich oder nutzen Sie die Navigation unten
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            {quickLinks.map((link, index) => {
-              const IconComponent = link.icon
-              return (
-                <Link
-                  key={index}
-                  href={link.href}
-                  className={`group block p-8 bg-gradient-to-br ${
-                    link.color === 'primary' 
-                      ? 'from-primary-600 to-navy-700 hover:from-primary-700 hover:to-navy-800' 
-                      : 'from-navy-700 to-primary-600 hover:from-navy-800 hover:to-primary-700'
-                  } rounded-xl text-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1`}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm mr-4">
-                      <IconComponent className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold">{link.title}</h3>
-                      <p className="text-white/80">{link.description}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center text-white/90 group-hover:text-white transition-colors duration-200">
-                    <span className="text-sm font-medium">Bereich erkunden</span>
-                    <ArrowLeft className="ml-2 h-4 w-4 rotate-180 group-hover:translate-x-1 transition-transform duration-200" />
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Popular Pages */}
       <section className="section-padding bg-gray-50">
         <div className="container-width">
@@ -132,7 +72,7 @@ export default function Custom404() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
             {popularPages.map((page, index) => (
               <Link
                 key={index}
@@ -158,47 +98,36 @@ export default function Custom404() {
                 Haben Sie nicht gefunden, was Sie suchen?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Kein Problem! Kontaktieren Sie mich direkt - ich helfe Ihnen gerne weiter.
+                Kein Problem! Kontaktieren Sie uns direkt - wir helfen Ihnen gerne weiter.
               </p>
             </div>
 
             {/* Contact Options */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <Phone className="h-12 w-12 text-primary-600 mx-auto mb-4" />
-                <h3 className="font-semibold text-navy-900 mb-2">Anrufen</h3>
-                <a 
-                  href="tel:069-97534441"
-                  className="text-primary-600 hover:text-primary-700 transition-colors duration-200"
-                >
-                  069 - 9753 4441
-                </a>
-              </div>
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               <div className="text-center p-6 bg-gray-50 rounded-xl">
                 <Mail className="h-12 w-12 text-primary-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-navy-900 mb-2">E-Mail schreiben</h3>
                 <a 
-                  href="mailto:egartner@frankfurt-business-coach.de"
+                  href="mailto:info@denck-consulting.de"
                   className="text-primary-600 hover:text-primary-700 transition-colors duration-200 text-sm"
                 >
-                  egartner@frankfurt-business-coach.de
+                  info@denck-consulting.de
                 </a>
               </div>
               
               <div className="text-center p-6 bg-gray-50 rounded-xl">
-                <MapPin className="h-12 w-12 text-primary-600 mx-auto mb-4" />
-                <h3 className="font-semibold text-navy-900 mb-2">Besuchen</h3>
+                <Bot className="h-12 w-12 text-primary-600 mx-auto mb-4" />
+                <h3 className="font-semibold text-navy-900 mb-2">KI-Beratung</h3>
                 <p className="text-gray-600 text-sm">
-                  Günthersburgallee 82<br />
-                  60389 Frankfurt am Main
+                  Lassen Sie uns über Ihre<br />
+                  KI-Zukunft sprechen
                 </p>
               </div>
             </div>
 
             <div className="mt-12">
               <Link
-                href="/transformationskontinuum/kontakt"
+                href="/kontakt"
                 className="btn-primary text-lg px-8 py-4"
               >
                 Kontaktformular nutzen
@@ -207,27 +136,6 @@ export default function Custom404() {
           </div>
         </div>
       </section>
-
-      {/* Error Details (for development) */}
-      {process.env.NODE_ENV === 'development' && (
-        <section className="section-padding bg-gray-100">
-          <div className="container-width">
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-yellow-500">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  Entwicklungsinfo (nur im Dev-Modus sichtbar)
-                </h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  <strong>Gesuchte URL:</strong> {router.asPath}
-                </p>
-                <p className="text-gray-600 text-sm">
-                  Diese Seite wurde nicht gefunden. Überprüfen Sie die URL oder die Routing-Konfiguration.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
     </>
   )
 }
@@ -236,7 +144,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Seite nicht gefunden - 404',
-      description: 'Die gesuchte Seite wurde nicht gefunden. Nutzen Sie unsere Navigation oder kontaktieren Sie Mario Egartner direkt.'
+      description: 'Die gesuchte Seite wurde nicht gefunden. Nutzen Sie unsere Navigation oder kontaktieren Sie DENCK Consulting direkt.'
     }
   }
 }

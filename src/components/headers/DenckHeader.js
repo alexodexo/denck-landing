@@ -10,19 +10,17 @@ export default function DenckHeader() {
   const router = useRouter()
 
   const navigation = [
+    { name: 'Home', href: '/' },
     { 
       name: 'Leistungen', 
       href: '/leistungen',
       dropdown: [
-        { name: 'KI-Strategieberatung', href: '/leistungen/ki-strategie' },
-        { name: 'Prozessautomatisierung', href: '/leistungen/automatisierung' },
-        { name: 'Daten & Analytics', href: '/leistungen/analytics' },
-        { name: 'KI-Governance', href: '/leistungen/governance' }
+        { name: 'KI-Strategieberatung', href: '/leistungen#ki-strategie' },
+        { name: 'Prozessautomatisierung', href: '/leistungen#automatisierung' },
+        { name: 'Daten & Analytics', href: '/leistungen#analytics' },
+        { name: 'KI-Governance', href: '/leistungen#governance' }
       ]
     },
-    { name: 'Über uns', href: '/ueber-uns' },
-    { name: 'Referenzen', href: '/referenzen' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Kontakt', href: '/kontakt' }
   ]
 

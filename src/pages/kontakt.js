@@ -1,6 +1,6 @@
 // src/pages/kontakt.js
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Calendar, Clock, Bot, Building2, Users, MessageSquare } from 'lucide-react'
+import { Mail, MapPin, Send, CheckCircle, AlertCircle, Calendar, Clock, Bot, Building2, Users, MessageSquare } from 'lucide-react'
 
 export default function Kontakt() {
   const [formData, setFormData] = useState({
@@ -105,7 +105,7 @@ export default function Kontakt() {
                 Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.
               </p>
               
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -224,8 +224,7 @@ export default function Kontakt() {
                 )}
 
                 <button
-                  type="button"
-                  onClick={handleSubmit}
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full px-6 py-4 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
@@ -241,7 +240,7 @@ export default function Kontakt() {
                     </span>
                   )}
                 </button>
-              </div>
+              </form>
             </div>
 
             {/* Contact Information */}
@@ -253,19 +252,6 @@ export default function Kontakt() {
                 </h2>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Telefon</h3>
-                      <a href="tel:+49123456789" className="text-lg hover:text-blue-200 transition-colors">
-                        +49 123 456789
-                      </a>
-                      <p className="text-sm text-blue-100 mt-1">Mo-Fr: 9:00-18:00 Uhr</p>
-                    </div>
-                  </div>
-                  
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail className="h-6 w-6" />
@@ -286,9 +272,9 @@ export default function Kontakt() {
                     <div>
                       <h3 className="font-semibold mb-1">Adresse</h3>
                       <p className="text-lg">
-                        DENCK Consulting GmbH<br />
-                        Frankfurt am Main<br />
-                        Deutschland
+                        ALD Beratungs und Beteiligungsgesellschaft UG<br />
+                        Hannah-Arendt-Str 40<br />
+                        60438 Frankfurt am Main
                       </p>
                     </div>
                   </div>
@@ -312,15 +298,7 @@ export default function Kontakt() {
                   
                   <button className="w-full flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group">
                     <div className="flex items-center space-x-3">
-                      <MessageSquare className="h-5 w-5 text-purple-600" />
-                      <span className="font-medium">Live-Chat starten</span>
-                    </div>
-                    <span className="text-gray-400 group-hover:text-gray-600">→</span>
-                  </button>
-                  
-                  <button className="w-full flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group">
-                    <div className="flex items-center space-x-3">
-                      <Bot className="h-5 w-5 text-pink-600" />
+                      <Bot className="h-5 w-5 text-purple-600" />
                       <span className="font-medium">KI-Demo anfordern</span>
                     </div>
                     <span className="text-gray-400 group-hover:text-gray-600">→</span>
@@ -378,4 +356,13 @@ export default function Kontakt() {
       </section>
     </>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Kontakt - DENCK Consulting',
+      description: 'Kontaktieren Sie DENCK Consulting für eine kostenlose KI-Beratung. Wir helfen Ihnen, das volle Potenzial von Künstlicher Intelligenz für Ihr Unternehmen zu nutzen.'
+    }
+  }
 }
