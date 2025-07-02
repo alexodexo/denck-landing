@@ -273,8 +273,8 @@ export default function Kontakt() {
                   <Mail className="h-6 w-6 text-slate-700" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">E-Mail</h3>
-                <a href="mailto:info@denck-consulting.de" className="text-slate-600 hover:text-slate-900 transition-colors">
-                  info@denck-consulting.de
+                <a href="mailto:info@denck.com" className="text-slate-600 hover:text-slate-900 transition-colors">
+                  info@denck.com
                 </a>
               </div>
 
