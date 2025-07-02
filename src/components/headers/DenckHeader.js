@@ -10,7 +10,6 @@ export default function DenckHeader() {
   const router = useRouter()
 
   const navigation = [
-    { name: 'Home', href: '/' },
     { 
       name: 'Leistungen', 
       href: '/leistungen',
@@ -33,7 +32,7 @@ export default function DenckHeader() {
       <nav className="container-width py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Bot className="h-8 w-8 text-slate-700 mr-2" />
+            
             <span className="text-2xl font-bold text-slate-900">DENCK Consulting</span>
           </Link>
 
