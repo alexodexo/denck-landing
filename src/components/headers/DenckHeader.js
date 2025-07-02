@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Menu, X, Bot, ChevronDown, Phone, Mail } from 'lucide-react'
+import { Menu, X, Bot, ChevronDown } from 'lucide-react'
 
 export default function DenckHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,22 +20,10 @@ export default function DenckHeader() {
         { name: 'KI-Governance', href: '/leistungen/governance' }
       ]
     },
-    { 
-      name: 'Über uns', 
-      href: '/ueber-uns' 
-    },
-    { 
-      name: 'Referenzen', 
-      href: '/referenzen' 
-    },
-    { 
-      name: 'Blog', 
-      href: '/blog' 
-    },
-    { 
-      name: 'Kontakt', 
-      href: '/kontakt' 
-    }
+    { name: 'Über uns', href: '/ueber-uns' },
+    { name: 'Referenzen', href: '/referenzen' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Kontakt', href: '/kontakt' }
   ]
 
   const isActiveLink = (href) => {
@@ -43,42 +31,14 @@ export default function DenckHeader() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-lg shadow-sm z-50">
-      {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 hidden md:block">
-        <div className="container mx-auto">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span>+49 123 456789</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>info@denck-consulting.de</span>
-              </div>
-            </div>
-            <div className="text-sm">
-              🚀 KI macht Ihr Unternehmen profitabler
-            </div>
-          </div>
-        </div>
-      </div>
+    <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+      <nav className="container-width py-4">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="flex items-center">
+            <Bot className="h-8 w-8 text-slate-700 mr-2" />
+            <span className="text-2xl font-bold text-slate-900">DENCK Consulting</span>
+          </Link>
 
-      <nav className="container mx-auto px-4" aria-label="Top">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <Bot className="h-8 w-8 text-blue-600 mr-2" />
-              <div className="text-xl lg:text-2xl font-bold">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">DENCK</span>
-                <span className="text-gray-900"> Consulting</span>
-              </div>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -86,9 +46,7 @@ export default function DenckHeader() {
                   <>
                     <button
                       className={`flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                        isActiveLink(item.href)
-                          ? 'text-blue-600'
-                          : 'text-gray-700 hover:text-blue-600'
+                        isActiveLink(item.href) ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
                       }`}
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -98,7 +56,7 @@ export default function DenckHeader() {
                     </button>
                     {isServicesOpen && (
                       <div 
-                        className="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2"
+                        className="absolute left-0 mt-2 w-64 bg-white border border-slate-200 rounded-lg shadow-lg py-2"
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                       >
@@ -106,7 +64,7 @@ export default function DenckHeader() {
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                            className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                           >
                             {subItem.name}
                           </Link>
@@ -118,9 +76,7 @@ export default function DenckHeader() {
                   <Link
                     href={item.href}
                     className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                      isActiveLink(item.href)
-                        ? 'text-blue-600'
-                        : 'text-gray-700 hover:text-blue-600'
+                      isActiveLink(item.href) ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
                     {item.name}
@@ -129,44 +85,29 @@ export default function DenckHeader() {
               </div>
             ))}
             
-            {/* CTA Button */}
-            <Link
-              href="/kontakt"
-              className="ml-4 inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-            >
+            <Link href="/kontakt" className="btn-primary">
               Kostenlose Beratung
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              type="button"
-              className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <span className="sr-only">Menü öffnen</span>
-              {isMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
-          </div>
+          <button
+            type="button"
+            className="lg:hidden p-2 rounded-md text-slate-700 hover:text-slate-900 hover:bg-slate-100"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden transition-all duration-300 ease-in-out">
-            <div className="px-2 pt-2 pb-6 space-y-1 bg-white border-t border-gray-200">
+          <div className="lg:hidden mt-4 py-4 border-t border-slate-200">
+            <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
                     href={item.href}
-                    className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
-                      isActiveLink(item.href)
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    className={`block px-3 py-2 text-base font-medium ${
+                      isActiveLink(item.href) ? 'text-slate-900' : 'text-slate-600'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -178,7 +119,7 @@ export default function DenckHeader() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                          className="block px-3 py-2 text-sm text-slate-600"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {subItem.name}
@@ -189,16 +130,13 @@ export default function DenckHeader() {
                 </div>
               ))}
               
-              {/* Mobile CTA Button */}
-              <div className="pt-4">
-                <Link
-                  href="/kontakt"
-                  className="block w-full text-center px-4 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Kostenlose Beratung anfragen
-                </Link>
-              </div>
+              <Link
+                href="/kontakt"
+                className="btn-primary text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Kostenlose Beratung anfragen
+              </Link>
             </div>
           </div>
         )}
