@@ -44,15 +44,7 @@ export default function DenckFooter() {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-slate-400 hover:text-white transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
+         
             </div>
           </div>
 
@@ -88,7 +80,7 @@ export default function DenckFooter() {
               <p className="flex items-start text-slate-400">
                 <Mail className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
                 <a href="mailto:info@denck-consulting.de" className="hover:text-white transition-colors">
-                  info@denck-consulting.de
+                  info@denck.com
                 </a>
               </p>
               <p className="flex items-start text-slate-400">
@@ -105,7 +97,7 @@ export default function DenckFooter() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-slate-400 mb-4 md:mb-0">
-              © 2024 ALD Beratungs und Beteiligungsgesellschaft UG. Alle Rechte vorbehalten.
+              © 2025 ALD Beratungs und Beteiligungsgesellschaft UG. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm">
               {footerLinks.rechtliches.map((link) => (
