@@ -53,9 +53,23 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--navy-900);
 }
 
-/* Button Styles */
 .btn-primary {
-  @apply inline-flex items-center px-6 py-3 text-white bg-gradient-to-r from-navy-700 to-navy-900 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:from-navy-800 hover:to-navy-900 transform hover:scale-105 transition-all duration-200;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background: linear-gradient(to right, var(--navy-700), var(--navy-900));
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(to right, var(--navy-800), var(--navy-900));
+  transform: scale(1.05);
 }
 
 .btn-secondary {
