@@ -1,168 +1,117 @@
-# Mario Egartner - Professional Websites
+// README.md
+# DENCK Consulting - KI-Beratung für den Mittelstand
 
-This Next.js application hosts two professional websites for Mario Egartner:
-
-1. **Transformationskontinuum** (C5 Business Partner) - B2B consulting and organizational development
-2. **Frankfurt Business Coach** - B2C coaching and personal development services
+Diese Next.js Anwendung ist die offizielle Website von DENCK Consulting - Ihrem Partner für erfolgreiche KI-Integration im Mittelstand.
 
 ## 🚀 Tech Stack
 
-- **Framework**: Next.js 15.3 with Pages Router
+- **Framework**: Next.js 15.3 mit Pages Router
 - **Styling**: Tailwind CSS 3.3
-- **Language**: JavaScript (ES6+)
+- **Sprache**: JavaScript (ES6+)
 - **Icons**: Lucide React
-- **Deployment**: Optimized for Vercel/Netlify
+- **Deployment**: Optimiert für Vercel/Netlify
 
-## 📁 Project Structure
-
-```
+## 📁 Projektstruktur
 ├── components/
-│   ├── common/           # Shared components
-│   │   ├── CTASection.js
-│   │   ├── FAQSection.js
+│   ├── common/           # Gemeinsam genutzte Komponenten
+│   │   ├── CookieBanner.js
 │   │   └── Hero.js
-│   ├── headers/          # Site-specific headers
-│   │   ├── TransformationHeader.js
-│   │   └── CoachHeader.js
-│   ├── footers/          # Site-specific footers
-│   │   ├── TransformationFooter.js
-│   │   └── CoachFooter.js
-│   └── Layout.js         # Main layout wrapper
+│   ├── headers/          # Header-Komponente
+│   │   └── DenckHeader.js
+│   ├── footers/          # Footer-Komponente
+│   │   └── DenckFooter.js
+│   └── Layout.js         # Haupt-Layout-Wrapper
 ├── pages/
-│   ├── transformationskontinuum/  # B2B site pages
-│   │   ├── index.js              # Homepage
-│   │   ├── ueber-uns.js          # About page
-│   │   ├── leistungen.js         # Services page
-│   │   ├── kontakt.js            # Contact page
-│   │   └── buchungen.js          # Bookings page
-│   └── frankfurt-business-coach/  # B2C site pages
-│       ├── index.js              # Homepage
-│       ├── coach.js              # About Mario
-│       ├── leistungen.js         # Services
-│       ├── preise.js             # Pricing
-│       ├── kontakt.js            # Contact
-│       └── buchungen.js          # Bookings
+│   ├── index.js          # Homepage
+│   ├── leistungen.js     # Leistungen
+│   ├── kontakt.js        # Kontakt
+│   ├── impressum.js      # Impressum
+│   ├── datenschutz.js    # Datenschutz
+│   └── agb.js           # AGB
 ├── styles/
-│   └── globals.css       # Global CSS with Tailwind
-└── public/               # Static assets
-```
+│   └── globals.css       # Globales CSS mit Tailwind
+└── public/               # Statische Assets
 
 ## 🎨 Design System
 
-### Colors
-- **Primary**: Blue tones for accents and CTAs
-- **Navy**: Dark blue for headings and professional elements
-- **Gray**: Neutral tones for text and backgrounds
+### Farben
+- **Primary**: Navy/Slate-Töne für Professionalität
+- **Accent**: Blau-Töne für CTAs und Highlights
+- **Gray**: Neutrale Töne für Text und Hintergründe
 
-### Typography
+### Typografie
 - **Font**: Inter (Google Fonts)
-- **Headings**: Navy colors with appropriate weights
-- **Body**: Gray-800 for optimal readability
+- **Überschriften**: Navy-Farben mit angemessenen Gewichtungen
+- **Body**: Grau-800 für optimale Lesbarkeit
 
-### Components
-- **Buttons**: Primary, secondary, and outline variants
-- **Cards**: Shadow effects with hover animations
-- **Sections**: Consistent padding and spacing
+### Komponenten
+- **Buttons**: Primary, Secondary und Outline-Varianten
+- **Cards**: Schatteneffekte mit Hover-Animationen
+- **Sections**: Konsistente Abstände und Padding
 
-## 🌐 Website Features
+## 🌐 Website-Features
 
-### Transformationskontinuum (B2B)
-- **Target Audience**: Large corporations, banks, insurance companies
-- **Services**: Organizational development, team workshops, strategic consulting
-- **Design**: Professional, McKinsey-inspired aesthetic
-- **Key Pages**: Home, About, Services, Contact, Bookings
-
-### Frankfurt Business Coach (B2C)
-- **Target Audience**: Individuals seeking personal/professional coaching
-- **Services**: Business coaching, career development, personal growth
-- **Design**: Warm, approachable while maintaining professionalism
-- **Key Pages**: Home, About Mario, Services, Pricing, Contact, Bookings
+- **Zielgruppe**: Mittelständische Unternehmen ab 50 Mitarbeitern
+- **Services**: KI-Strategieberatung, Prozessautomatisierung, Datenanalyse, KI-Governance
+- **Design**: Modern, professionell und vertrauenswürdig
+- **Hauptseiten**: Home, Leistungen, Kontakt, Impressum, Datenschutz
 
 ## 🔧 Getting Started
 
-1. **Install dependencies**:
+1. **Dependencies installieren**:
    ```bash
    npm install
-   ```
 
-2. **Run development server**:
-   ```bash
-   npm run dev
-   ```
+Entwicklungsserver starten:
+bashnpm run dev
 
-3. **Build for production**:
-   ```bash
-   npm run build
-   ```
+Production Build:
+bashnpm run build
 
-4. **Start production server**:
-   ```bash
-   npm start
-   ```
+Production Server starten:
+bashnpm start
 
-## 📱 Responsive Design
 
-The application is fully responsive with breakpoints:
-- **Mobile**: < 640px
-- **Tablet**: 640px - 1024px
-- **Desktop**: > 1024px
+📱 Responsive Design
+Die Anwendung ist vollständig responsiv mit Breakpoints:
 
-## 🎯 SEO Optimization
+Mobile: < 640px
+Tablet: 640px - 1024px
+Desktop: > 1024px
 
-- Dynamic meta tags for each page
-- Structured data (Schema.org)
-- Optimized images and fonts
-- Clean URL structure
-- Semantic HTML markup
+🎯 SEO-Optimierung
 
-## 📞 Contact Information
+Dynamische Meta-Tags für jede Seite
+Strukturierte Daten (Schema.org)
+Optimierte Bilder und Schriftarten
+Saubere URL-Struktur
+Semantisches HTML-Markup
 
-**Mario Egartner**
-- Phone: 069 - 9753 4441
-- Email: egartner@frankfurt-business-coach.de (B2C)
-- Email: info@c5-business-partner.de (B2B)
-- Address: Günthersburgallee 82, 60389 Frankfurt am Main
+📞 Kontaktinformationen
+DENCK Consulting
 
-## 🚀 Deployment
+ALD Beratungs und Beteiligungsgesellschaft UG
+Hannah-Arendt-Str 40
+60438 Frankfurt am Main
 
-The application is optimized for deployment on:
-- **Vercel** (recommended for Next.js)
-- **Netlify**
-- **Traditional hosting** with Node.js support
+🚀 Deployment
+Die Anwendung ist optimiert für Deployment auf:
 
-## 📝 Content Management
+Vercel (empfohlen für Next.js)
+Netlify
+Traditionelles Hosting mit Node.js-Unterstützung
 
-Content is currently managed through:
-- Static content in React components
-- Future integration with CMS possible (Strapi, Contentful, etc.)
-- Contact forms ready for backend integration
+📈 Performance
 
-## 🔗 External Integrations
+Lighthouse Score: Optimiert für 90+ Scores
+Core Web Vitals: Fokus auf User Experience
+Bildoptimierung: Next.js Image Component
+Font Loading: Optimiertes Google Fonts Loading
 
-Ready for integration with:
-- **Calendly** for appointment booking
-- **Email services** for contact forms
-- **Analytics** (Google Analytics, etc.)
-- **Payment processing** for coaching packages
+🔐 Sicherheit
 
-## 🎨 Customization
+Headers: Sicherheitsheader konfiguriert
+Umgebungsvariablen: Bereit für sensible Daten
+Formularvalidierung: Client- und serverseitig bereit
+HTTPS: SSL/TLS bereit für Produktion
 
-The design system is built with Tailwind CSS custom utility classes:
-- `btn-primary`, `btn-secondary`, `btn-outline` for buttons
-- `section-padding`, `container-width` for layout
-- `hero-text`, `section-title` for typography
-- Custom animations and transitions
-
-## 📈 Performance
-
-- **Lighthouse Score**: Optimized for 90+ scores
-- **Core Web Vitals**: Focused on user experience
-- **Image Optimization**: Next.js Image component
-- **Font Loading**: Optimized Google Fonts loading
-
-## 🔐 Security
-
-- **Headers**: Security headers configured
-- **Environment Variables**: Ready for sensitive data
-- **Form Validation**: Client and server-side ready
-- **HTTPS**: SSL/TLS ready for production

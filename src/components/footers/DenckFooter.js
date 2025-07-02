@@ -1,26 +1,23 @@
 // src/components/footers/DenckFooter.js
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Linkedin, Twitter, Bot } from 'lucide-react'
+import { Mail, MapPin, Linkedin, Twitter, Bot } from 'lucide-react'
 
 export default function DenckFooter() {
   const footerLinks = {
     leistungen: [
-      { name: 'KI-Strategieberatung', href: '/leistungen/ki-strategie' },
-      { name: 'Prozessautomatisierung', href: '/leistungen/automatisierung' },
-      { name: 'Daten & Analytics', href: '/leistungen/analytics' },
-      { name: 'KI-Governance', href: '/leistungen/governance' }
+      { name: 'KI-Strategieberatung', href: '/leistungen#ki-strategie' },
+      { name: 'Prozessautomatisierung', href: '/leistungen#automatisierung' },
+      { name: 'Daten & Analytics', href: '/leistungen#analytics' },
+      { name: 'KI-Governance', href: '/leistungen#governance' }
     ],
     unternehmen: [
-      { name: 'Über uns', href: '/ueber-uns' },
-      { name: 'Team', href: '/team' },
-      { name: 'Karriere', href: '/karriere' },
-      { name: 'Partner', href: '/partner' }
+      { name: 'Kontakt', href: '/kontakt' },
+      { name: 'Leistungen', href: '/leistungen' },
     ],
-    ressourcen: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Whitepaper', href: '/ressourcen/whitepaper' },
-      { name: 'Webinare', href: '/ressourcen/webinare' },
-      { name: 'KI-Ratgeber', href: '/ressourcen/ratgeber' }
+    rechtliches: [
+      { name: 'Impressum', href: '/impressum' },
+      { name: 'Datenschutz', href: '/datenschutz' },
+      { name: 'AGB', href: '/agb' }
     ]
   }
 
@@ -38,10 +35,22 @@ export default function DenckFooter() {
               Wir machen Künstliche Intelligenz praktisch nutzbar und schaffen messbare Mehrwerte.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-slate-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-slate-400 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
@@ -76,17 +85,18 @@ export default function DenckFooter() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <div className="space-y-2 text-sm">
-              <p className="flex items-center text-slate-400">
-                <Phone className="h-4 w-4 mr-2" />
-                +49 123 456789
+              <p className="flex items-start text-slate-400">
+                <Mail className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                <a href="mailto:info@denck-consulting.de" className="hover:text-white transition-colors">
+                  info@denck-consulting.de
+                </a>
               </p>
-              <p className="flex items-center text-slate-400">
-                <Mail className="h-4 w-4 mr-2" />
-                info@denck-consulting.de
-              </p>
-              <p className="flex items-center text-slate-400">
-                <MapPin className="h-4 w-4 mr-2" />
-                Frankfurt am Main
+              <p className="flex items-start text-slate-400">
+                <MapPin className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                <span>
+                  Hannah-Arendt-Str 40<br />
+                  60438 Frankfurt am Main
+                </span>
               </p>
             </div>
           </div>
@@ -95,18 +105,18 @@ export default function DenckFooter() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-slate-400 mb-4 md:mb-0">
-              © 2024 DENCK Consulting GmbH. Alle Rechte vorbehalten.
+              © 2024 ALD Beratungs und Beteiligungsgesellschaft UG. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link href="/impressum" className="text-slate-400 hover:text-white transition-colors">
-                Impressum
-              </Link>
-              <Link href="/datenschutz" className="text-slate-400 hover:text-white transition-colors">
-                Datenschutz
-              </Link>
-              <Link href="/agb" className="text-slate-400 hover:text-white transition-colors">
-                AGB
-              </Link>
+              {footerLinks.rechtliches.map((link) => (
+                <Link 
+                  key={link.name}
+                  href={link.href} 
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

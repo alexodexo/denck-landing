@@ -1,3 +1,4 @@
+// src/pages/datenschutz.js
 import Link from 'next/link'
 import { ArrowLeft, Shield, Eye, Lock, UserCheck, Database, Globe } from 'lucide-react'
 
@@ -59,15 +60,13 @@ export default function Datenschutz() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="space-y-2 text-gray-700">
-                    <p><strong>Mario Egartner / C5 Business Partner</strong></p>
-                    <p>Günthersburgallee 82 / Beraterhaus</p>
-                    <p>60389 Frankfurt am Main</p>
+                    <p><strong>ALD Beratungs und Beteiligungsgesellschaft UG</strong></p>
+                    <p>(haftungsbeschränkt)</p>
+                    <p>Hannah-Arendt-Str 40</p>
+                    <p>60438 Frankfurt am Main</p>
                     <p>Deutschland</p>
                     <p className="mt-4">
-                      <strong>E-Mail:</strong> <a href="mailto:datenschutz@c5-business-partner.de" className="text-primary-600 hover:text-primary-700">datenschutz@c5-business-partner.de</a>
-                    </p>
-                    <p>
-                      <strong>Telefon:</strong> <a href="tel:069-97534440" className="text-primary-600 hover:text-primary-700">069 - 9753 4440</a>
+                      <strong>E-Mail:</strong> <a href="mailto:datenschutz@denck-consulting.de" className="text-primary-600 hover:text-primary-700">datenschutz@denck-consulting.de</a>
                     </p>
                   </div>
                 </div>
@@ -80,12 +79,12 @@ export default function Datenschutz() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-gray-50 rounded-lg p-6">
-                    <h3 className="font-semibold text-navy-900 mb-3">Kontakt- und Bestandsdaten</h3>
+                    <h3 className="font-semibold text-navy-900 mb-3">Kontaktdaten</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• Namen und Adressen</li>
+                      <li>• Namen und Firmennamen</li>
                       <li>• E-Mail-Adressen</li>
                       <li>• Telefonnummern</li>
-                      <li>• Unternehmensdaten</li>
+                      <li>• Geschäftsadressen</li>
                     </ul>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -107,11 +106,11 @@ export default function Datenschutz() {
                     </ul>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-6">
-                    <h3 className="font-semibold text-navy-900 mb-3">Coaching-/Beratungsdaten</h3>
+                    <h3 className="font-semibold text-navy-900 mb-3">Beratungsdaten</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• Gesprächsinhalte (anonymisiert)</li>
-                      <li>• Termine und Notizen</li>
-                      <li>• Entwicklungsverläufe</li>
+                      <li>• Projektinformationen</li>
+                      <li>• Beratungsinhalte</li>
+                      <li>• Vertragsdetails</li>
                       <li>• Feedback und Bewertungen</li>
                     </ul>
                   </div>
@@ -128,7 +127,7 @@ export default function Datenschutz() {
                   <ul className="space-y-2 ml-6">
                     <li>• Bereitstellung und Betrieb unserer Website</li>
                     <li>• Bearbeitung von Kontaktanfragen und Kommunikation</li>
-                    <li>• Durchführung von Coaching-, Beratungs- och Schulungsleistungen</li>
+                    <li>• Durchführung von KI-Beratungsleistungen</li>
                     <li>• Vertragsabwicklung und Rechnungsstellung</li>
                     <li>• Verbesserung unserer Dienstleistungen</li>
                     <li>• Einhaltung gesetzlicher Verpflichtungen</li>
@@ -151,7 +150,7 @@ export default function Datenschutz() {
                     </div>
                     <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                       <h4 className="font-semibold text-navy-900 mb-2">Art. 6 Abs. 1 lit. b DSGVO</h4>
-                      <p className="text-sm">Vertragserfüllung (z.B. Coaching-Leistungen)</p>
+                      <p className="text-sm">Vertragserfüllung (z.B. Beratungsleistungen)</p>
                     </div>
                     <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                       <h4 className="font-semibold text-navy-900 mb-2">Art. 6 Abs. 1 lit. c DSGVO</h4>
@@ -287,34 +286,34 @@ export default function Datenschutz() {
               <div>
                 <div className="flex items-center space-x-3 mb-6">
                   <Shield className="h-6 w-6 text-primary-600" />
-                  <h2 className="text-2xl font-bold text-navy-900">8. Coaching und Beratungsleistungen</h2>
+                  <h2 className="text-2xl font-bold text-navy-900">8. KI-Beratungsleistungen</h2>
                 </div>
                 <div className="space-y-6">
                   <div className="bg-red-50 border border-red-200 rounded-lg p-6">
                     <h3 className="text-lg font-semibold text-navy-900 mb-4">Besondere Vertraulichkeit</h3>
                     <p className="text-gray-700 text-sm">
-                      Coaching- und Beratungsinhalte unterliegen einer besonderen Vertraulichkeit. Persönliche Informationen aus Gesprächen werden nur in anonymisierter Form und ausschließlich zur Leistungserbringung verarbeitet. Eine Weitergabe an Dritte erfolgt nur mit Ihrer ausdrücklichen Einwilligung oder bei gesetzlicher Verpflichtung.
+                      Beratungsinhalte unterliegen einer besonderen Vertraulichkeit. Unternehmensinformationen und Projektdetails werden nur zur Leistungserbringung verarbeitet. Eine Weitergabe an Dritte erfolgt nur mit Ihrer ausdrücklichen Einwilligung oder bei gesetzlicher Verpflichtung.
                     </p>
                   </div>
 
                   <div className="space-y-4 text-gray-700">
-                    <p><strong>8.1. Verarbeitete Daten bei Coaching/Beratung:</strong></p>
+                    <p><strong>8.1. Verarbeitete Daten bei KI-Beratung:</strong></p>
                     <ul className="ml-6 space-y-1 text-sm">
-                      <li>• Kontakt- und Stammdaten</li>
-                      <li>• Termine und Terminhistorie</li>
-                      <li>• Anonymisierte Notizen zum Coaching-Verlauf</li>
-                      <li>• Zielsetzungen und Entwicklungsfortschritte</li>
+                      <li>• Kontakt- und Unternehmensdaten</li>
+                      <li>• Projektinformationen und -anforderungen</li>
+                      <li>• Technische Dokumentationen</li>
+                      <li>• Geschäftsprozesse und Datenflüsse</li>
                       <li>• Feedback und Bewertungen</li>
                     </ul>
 
                     <p><strong>8.2. Besondere Kategorien von Daten:</strong></p>
                     <p className="text-sm">
-                      Soweit im Rahmen von Coaching oder Beratung besondere Kategorien personenbezogener Daten (Art. 9 DSGVO) verarbeitet werden, erfolgt dies nur mit Ihrer ausdrücklichen Einwilligung (Art. 9 Abs. 2 lit. a DSGVO).
+                      Soweit im Rahmen der Beratung besondere Kategorien personenbezogener Daten (Art. 9 DSGVO) verarbeitet werden, erfolgt dies nur mit Ihrer ausdrücklichen Einwilligung (Art. 9 Abs. 2 lit. a DSGVO).
                     </p>
 
                     <p><strong>8.3. Aufbewahrung und Löschung:</strong></p>
                     <p className="text-sm">
-                      Coaching-Unterlagen werden für die Dauer der Zusammenarbeit und darüber hinaus für 3 Jahre aufbewahrt, sofern keine längeren Aufbewahrungsfristen bestehen. Auf Ihren Wunsch werden personenbezogene Aufzeichnungen jederzeit gelöscht.
+                      Beratungsunterlagen werden für die Dauer der Zusammenarbeit und darüber hinaus für 3 Jahre aufbewahrt, sofern keine längeren Aufbewahrungsfristen bestehen. Auf Ihren Wunsch werden personenbezogene Aufzeichnungen jederzeit gelöscht.
                     </p>
                   </div>
                 </div>
@@ -368,8 +367,7 @@ export default function Datenschutz() {
                   </p>
                   <div className="bg-white border border-gray-200 rounded-lg p-4">
                     <p className="text-sm">
-                      <strong>E-Mail:</strong> <a href="mailto:datenschutz@c5-business-partner.de" className="text-primary-600 hover:text-primary-700">datenschutz@c5-business-partner.de</a><br />
-                      <strong>Telefon:</strong> <a href="tel:069-97534440" className="text-primary-600 hover:text-primary-700">069 - 9753 4440</a><br />
+                      <strong>E-Mail:</strong> <a href="mailto:datenschutz@denck-consulting.de" className="text-primary-600 hover:text-primary-700">datenschutz@denck-consulting.de</a><br />
                       <strong>Betreff:</strong> Datenschutz - [Ihr Anliegen]
                     </p>
                   </div>
@@ -419,7 +417,7 @@ export default function Datenschutz() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <p><strong>Kontaktanfragen:</strong> 3 Jahre nach Bearbeitung</p>
-                        <p><strong>Coaching-Unterlagen:</strong> 3 Jahre nach Vertragsende</p>
+                        <p><strong>Beratungsunterlagen:</strong> 3 Jahre nach Vertragsende</p>
                         <p><strong>Rechnungsunterlagen:</strong> 10 Jahre (§ 147 AO)</p>
                       </div>
                       <div>
@@ -465,7 +463,7 @@ export default function Datenschutz() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="text-sm">
                       <strong>Letzte Aktualisierung:</strong> Dezember 2024<br />
-                      <strong>Version:</strong> 2.0<br />
+                      <strong>Version:</strong> 1.0<br />
                       Bei Ihrem nächsten Besuch gilt dann die neue Datenschutzerklärung.
                     </p>
                   </div>
@@ -504,7 +502,7 @@ export default function Datenschutz() {
                   Allgemeine Geschäftsbedingungen
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Bedingungen für unsere Dienstleistungen und Veranstaltungen
+                  Bedingungen für unsere Dienstleistungen
                 </p>
               </Link>
             </div>
@@ -518,8 +516,8 @@ export default function Datenschutz() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Datenschutzerklärung',
-      description: 'Datenschutzerklärung von Mario Egartner - C5 Business Partner. Informationen zum Schutz Ihrer personenbezogenen Daten.'
+      title: 'Datenschutzerklärung - DENCK Consulting',
+      description: 'Datenschutzerklärung der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Consulting. Informationen zum Schutz Ihrer personenbezogenen Daten.'
     }
   }
 }

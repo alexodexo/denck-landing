@@ -1,3 +1,4 @@
+// src/pages/_document.js
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -21,27 +22,26 @@ export default function Document() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "C5 Business Partner",
-              "alternateName": "Frankfurt Business Coach",
-              "url": "https://www.c5-business-partner.de",
-              "logo": "https://www.c5-business-partner.de/logo.png",
+              "name": "DENCK Consulting",
+              "legalName": "ALD Beratungs und Beteiligungsgesellschaft UG",
+              "url": "https://www.denck.com",
+              "logo": "https://www.denck.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+49-69-9753-4441",
+                "email": "info@denck.com",
                 "contactType": "customer service",
                 "areaServed": "DE",
                 "availableLanguage": "German"
               },
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Günthersburgallee 82",
+                "streetAddress": "Hannah-Arendt-Str 40",
                 "addressLocality": "Frankfurt am Main",
-                "postalCode": "60389",
+                "postalCode": "60438",
                 "addressCountry": "DE"
               },
               "sameAs": [
-                "https://www.linkedin.com/in/mario-egartner",
-                "https://www.xing.com/profile/Mario_Egartner"
+                "https://www.linkedin.com/u/denck"
               ]
             })
           }}
