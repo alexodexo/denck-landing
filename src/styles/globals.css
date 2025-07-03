@@ -165,26 +165,6 @@ h1, h2, h3, h4, h5, h6 {
   animation-delay: 600ms;
 }
 
-/* Selection */
-::selection {
-  background-color: var(--navy-700);
-  color: white;
-}
-
-/* Focus Styles */
-.focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-navy-500 focus:ring-offset-2;
-}
-
-/* Mobile Optimizations */
-@media (max-width: 640px) {
-  .use-case-card {
-    width: 280px;
-  }
-}
-
-/* Fügen Sie diese Styles zu Ihrer src/styles/globals.css hinzu */
-
 /* Animation Delays */
 .animation-delay-2000 {
   animation-delay: 2s;
@@ -203,6 +183,10 @@ h1, h2, h3, h4, h5, h6 {
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
 }
 
 /* Number Counter Animation */
@@ -279,3 +263,44 @@ h1, h2, h3, h4, h5, h6 {
   animation: pulse-slow 4s ease-in-out infinite;
 }
 
+/* Background Wrapper Utilities */
+.bg-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--navy-700);
+  color: white;
+}
+
+/* Focus Styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-navy-500 focus:ring-offset-2;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .use-case-card {
+    width: 280px;
+  }
+}
+
+/* Smooth background transitions */
+.background-transition {
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Enhanced gradients for consistency */
+.gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
