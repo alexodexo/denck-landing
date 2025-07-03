@@ -23,8 +23,7 @@ export default function AIServicesSection() {
         'Autonome Entscheidungsfindung',
         'Selbstlernende Systeme',
         '24/7 Verfügbarkeit'
-      ],
-      connections: ['automation', 'phone', 'chat', 'email', 'reports']
+      ]
     },
     {
       id: 'automation',
@@ -37,8 +36,7 @@ export default function AIServicesSection() {
         'RPA Integration',
         'Echtzeit-Monitoring',
         'Fehlerfreie Ausführung'
-      ],
-      connections: ['agents', 'reports']
+      ]
     },
     {
       id: 'phone',
@@ -51,8 +49,7 @@ export default function AIServicesSection() {
         'Emotionale Intelligenz',
         'Mehrsprachiger Support',
         'Nahtlose Weiterleitung'
-      ],
-      connections: ['agents', 'chat']
+      ]
     },
     {
       id: 'chat',
@@ -65,8 +62,7 @@ export default function AIServicesSection() {
         'Microsoft Teams Integration',
         'Slack Workspace Bots',
         'Telegram & Discord'
-      ],
-      connections: ['agents', 'phone', 'email']
+      ]
     },
     {
       id: 'email',
@@ -79,8 +75,7 @@ export default function AIServicesSection() {
         'Smart Reply Generation',
         'Sentiment-Analyse',
         'Prioritäts-Management'
-      ],
-      connections: ['agents', 'chat', 'reports']
+      ]
     },
     {
       id: 'reports',
@@ -93,8 +88,7 @@ export default function AIServicesSection() {
         'Predictive Analytics',
         'Executive Summaries',
         'Real-Time Dashboards'
-      ],
-      connections: ['agents', 'automation', 'email']
+      ]
     }
   ]
 
@@ -184,7 +178,7 @@ export default function AIServicesSection() {
                     idx >= 2 ? (isActive ? 'opacity-100 max-h-10' : 'opacity-0 max-h-0') : ''
                   }`}
                 >
-                  <CheckCircle className={`h-4 w-4 mr-2 flex-shrink-0 bg-gradient-to-r ${service.gradient} text-transparent bg-clip-text`} />
+                  <CheckCircle className={`h-4 w-4 mr-2 flex-shrink-0 text-green-400`} />
                   {feature}
                 </li>
               ))}
@@ -211,11 +205,11 @@ export default function AIServicesSection() {
         <div className="absolute inset-0">
           <svg className="w-full h-full opacity-10">
             <defs>
-              <pattern id="neural-grid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+              <pattern id="neural-grid-ai" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
                 <circle cx="50" cy="50" r="1" fill="#64748b" />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#neural-grid)" />
+            <rect width="100%" height="100%" fill="url(#neural-grid-ai)" />
           </svg>
         </div>
         
@@ -265,8 +259,6 @@ export default function AIServicesSection() {
           ))}
         </div>
 
-       
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-block mb-8 px-8 py-4 bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50">
@@ -287,8 +279,6 @@ export default function AIServicesSection() {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
             </a>
-            
-            
           </div>
         </div>
       </div>

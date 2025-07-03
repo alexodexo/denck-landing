@@ -1,5 +1,6 @@
 // src/components/home/UseCasesSection.js
 import { useEffect, useRef, useState } from 'react'
+import { ArrowRight } from 'lucide-react'
 
 export default function UseCasesSection() {
   const scrollRef1 = useRef(null)
@@ -87,8 +88,33 @@ export default function UseCasesSection() {
   )
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-      <div className="container-width">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden relative">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        {/* Neural Network Animation */}
+        <div className="absolute inset-0">
+          <svg className="w-full h-full opacity-10">
+            <defs>
+              <pattern id="neural-grid-2" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <circle cx="50" cy="50" r="1" fill="#64748b" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#neural-grid-2)" />
+          </svg>
+        </div>
+        
+        {/* Floating Particles */}
+        <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+        <div className="absolute top-20 right-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-20 left-1/3 w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+        
+        {/* Gradient Orbs */}
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-purple-500 rounded-full filter blur-[150px] opacity-20" />
+        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-blue-500 rounded-full filter blur-[150px] opacity-20" />
+      </div>
+
+      <div className="container-width relative z-10">
+        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span className="inline-flex items-center px-4 py-2 bg-yellow-400/20 backdrop-blur border border-yellow-400/30 rounded-full text-yellow-400 text-sm font-medium">
@@ -151,9 +177,7 @@ export default function UseCasesSection() {
               className="group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-slate-900 rounded-lg font-semibold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Jetzt KI-Beratung sichern
-              <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
             
             <a
@@ -161,9 +185,7 @@ export default function UseCasesSection() {
               className="group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white border-2 border-slate-600 rounded-lg font-semibold hover:bg-slate-800 hover:border-slate-500 transition-all duration-200"
             >
               Alle Leistungen ansehen
-              <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
