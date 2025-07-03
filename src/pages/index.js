@@ -1,19 +1,22 @@
 // src/pages/index.js
 import HeroSection from '../components/home/HeroSection'
 import ProblemSolutionSection from '../components/home/ProblemSolutionSection'
+import UseCasesSection from '../components/home/UseCasesSection'
+import StatisticsSection from '../components/home/StatisticsSection'
 import ServicesSection from '../components/home/ServicesSection'
 import ProcessSection from '../components/home/ProcessSection'
-import TestimonialsSection from '../components/home/TestimonialsSection'
 import CTASection from '../components/home/CTASection'
+import AIServicesSection from '../components/home/AIServicesSection'
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ProblemSolutionSection />
-      <ServicesSection />
+      <UseCasesSection />
+      <StatisticsSection />
+      <AIServicesSection />
       <ProcessSection />
-      <TestimonialsSection />
+      <ProblemSolutionSection />
       <CTASection />
     </>
   )
