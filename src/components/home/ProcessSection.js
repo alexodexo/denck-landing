@@ -1,6 +1,5 @@
 // src/components/home/ProcessSection.js
 import { ChevronRight, Target, Brain, Zap, CheckCircle } from 'lucide-react'
-import BackgroundWrapper from '../common/BackgroundWrapper'
 import SectionHeader from '../common/SectionHeader'
 
 export default function ProcessSection() {
@@ -50,14 +49,8 @@ export default function ProcessSection() {
   ]
 
   return (
-    <BackgroundWrapper 
-      variant="dark" 
-      className="py-20"
-      animated={true}
-      particles={true}
-      gradientOrbs={true}
-    >
-      <div className="container-width">
+    <section className="py-20 relative overflow-hidden">
+      <div className="container-width relative z-10">
         <SectionHeader
           badge="Bewährter Prozess"
           badgeIcon={Target}
@@ -142,6 +135,6 @@ export default function ProcessSection() {
           </a>
         </div>
       </div>
-    </BackgroundWrapper>
+    </section>
   )
 }
