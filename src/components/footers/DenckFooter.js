@@ -22,12 +22,14 @@ export default function DenckFooter() {
   }
 
   return (
-    <footer className="bg-slate-900 text-white pt-16 pb-8">
-      <div className="container-width">
+    <footer className="relative text-white pt-16 pb-8 border-t border-slate-800/50">
+      {/* Semi-transparent overlay to ensure readability */}
+      <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" />
+      
+      <div className="container-width relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <Bot className="h-8 w-8 text-white mr-2" />
               <span className="text-2xl font-bold">DENCK Consulting</span>
             </div>
             <p className="text-slate-400 mb-6">
@@ -36,7 +38,7 @@ export default function DenckFooter() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/denck" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-slate-400 hover:text-white transition-colors"
