@@ -78,7 +78,6 @@ export default function DenckHeader() {
           <Link href="/" className="flex items-center group">
             <div className="relative">
               {/* Logo Background with Glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
               
               <div className="relative flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-xl border border-slate-600/30 rounded-xl group-hover:border-slate-500/50 transition-all duration-300">
                 <div className="relative">

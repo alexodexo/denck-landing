@@ -198,32 +198,7 @@ export default function AIServicesSection() {
   }
 
   return (
-    <section ref={sectionRef} className="py-20 bg-slate-900 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        {/* Neural Network Animation */}
-        <div className="absolute inset-0">
-          <svg className="w-full h-full opacity-10">
-            <defs>
-              <pattern id="neural-grid-ai" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                <circle cx="50" cy="50" r="1" fill="#64748b" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#neural-grid-ai)" />
-          </svg>
-        </div>
-        
-        {/* Floating Particles */}
-        <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-        <div className="absolute top-20 right-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-20 left-1/3 w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-10 right-1/4 w-4 h-4 bg-yellow-400 rounded-full animate-pulse" style={{ animationDelay: '3s' }} />
-        
-        {/* Gradient Orbs */}
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-purple-500 rounded-full filter blur-[150px] opacity-20" />
-        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-blue-500 rounded-full filter blur-[150px] opacity-20" />
-      </div>
-
+    <section ref={sectionRef} className="py-20 relative overflow-hidden">
       <div className="container-width relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
