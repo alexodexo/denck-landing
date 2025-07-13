@@ -75,10 +75,10 @@ export default function Impressum() {
                     <div>
                       <h3 className="font-semibold text-white mb-2">E-Mail</h3>
                       <a 
-                        href="mailto:info@denck-consulting.de"
+                        href="mailto:info@denck.com"
                         className="text-green-400 hover:text-green-300 transition-colors duration-200"
                       >
-                        info@denck-consulting.de
+                        info@denck.com
                       </a>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ export default function Impressum() {
                   <div className="text-slate-300 space-y-2 text-sm">
                     <p><strong className="text-white">Eintragung im Handelsregister</strong></p>
                     <p>Registergericht: Amtsgericht Frankfurt am Main</p>
-                    <p>Registernummer: [Ihre HRB-Nummer]</p>
+                    <p>Registernummer: HRB 138616</p>
                   </div>
                 </div>
               </div>

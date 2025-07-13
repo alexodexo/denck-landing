@@ -215,7 +215,7 @@ export default function Kontakt() {
             <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 md:p-12">
               <form 
                 onSubmit={handleSubmit} 
-                action="https://formsubmit.co/alex@denck.com" 
+                action="https://formsubmit.co/b6eea7af06bb690ca806dd85777c3b46" 
                 method="POST"
                 className="space-y-6"
               >
