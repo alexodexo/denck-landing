@@ -74,18 +74,25 @@ export default function DenckHeader() {
       <nav className="container-width py-4 relative z-10">
         <div className="flex items-center justify-between">
           
-          {/* Logo */}
+          {/* Logo - Cleaner Design */}
           <Link href="/" className="flex items-center group">
-            <div className="relative">
-              {/* Logo Background with Glow */}
-              
-              <div className="relative flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-xl border border-slate-600/30 rounded-xl group-hover:border-slate-500/50 transition-all duration-300">
-                <div className="relative">
-                  <Bot className="h-8 w-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 group-hover:scale-110 transition-transform duration-300" />
-                  <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-yellow-400 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300" />
+            <div className="relative flex items-center space-x-3">
+              {/* Icon with subtle glow */}
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-purple-500/25">
+                  <Bot className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-white via-slate-200 to-white text-transparent bg-clip-text group-hover:from-purple-400 group-hover:via-pink-400 group-hover:to-yellow-400 transition-all duration-300">
-                  DENCK Consulting
+                {/* Subtle sparkle effect on hover */}
+                <Sparkles className="absolute -top-1 -right-1 h-3 w-3 text-yellow-400 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300" />
+              </div>
+              
+              {/* Clean text logo */}
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300">
+                  DENCK Solutions
+                </span>
+                <span className="text-xs text-slate-400 -mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  KI für Ihr Business
                 </span>
               </div>
             </div>

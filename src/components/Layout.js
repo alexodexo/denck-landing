@@ -30,7 +30,7 @@ export default function Layout({ children, title, description }) {
     )
   }
   
-  const defaultTitle = 'DENCK Consulting - KI-Beratung für den Mittelstand'
+const defaultTitle = 'DENCK Solutions - KI-Beratung für den Mittelstand'
   const defaultDescription = 'Wir machen Künstliche Intelligenz für Ihr Unternehmen nutzbar. KI-Strategieberatung, Prozessautomatisierung und Datenanalyse für nachhaltigen Erfolg.'
 
   const pageTitle = title ? `${title} | ${defaultTitle}` : defaultTitle
@@ -43,13 +43,13 @@ export default function Layout({ children, title, description }) {
         <meta name="description" content={pageDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="DENCK Consulting" />
+        <meta name="author" content="DENCK Solutions" />
         
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="de_DE" />
-        <meta property="og:site_name" content="DENCK Consulting - KI-Beratung" />
+        <meta property="og:site_name" content="DENCK Solutions - KI-Beratung" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />

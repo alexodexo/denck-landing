@@ -870,7 +870,7 @@ export default function Leistungen() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'KI-Beratungsleistungen - DENCK Consulting',
+      title: 'KI-Beratungsleistungen - DENCK Solutions',
       description: 'Individuelle KI-Beratung für Unternehmer. Flexible Unterstützung von der Strategie bis zur Umsetzung. Praxisnah, persönlich und ohne unnötigen Overhead.'
     }
   }

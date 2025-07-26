@@ -22,7 +22,7 @@ export default function Document() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "DENCK Consulting",
+              "name": "DENCK Soltutions",
               "legalName": "ALD Beratungs und Beteiligungsgesellschaft UG",
               "url": "https://www.denck.com",
               "logo": "https://www.denck.com/logo.png",

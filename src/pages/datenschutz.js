@@ -71,7 +71,7 @@ export default function Datenschutz() {
                     <p>60438 Frankfurt am Main</p>
                     <p>Deutschland</p>
                     <p className="mt-4">
-                      <strong className="text-white">E-Mail:</strong> <a href="mailto:datenschutz@denck-consulting.de" className="text-green-400 hover:text-green-300 transition-colors">datenschutz@denck-consulting.de</a>
+                      <strong className="text-white">E-Mail:</strong> <a href="mailto:datenschutz@denck.com" className="text-green-400 hover:text-green-300 transition-colors">info@denck.com</a>
                     </p>
                   </div>
                 </div>
@@ -373,7 +373,7 @@ export default function Datenschutz() {
                   </p>
                   <div className="bg-slate-600/40 border border-slate-500/30 rounded-lg p-4">
                     <p className="text-sm">
-                      <strong className="text-white">E-Mail:</strong> <a href="mailto:datenschutz@denck-consulting.de" className="text-green-400 hover:text-green-300 transition-colors">datenschutz@denck-consulting.de</a><br />
+                      <strong className="text-white">E-Mail:</strong> <a href="mailto:info@denck.com" className="text-green-400 hover:text-green-300 transition-colors">info@denck.com</a><br />
                       <strong className="text-white">Betreff:</strong> Datenschutz - [Ihr Anliegen]
                     </p>
                   </div>
@@ -538,8 +538,8 @@ export default function Datenschutz() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Datenschutzerklärung - DENCK Consulting',
-      description: 'Datenschutzerklärung der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Consulting. Informationen zum Schutz Ihrer personenbezogenen Daten.'
+      title: 'Datenschutzerklärung - DENCK Solutions',
+      description: 'Datenschutzerklärung der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Solutions. Informationen zum Schutz Ihrer personenbezogenen Daten.'
     }
   }
 }

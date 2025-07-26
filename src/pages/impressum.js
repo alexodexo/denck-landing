@@ -235,8 +235,8 @@ export default function Impressum() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Impressum - DENCK Consulting',
-      description: 'Impressum und rechtliche Angaben der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Consulting.'
+      title: 'Impressum - DENCK Solutions',
+      description: 'Impressum und rechtliche Angaben der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Solutions.'
     }
   }
 }

@@ -33,7 +33,7 @@ export default function AGB() {
               </h1>
 
               <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                AGB für KI-Beratungsleistungen von DENCK Consulting
+                AGB für KI-Beratungsleistungen von DENCK Soltutions
               </p>
             </div>
 
@@ -48,7 +48,7 @@ export default function AGB() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-3">1. Geltungsbereich</h3>
                       <p className="text-slate-300 leading-relaxed">
-                        Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge über KI-Beratungsleistungen zwischen der ALD Beratungs und Beteiligungsgesellschaft UG (haftungsbeschränkt), handelnd unter DENCK Consulting (nachfolgend "Auftragnehmer"), und ihren Kunden (nachfolgend "Auftraggeber"). Abweichende Bedingungen des Auftraggebers gelten nur, wenn sie vom Auftragnehmer ausdrücklich schriftlich anerkannt wurden.
+                        Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge über KI-Beratungsleistungen zwischen der ALD Beratungs und Beteiligungsgesellschaft UG (haftungsbeschränkt), handelnd unter DENCK Soltutions (nachfolgend "Auftragnehmer"), und ihren Kunden (nachfolgend "Auftraggeber"). Abweichende Bedingungen des Auftraggebers gelten nur, wenn sie vom Auftragnehmer ausdrücklich schriftlich anerkannt wurden.
                       </p>
                     </div>
 
@@ -300,8 +300,8 @@ export default function AGB() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Allgemeine Geschäftsbedingungen - DENCK Consulting',
-      description: 'AGB für KI-Beratungsleistungen der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Consulting.'
+      title: 'Allgemeine Geschäftsbedingungen - DENCK Solutions',
+      description: 'AGB für KI-Beratungsleistungen der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Solutions.'
     }
   }
 }

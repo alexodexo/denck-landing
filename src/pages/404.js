@@ -108,7 +108,7 @@ export default function Custom404() {
                 <Mail className="h-12 w-12 text-primary-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-navy-900 mb-2">E-Mail schreiben</h3>
                 <a 
-                  href="mailto:info@denck-consulting.de"
+                  href="mailto:info@denck.com"
                   className="text-primary-600 hover:text-primary-700 transition-colors duration-200 text-sm"
                 >
                   info@denck-consulting.de
