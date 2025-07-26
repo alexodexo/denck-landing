@@ -1,8 +1,8 @@
 {
-  "name": "mario-egartner-websites",
+  "name": "denck-solutions",
   "version": "1.0.0",
   "private": true,
-  "description": "Professional websites for Mario Egartner - C5 Business Partner and Frankfurt Business Coach",
+  "description": "DENCK Solutions Landing Page",
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 80",
     "build": "next build",
@@ -32,24 +32,25 @@
     "node": ">=18.0.0"
   },
   "keywords": [
-    "business-coach",
-    "transformation",
+    "denck",
+    "solutions",
     "consulting",
-    "frankfurt",
-    "mario-egartner",
-    "c5-business-partner"
+    "digital",
+    "transformation",
+    "tech",
+    "innovation"
   ],
   "author": {
-    "name": "Mario Egartner",
-    "email": "info@c5-business-partner.de",
-    "url": "https://www.c5-business-partner.de"
+    "name": "DENCK Solutions",
+    "email": "info@denck.com",
+    "url": "https://www.denck.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mario-egartner/websites.git"
+    "url": "git+https://github.com/alexodexo/denck-landing"
   },
   "bugs": {
-    "url": "https://github.com/mario-egartner/websites/issues"
+    "url": "https://github.com/alexodexo/denck-landing/issues"
   },
-  "homepage": "https://www.c5-business-partner.de"
+  "homepage": "https://www.denck.com"
 }
