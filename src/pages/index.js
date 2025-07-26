@@ -24,7 +24,7 @@ export default function HomePage() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'DENCK Consulting - KI-Beratung für den Mittelstand',
+      title: 'DENCK Solutions - KI-Beratung für den Mittelstand',
       description: 'Wir machen Künstliche Intelligenz für Ihr Unternehmen nutzbar. Steigern Sie Ihre Effizienz, senken Sie Kosten und gewinnen Sie Kunden mit KI.'
     }
   }

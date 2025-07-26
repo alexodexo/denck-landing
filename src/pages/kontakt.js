@@ -220,7 +220,7 @@ export default function Kontakt() {
                 className="space-y-6"
               >
                 {/* Formsubmit Configuration */}
-                <input type="hidden" name="_subject" value="Neue Kontaktanfrage von DENCK Consulting Website" />
+                <input type="hidden" name="_subject" value="Neue Kontaktanfrage von DENCK Solutions Website" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 
@@ -419,8 +419,8 @@ export default function Kontakt() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Kontakt - DENCK Consulting',
-      description: 'Kontaktieren Sie DENCK Consulting für eine kostenlose KI-Beratung. Buchen Sie direkt einen Termin oder senden Sie uns eine Nachricht.'
+      title: 'Kontakt - DENCK Soltutions',
+      description: 'Kontaktieren Sie DENCK Solutions für eine kostenlose KI-Beratung. Buchen Sie direkt einen Termin oder senden Sie uns eine Nachricht.'
     }
   }
 }

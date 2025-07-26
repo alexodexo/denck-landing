@@ -4,7 +4,7 @@ import { Star } from 'lucide-react'
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      text: "DENCK Consulting hat unsere Kundenservice-Prozesse revolutioniert. Die KI-Lösung bearbeitet nun 70% der Anfragen automatisch.",
+      text: "DENCK Solutions hat unsere Kundenservice-Prozesse revolutioniert. Die KI-Lösung bearbeitet nun 70% der Anfragen automatisch.",
       author: "Dr. Sarah Weber",
       position: "CDO, FinTech Unternehmen",
       company: "FinTech Solutions GmbH",
