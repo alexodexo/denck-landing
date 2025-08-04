@@ -56,18 +56,6 @@ const nextConfig = {
   // SEO-freundliche Redirects
   async redirects() {
     return [
-      // Redirect www to non-www für konsistente URLs
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.denck.com',
-          },
-        ],
-        destination: 'https://denck.com/:path*',
-        permanent: true,
-      },
       // Alte URLs umleiten falls vorhanden
       {
         source: '/alex-denck',
