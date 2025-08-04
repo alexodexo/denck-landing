@@ -5,6 +5,7 @@ import {
   Cpu, Bot, Workflow, Zap, Globe, Sparkles,
   ArrowRight, CheckCircle
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function AIServicesSection() {
   const [activeService, setActiveService] = useState(null)
@@ -96,13 +97,15 @@ export default function AIServicesSection() {
       { threshold: 0.1 }
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+    const currentSectionRef = sectionRef.current
+
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef)
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef)
       }
     }
   }, [])
@@ -120,7 +123,7 @@ export default function AIServicesSection() {
     }, 3000)
 
     return () => clearInterval(interval)
-  }, [isVisible])
+  }, [isVisible, services])
 
   const ServiceCard = ({ service, index }) => {
     const Icon = service.icon
@@ -227,7 +230,7 @@ export default function AIServicesSection() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <Link
               href="/kontakt"
               className="btn-primary group"
             >
@@ -236,7 +239,7 @@ export default function AIServicesSection() {
                 KI-Beratung starten
               </span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 // src/components/common/FAQ.js - SEO-optimierte FAQ für DENCK Solutions
 import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
+import Link from 'next/link'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null)
@@ -109,13 +110,13 @@ export default function FAQ() {
           <p className="text-text-secondary mb-6">
             Haben Sie weitere Fragen zu DENCK Solutions oder der KI-Beratung?
           </p>
-          <a
+          <Link
             href="/kontakt"
             className="btn-primary group"
           >
             Alex Denck kontaktieren
             <ChevronDown className="ml-2 h-4 w-4 rotate-[-90deg] group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

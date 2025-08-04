@@ -1,5 +1,6 @@
 // src/components/home/ProblemSolutionSection.js
 import { X, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
+import Link from 'next/link'
 
 export default function ProblemSolutionSection() {
   const problems = [
@@ -155,7 +156,7 @@ export default function ProblemSolutionSection() {
               </p>
             </div>
             
-            <a
+            <Link
               href="/kontakt"
               className="btn-primary group"
             >
@@ -163,7 +164,7 @@ export default function ProblemSolutionSection() {
                 Jetzt Transformation starten
                 <CheckCircle className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
