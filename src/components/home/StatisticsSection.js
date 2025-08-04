@@ -56,6 +56,7 @@ export default function StatisticsSection() {
       delay: 500
     }
   ]
+  
 
   // Intersection Observer für Animation
   useEffect(() => {
