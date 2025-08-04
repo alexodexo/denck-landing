@@ -1,4 +1,4 @@
-// src/pages/_document.js - Erweitert für lokale SEO
+// src/pages/_document.js - Mit Google Search Console Verification
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -15,8 +15,8 @@ export default function Document() {
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
-        {/* Google Search Console Verification - Ersetzen Sie mit Ihrem Code */}
-        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+        {/* Google Search Console Verification - IHR CODE */}
+        <meta name="google-site-verification" content="43561a20093f79bd" />
         
         {/* Erweiterte Schema.org structured data für lokales Business */}
         <script
