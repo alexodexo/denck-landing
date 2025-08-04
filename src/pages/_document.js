@@ -14,9 +14,8 @@ export default function Document() {
         {/* Performance optimizations */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        
-        {/* Google Search Console Verification - IHR CODE */}
-        <meta name="google-site-verification" content="43561a20093f79bd" />
+              
+        <meta name="google-site-verification" content="sgMl6_n5KtqOywJ8sEikU7w17r9qG5i0a-v0jIsrDBk" />
         
         {/* Erweiterte Schema.org structured data für lokales Business */}
         <script
