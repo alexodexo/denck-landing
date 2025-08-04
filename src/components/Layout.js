@@ -1,4 +1,4 @@
-// src/components/Layout.js
+// src/components/Layout.js - SEO-optimiert
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
@@ -6,7 +6,15 @@ import DenckHeader from './headers/DenckHeader'
 import DenckFooter from './footers/DenckFooter'
 import CookieBanner from './common/CookieBanner'
 
-export default function Layout({ children, title, description }) {
+export default function Layout({ 
+  children, 
+  title, 
+  description, 
+  keywords, 
+  openGraph,
+  schema,
+  canonical 
+}) {
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
   
@@ -30,33 +38,90 @@ export default function Layout({ children, title, description }) {
     )
   }
   
-const defaultTitle = 'DENCK Solutions - KI-Beratung für den Mittelstand'
-  const defaultDescription = 'Wir machen Künstliche Intelligenz für Ihr Unternehmen nutzbar. KI-Strategieberatung, Prozessautomatisierung und Datenanalyse für nachhaltigen Erfolg.'
+  const defaultTitle = 'DENCK Solutions - KI-Beratung für den Mittelstand'
+  const defaultDescription = 'DENCK Solutions: Ihr Experte für KI-Beratung von Alex Denck. Professionelle Automatisierung und digitale Transformation für nachhaltigen Unternehmenserfolg.'
 
-  const pageTitle = title ? `${title} | ${defaultTitle}` : defaultTitle
+  const pageTitle = title ? `${title}` : defaultTitle
   const pageDescription = description || defaultDescription
+  const currentUrl = `https://www.denck.com${router.asPath}`
+  const canonicalUrl = canonical || currentUrl
+
+  // Default Schema.org data
+  const defaultSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "description": pageDescription,
+    "url": currentUrl,
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "DENCK Solutions",
+      "founder": {
+        "@type": "Person",
+        "name": "Alex Denck"
+      }
+    }
+  }
+
+  const schemaData = schema || defaultSchema
 
   return (
     <>
       <Head>
+        {/* Basic Meta Tags */}
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="DENCK Solutions" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="DENCK Solutions - Alex Denck" />
+        <link rel="canonical" href={canonicalUrl} />
         
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="de_DE" />
-        <meta property="og:site_name" content="DENCK Solutions - KI-Beratung" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content={openGraph?.type || "website"} />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:title" content={openGraph?.title || pageTitle} />
+        <meta property="og:description" content={openGraph?.description || pageDescription} />
+        <meta property="og:site_name" content={openGraph?.siteName || "DENCK Solutions"} />
+        <meta property="og:locale" content={openGraph?.locale || "de_DE"} />
         
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:url" content={currentUrl} />
+        <meta name="twitter:title" content={openGraph?.title || pageTitle} />
+        <meta name="twitter:description" content={openGraph?.description || pageDescription} />
         
+        {/* Additional SEO Meta Tags */}
+        <meta name="geo.region" content="DE-HE" />
+        <meta name="geo.placename" content="Frankfurt am Main" />
+        <meta name="geo.position" content="50.1109;8.6821" />
+        <meta name="ICBM" content="50.1109, 8.6821" />
+        
+        {/* Business/Organization specific */}
+        <meta name="rating" content="5" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="distribution" content="Global" />
+        <meta name="target" content="business professionals, entrepreneurs, SMEs" />
+        
+        {/* Language and Region */}
+        <meta httpEquiv="content-language" content="de" />
+        <link rel="alternate" hrefLang="de" href={currentUrl} />
+        
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#193559" />
+        
+        {/* Structured Data - Schema.org JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData)
+          }}
+        />
+        
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
 
       <div className="min-h-screen flex flex-col bg-bg-primary relative overflow-hidden">

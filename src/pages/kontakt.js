@@ -406,11 +406,59 @@ export default function Kontakt() {
   )
 }
 
+// Ergänzung für src/pages/kontakt.js - SEO getStaticProps
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Kontakt - DENCK Solutions',
-      description: 'Kontaktieren Sie DENCK Solutions für eine kostenlose KI-Beratung. Buchen Sie direkt einen Termin oder senden Sie uns eine Nachricht.'
+      title: 'Kontakt Alex Denck - DENCK Solutions KI-Beratung Frankfurt',
+      description: 'Kontaktieren Sie Alex Denck von DENCK Solutions für eine kostenlose KI-Beratung. Termin direkt buchen oder Nachricht senden. Antwort innerhalb 24h garantiert.',
+      keywords: 'Alex Denck Kontakt, DENCK Solutions Kontakt, KI-Beratung Frankfurt, Termin buchen, Kostenlose Beratung, KI-Berater Frankfurt',
+      openGraph: {
+        title: 'Alex Denck kontaktieren - DENCK Solutions',
+        description: 'Vereinbaren Sie ein kostenloses Beratungsgespräch mit Alex Denck. 30 Min für Ihre KI-Zukunft - unverbindlich und sofort buchbar.',
+        type: 'website'
+      },
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Kontakt DENCK Solutions",
+        "description": "Kontaktieren Sie Alex Denck für eine kostenlose KI-Beratung",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "DENCK Solutions",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "alex@denck.com",
+            "contactType": "customer service",
+            "areaServed": "DE",
+            "availableLanguage": "German",
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday", 
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Alex Denck",
+            "jobTitle": "KI-Berater und Gründer"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hannah-Arendt-Str 40",
+            "addressLocality": "Frankfurt am Main",
+            "postalCode": "60438",
+            "addressCountry": "DE"
+          }
+        }
+      }
     }
   }
 }

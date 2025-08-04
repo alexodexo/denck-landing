@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow admin areas if any
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.denck.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

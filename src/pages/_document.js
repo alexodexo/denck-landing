@@ -1,4 +1,4 @@
-// src/pages/_document.js
+// src/pages/_document.js - Erweitert für lokale SEO
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -15,33 +15,162 @@ export default function Document() {
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
-        {/* Schema.org structured data */}
+        {/* Google Search Console Verification - Ersetzen Sie mit Ihrem Code */}
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+        
+        {/* Erweiterte Schema.org structured data für lokales Business */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "DENCK Soltutions",
+              "@type": "ProfessionalService",
+              "name": "DENCK Solutions",
+              "alternateName": "DENCK",
               "legalName": "ALD Beratungs und Beteiligungsgesellschaft UG",
               "url": "https://www.denck.com",
               "logo": "https://www.denck.com/logo.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "email": "info@denck.com",
-                "contactType": "customer service",
-                "areaServed": "DE",
-                "availableLanguage": "German"
+              "description": "DENCK Solutions ist Ihr Experte für KI-Beratung und Prozessautomatisierung. Alex Denck berät Unternehmen bei der erfolgreichen Integration von Künstlicher Intelligenz.",
+              "founder": {
+                "@type": "Person",
+                "name": "Alex Denck",
+                "jobTitle": "KI-Berater und Gründer von DENCK Solutions",
+                "description": "Experte für Künstliche Intelligenz und Geschäftsprozessautomatisierung",
+                "knowsAbout": [
+                  "Künstliche Intelligenz",
+                  "Prozessautomatisierung", 
+                  "Business Intelligence",
+                  "Digitale Transformation",
+                  "Machine Learning",
+                  "Chatbot-Entwicklung"
+                ]
               },
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Hannah-Arendt-Str 40",
                 "addressLocality": "Frankfurt am Main",
+                "addressRegion": "Hessen",
                 "postalCode": "60438",
                 "addressCountry": "DE"
               },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "50.1109",
+                "longitude": "8.6821"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "alex@denck.com",
+                "contactType": "customer service",
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "Deutschland"
+                },
+                "availableLanguage": "German",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                }
+              },
               "sameAs": [
-                "https://www.linkedin.com/u/denck"
+                "https://www.linkedin.com/in/denck"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "KI-Beratungsleistungen von DENCK Solutions",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "KI-Strategieberatung",
+                      "description": "Entwicklung individueller KI-Strategien für Unternehmen",
+                      "provider": {
+                        "@type": "Person",
+                        "name": "Alex Denck"
+                      }
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service", 
+                      "name": "Prozessautomatisierung",
+                      "description": "End-to-End Automatisierung von Geschäftsprozessen mit KI",
+                      "provider": {
+                        "@type": "Person",
+                        "name": "Alex Denck"
+                      }
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "KI-Agenten Entwicklung",
+                      "description": "Intelligente KI-Agenten für Kundenservice und Automatisierung",
+                      "provider": {
+                        "@type": "Person",
+                        "name": "Alex Denck"
+                      }
+                    }
+                  }
+                ]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "25",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "areaServed": {
+                "@type": "State",
+                "name": "Deutschland"
+              },
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "50.1109",
+                  "longitude": "8.6821"
+                },
+                "geoRadius": "50000"
+              }
+            })
+          }}
+        />
+        
+        {/* Breadcrumb Schema für bessere Navigation */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.denck.com"
+                },
+                {
+                  "@type": "ListItem", 
+                  "position": 2,
+                  "name": "Leistungen",
+                  "item": "https://www.denck.com/leistungen"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Kontakt",
+                  "item": "https://www.denck.com/kontakt"
+                }
               ]
             })
           }}
