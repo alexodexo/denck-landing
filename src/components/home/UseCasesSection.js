@@ -143,14 +143,14 @@ export default function UseCasesSection() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-slate-400 mb-8 text-base sm:text-lg">
+          <p className="text-text-secondary mb-8 text-base sm:text-lg">
             Bereit, Ihr Unternehmen mit KI zu transformieren?
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/kontakt"
-              className="group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-slate-900 rounded-lg font-semibold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="btn-primary group"
             >
               Jetzt KI-Beratung sichern
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -158,7 +158,7 @@ export default function UseCasesSection() {
             
             <a
               href="/leistungen"
-              className="group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white border-2 border-slate-600 rounded-lg font-semibold hover:bg-slate-800 hover:border-slate-500 transition-all duration-200"
+              className="btn-secondary group"
             >
               Alle Leistungen ansehen
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

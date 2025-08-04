@@ -61,29 +61,29 @@ export default function Kontakt() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-20 bg-bg-primary">
         <div className="container-width relative z-10">
           <div className="max-w-5xl mx-auto">
             
             {/* Header */}
             <div className="text-center mb-16">
               <div className="inline-block mb-6">
-                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                  <Bot className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400" />
-                  <span className="font-medium bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 text-transparent bg-clip-text animate-gradient bg-300%">
+                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                  <Bot className="w-6 h-6 text-marine-600" />
+                  <span className="font-medium text-marine-800">
                     Lassen Sie uns sprechen
                   </span>
                 </div>
               </div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-text-primary">
                 Bereit für Ihre{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 animate-gradient bg-300%">
+                <span className="text-marine-600">
                   KI-Zukunft
                 </span>?
               </h1>
               
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
                 Entdecken Sie, wie KI Ihr Unternehmen transformieren kann.
                 Kostenlose Erstberatung für Ihren Erfolg.
               </p>
@@ -94,18 +94,16 @@ export default function Kontakt() {
               
               {/* Option 1: Direkt Termin buchen */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-2xl" />
-                
-                <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Calendar className="h-8 w-8 text-purple-400" />
+                <div className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 hover:border-marine-300 transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-marine-100 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Calendar className="h-8 w-8 text-marine-600" />
                   </div>
                   
-                  <h2 className="text-2xl font-bold mb-4 text-white">
+                  <h2 className="text-2xl font-bold mb-4 text-marine-800">
                     Schnell & Unkompliziert
                   </h2>
                   
-                  <p className="text-slate-300 mb-8 leading-relaxed">
+                  <p className="text-text-secondary mb-8 leading-relaxed">
                     Buchen Sie direkt einen 30-minütigen Beratungstermin.
                     Wählen Sie einfach einen passenden Zeitslot aus.
                   </p>
@@ -114,23 +112,23 @@ export default function Kontakt() {
                     href="https://cal.com/alexdenck/besprechung"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-400 hover:to-pink-400 transition-all duration-200 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25"
+                    className="btn-primary group/btn"
                   >
                     Termin buchen
                     <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
 
                   <div className="mt-6 space-y-2">
-                    <div className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="h-4 w-4 mr-2 text-green-400" />
+                    <div className="flex items-center text-sm text-text-secondary">
+                      <CheckCircle className="h-4 w-4 mr-2 text-gold-500" />
                       Sofort verfügbare Termine
                     </div>
-                    <div className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="h-4 w-4 mr-2 text-green-400" />
+                    <div className="flex items-center text-sm text-text-secondary">
+                      <CheckCircle className="h-4 w-4 mr-2 text-gold-500" />
                       Automatische Kalendereinladung
                     </div>
-                    <div className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="h-4 w-4 mr-2 text-green-400" />
+                    <div className="flex items-center text-sm text-text-secondary">
+                      <CheckCircle className="h-4 w-4 mr-2 text-gold-500" />
                       Video-Call Link inklusive
                     </div>
                   </div>
@@ -139,41 +137,39 @@ export default function Kontakt() {
 
               {/* Option 2: Kontaktformular */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-2xl" />
-                
-                <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 hover:border-yellow-500/50 transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Mail className="h-8 w-8 text-yellow-400" />
+                <div className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 hover:border-marine-300 transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gold-100 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Mail className="h-8 w-8 text-gold-600" />
                   </div>
                   
-                  <h2 className="text-2xl font-bold mb-4 text-white">
+                  <h2 className="text-2xl font-bold mb-4 text-marine-800">
                     Detaillierte Anfrage
                   </h2>
                   
-                  <p className="text-slate-300 mb-8 leading-relaxed">
+                  <p className="text-text-secondary mb-8 leading-relaxed">
                     Schildern Sie mir Ihr Anliegen.
                     Ich melde mich innerhalb von 24 Stunden.
                   </p>
                   
                   <button
                     onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
-                    className="group/btn inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-400 text-slate-900 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-300 transition-all duration-200 transform hover:scale-105 shadow-2xl hover:shadow-yellow-400/25"
+                    className="btn-secondary group/btn"
                   >
                     Zum Kontaktformular
                     <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
                   
                   <div className="mt-6 space-y-2">
-                    <div className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="h-4 w-4 mr-2 text-green-400" />
+                    <div className="flex items-center text-sm text-text-secondary">
+                      <CheckCircle className="h-4 w-4 mr-2 text-gold-500" />
                       Individuelles Anliegen
                     </div>
-                    <div className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="h-4 w-4 mr-2 text-green-400" />
+                    <div className="flex items-center text-sm text-text-secondary">
+                      <CheckCircle className="h-4 w-4 mr-2 text-gold-500" />
                       Ausführliche Beschreibung möglich
                     </div>
-                    <div className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="h-4 w-4 mr-2 text-green-400" />
+                    <div className="flex items-center text-sm text-text-secondary">
+                      <CheckCircle className="h-4 w-4 mr-2 text-gold-500" />
                       Persönliche Rückmeldung
                     </div>
                   </div>
@@ -185,34 +181,34 @@ export default function Kontakt() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact-form" className="py-20 relative overflow-hidden">
+      <section id="contact-form" className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           <div className="max-w-3xl mx-auto">
             
             {/* Header */}
             <div className="text-center mb-12">
               <div className="inline-block mb-6">
-                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                  <Send className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400" />
-                  <span className="font-medium bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 text-transparent bg-clip-text animate-gradient bg-300%">
+                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                  <Send className="w-6 h-6 text-marine-600" />
+                  <span className="font-medium text-marine-800">
                     Kontaktformular
                   </span>
                 </div>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
                 Schildern Sie mir Ihr{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                <span className="text-marine-600">
                   Anliegen
                 </span>
               </h2>
               
-              <p className="text-slate-300 text-lg">
+              <p className="text-text-secondary text-lg">
                 Je mehr Sie mir mitteilen, desto besser kann ich Ihnen helfen.
               </p>
             </div>
 
-            <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 md:p-12">
+            <div className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 md:p-12">
               <form 
                 onSubmit={handleSubmit} 
                 action="https://formsubmit.co/b6eea7af06bb690ca806dd85777c3b46" 
@@ -226,7 +222,7 @@ export default function Kontakt() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-marine-800 mb-2">
                       Name *
                     </label>
                     <input
@@ -236,12 +232,12 @@ export default function Kontakt() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-slate-400"
+                      className="w-full px-4 py-3 bg-white border border-marine-200 text-marine-800 rounded-lg focus:ring-2 focus:ring-marine-500 focus:border-transparent transition-all duration-200 placeholder-text-secondary"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-marine-800 mb-2">
                       Unternehmen *
                     </label>
                     <input
@@ -251,13 +247,13 @@ export default function Kontakt() {
                       required
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-slate-400"
+                      className="w-full px-4 py-3 bg-white border border-marine-200 text-marine-800 rounded-lg focus:ring-2 focus:ring-marine-500 focus:border-transparent transition-all duration-200 placeholder-text-secondary"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-marine-800 mb-2">
                     E-Mail *
                   </label>
                   <input
@@ -267,12 +263,12 @@ export default function Kontakt() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-slate-400"
+                    className="w-full px-4 py-3 bg-white border border-marine-200 text-marine-800 rounded-lg focus:ring-2 focus:ring-marine-500 focus:border-transparent transition-all duration-200 placeholder-text-secondary"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="service" className="block text-sm font-medium text-marine-800 mb-2">
                     Interessensbereich
                   </label>
                   <select
@@ -280,7 +276,7 @@ export default function Kontakt() {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 bg-white border border-marine-200 text-marine-800 rounded-lg focus:ring-2 focus:ring-marine-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">Bitte wählen...</option>
                     <option value="ki-strategie">KI-Strategieberatung</option>
@@ -294,7 +290,7 @@ export default function Kontakt() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-marine-800 mb-2">
                     Ihre Nachricht *
                   </label>
                   <textarea
@@ -304,20 +300,20 @@ export default function Kontakt() {
                     rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none placeholder-slate-400"
+                    className="w-full px-4 py-3 bg-white border border-marine-200 text-marine-800 rounded-lg focus:ring-2 focus:ring-marine-500 focus:border-transparent transition-all duration-200 resize-none placeholder-text-secondary"
                     placeholder="Beschreiben Sie Ihr Anliegen..."
                   />
                 </div>
 
                 {formStatus === 'success' && (
-                  <div className="flex items-center space-x-2 text-green-400 bg-green-500/20 border border-green-500/30 p-4 rounded-lg backdrop-blur-xl">
+                  <div className="flex items-center space-x-2 text-gold-600 bg-gold-50 border border-gold-200 p-4 rounded-lg">
                     <CheckCircle className="h-5 w-5 flex-shrink-0" />
                     <span>Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.</span>
                   </div>
                 )}
 
                 {formStatus === 'error' && (
-                  <div className="flex items-center space-x-2 text-red-400 bg-red-500/20 border border-red-500/30 p-4 rounded-lg backdrop-blur-xl">
+                  <div className="flex items-center space-x-2 text-red-600 bg-red-50 border border-red-200 p-4 rounded-lg">
                     <AlertCircle className="h-5 w-5 flex-shrink-0" />
                     <span>Es gab einen Fehler. Bitte versuchen Sie es erneut.</span>
                   </div>
@@ -326,7 +322,7 @@ export default function Kontakt() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-4 text-white bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold hover:from-blue-400 hover:to-cyan-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105"
+                  className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>
@@ -347,47 +343,43 @@ export default function Kontakt() {
       </section>
 
       {/* Contact Info */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           <div className="max-w-4xl mx-auto">
             
             {/* Header */}
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
                 Weitere{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                <span className="text-marine-600">
                   Kontaktmöglichkeiten
                 </span>
               </h2>
-              <p className="text-slate-300 text-lg">
+              <p className="text-text-secondary text-lg">
                 Ich bin für Sie da - wählen Sie den Weg, der für Sie am besten ist.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-xl" />
-                
-                <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Mail className="h-6 w-6 text-blue-400" />
+                <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-6 text-center hover:border-marine-300 transition-all duration-300 hover:scale-105">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-marine-100 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Mail className="h-6 w-6 text-marine-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">E-Mail</h3>
-                  <a href="mailto:alex@denck.com" className="text-slate-300 hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-marine-800 mb-2">E-Mail</h3>
+                  <a href="mailto:alex@denck.com" className="text-text-secondary hover:text-marine-600 transition-colors">
                     alex@denck.com
                   </a>
                 </div>
               </div>
 
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-xl" />
-                
-                <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:scale-105">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <MapPin className="h-6 w-6 text-green-400" />
+                <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-6 text-center hover:border-marine-300 transition-all duration-300 hover:scale-105">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gold-100 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <MapPin className="h-6 w-6 text-gold-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Adresse</h3>
-                  <p className="text-slate-300">
+                  <h3 className="text-lg font-semibold text-marine-800 mb-2">Adresse</h3>
+                  <p className="text-text-secondary">
                     Hannah-Arendt-Str 40<br />
                     60438 Frankfurt am Main
                   </p>
@@ -395,14 +387,12 @@ export default function Kontakt() {
               </div>
 
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-xl" />
-                
-                <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Clock className="h-6 w-6 text-purple-400" />
+                <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-6 text-center hover:border-marine-300 transition-all duration-300 hover:scale-105">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-marine-100 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Clock className="h-6 w-6 text-marine-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Reaktionszeit</h3>
-                  <p className="text-slate-300">
+                  <h3 className="text-lg font-semibold text-marine-800 mb-2">Reaktionszeit</h3>
+                  <p className="text-text-secondary">
                     Innerhalb von<br />
                     24 Stunden
                   </p>
@@ -419,7 +409,7 @@ export default function Kontakt() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Kontakt - DENCK Soltutions',
+      title: 'Kontakt - DENCK Solutions',
       description: 'Kontaktieren Sie DENCK Solutions für eine kostenlose KI-Beratung. Buchen Sie direkt einen Termin oder senden Sie uns eine Nachricht.'
     }
   }

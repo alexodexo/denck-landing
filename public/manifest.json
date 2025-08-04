@@ -1,8 +1,8 @@
 {
-    "name": "Telefonieren.ai",
-    "short_name": "Telefonieren.ai",
-    "description": "Die KI-Telefonie Lösung der Zukunft ist hier.",
-    "start_url": "/dashboard",
+    "name": "Denck Solutions",
+    "short_name": "Denck Solutions",
+    "description": "Denck Solutions - KI für Ihr Business",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#F75C03"

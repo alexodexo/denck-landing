@@ -12,7 +12,7 @@ export default function StatisticsSection() {
       icon: TrendingUp,
       title: 'der KI Nutzer sagen, dass KI ihre Arbeits-Abläufe verbessert',
       source: 'Juliety, 2024',
-      gradient: 'from-blue-400 to-cyan-400',
+      gradient: 'from-marine-400 to-marine-600',
       delay: 0
     },
     {
@@ -20,7 +20,7 @@ export default function StatisticsSection() {
       icon: Users,
       title: 'der IT-Führungskräfte sehen KI als strategische Priorität im Unternehmen',
       source: 'IBM, 2023',
-      gradient: 'from-purple-400 to-pink-400',
+      gradient: 'from-gold-400 to-gold-600',
       delay: 100
     },
     {
@@ -28,7 +28,7 @@ export default function StatisticsSection() {
       icon: Building2,
       title: 'der Arbeitnehmer wollen mehr KI-Tools in ihren Unternehmen',
       source: 'Forbes, 2024',
-      gradient: 'from-green-400 to-emerald-400',
+      gradient: 'from-marine-500 to-marine-700',
       delay: 200
     },
     {
@@ -36,7 +36,7 @@ export default function StatisticsSection() {
       icon: DollarSign,
       title: 'der Unternehmen, die KI nutzen, haben dadurch ihre Kosten gesenkt',
       source: 'McKinsey, 2023',
-      gradient: 'from-yellow-400 to-orange-400',
+      gradient: 'from-gold-500 to-gold-700',
       delay: 300
     },
     {
@@ -44,7 +44,7 @@ export default function StatisticsSection() {
       icon: Phone,
       title: 'der Telekommunikations-unternehmen nutzen KI zur Kundenzufriedenheit',
       source: 'Accenture, 2023',
-      gradient: 'from-red-400 to-rose-400',
+      gradient: 'from-marine-600 to-marine-800',
       delay: 400
     },
     {
@@ -52,10 +52,11 @@ export default function StatisticsSection() {
       icon: Megaphone,
       title: 'der Marketingleiter erwarten sehr große Veränderungen durch KI',
       source: 'Gartner, 2023',
-      gradient: 'from-indigo-400 to-blue-400',
+      gradient: 'from-gold-500 to-gold-700',
       delay: 500
     }
   ]
+  
 
   // Intersection Observer für Animation
   useEffect(() => {
@@ -111,24 +112,24 @@ export default function StatisticsSection() {
       <div className="container-width relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <div className="flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-              <BarChart3 className="w-5 h-5 text-yellow-400 animate-pulse" />
-              <span className="text-yellow-400 font-medium bg-gradient-to-r from-yellow-400 to-yellow-600 text-transparent bg-clip-text">
+            <div className="flex items-center justify-center space-x-2 px-6 py-3 bg-gold-100 border border-gold-200 rounded-full shadow-lg">
+              <BarChart3 className="w-5 h-5 text-gold-700" />
+              <span className="text-gold-700 font-medium">
                 Beeindruckende Zahlen
               </span>
             </div>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-marine-900">
             Den konkreten{' '}
             <span className="relative">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 animate-gradient bg-300% bg-gradient-x">
+              <span className="gradient-text">
                 Nutzen
               </span>
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full" />
+              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full" />
             </span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Aktuelle Studien zeigen: KI ist kein Hype, sondern ein echter Game-Changer für Unternehmen
           </p>
         </div>
@@ -145,7 +146,7 @@ export default function StatisticsSection() {
                 style={{ transitionDelay: `${stat.delay}ms` }}
               >
                 {/* Card Container */}
-                <div className="relative h-full bg-gradient-to-br from-slate-800/80 to-slate-800/40 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 overflow-hidden">
+                <div className="card relative h-full overflow-hidden">
                   {/* Animated Background Gradient */}
                   <div 
                     className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-3xl`} 
@@ -164,20 +165,20 @@ export default function StatisticsSection() {
                         </span>
                       </div>
                       
-                      <div className={`relative p-3 rounded-xl bg-gradient-to-br ${stat.gradient} bg-opacity-10 group-hover:scale-110 transition-all duration-300`}>
-                        <Icon className="h-7 w-7 lg:h-8 lg:w-8 text-white" />
+                      <div className={`relative p-3 rounded-xl bg-marine-100 group-hover:bg-marine-200 group-hover:scale-110 transition-all duration-300`}>
+                        <Icon className="h-7 w-7 lg:h-8 lg:w-8 text-marine-600 group-hover:text-marine-800" />
                         <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${stat.gradient} opacity-30 blur-lg group-hover:opacity-50 transition-opacity duration-300`} />
                       </div>
                     </div>
 
                     {/* Title */}
-                    <p className="text-slate-200 mb-4 leading-relaxed text-sm lg:text-base">
+                    <p className="text-marine-800 mb-4 leading-relaxed text-sm lg:text-base">
                       {stat.title}
                     </p>
 
                     {/* Source with hover effect */}
                     <div className="flex items-center justify-between">
-                      <p className="text-sm text-slate-500 font-medium group-hover:text-slate-400 transition-colors duration-300">
+                      <p className="text-sm text-text-secondary font-medium group-hover:text-marine-600 transition-colors duration-300">
                         {stat.source}
                       </p>
                       <div className={`h-1 w-20 bg-gradient-to-r ${stat.gradient} rounded-full opacity-50 group-hover:opacity-100 group-hover:w-full transition-all duration-500`} />
@@ -186,7 +187,7 @@ export default function StatisticsSection() {
 
                   {/* Border Glow Effect */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} style={{ padding: '1px' }}>
-                    <div className="bg-slate-800 w-full h-full rounded-2xl" />
+                    <div className="bg-white w-full h-full rounded-2xl" />
                   </div>
                 </div>
               </div>
@@ -197,7 +198,7 @@ export default function StatisticsSection() {
         {/* CTA Section */}
         <div className="mt-20 text-center">
           <div className="inline-block mb-8">
-            <p className="text-lg text-slate-300 bg-slate-800/50 backdrop-blur-xl px-8 py-4 rounded-full border border-slate-700/50">
+            <p className="text-lg text-marine-700 bg-white/80 backdrop-blur-xl px-8 py-4 rounded-full border border-marine-200 shadow-sm">
               Überzeugt von den Zahlen? Lassen Sie uns über Ihre KI-Strategie sprechen.
             </p>
           </div>
@@ -205,20 +206,19 @@ export default function StatisticsSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/kontakt"
-              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-slate-900 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-400/25"
+              className="btn-primary group"
             >
-              <span className="relative z-10 flex items-center">
+              <span className="flex items-center">
                 Kostenlose Beratung starten
                 <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
             </a>
             
             <a
               href="/leistungen"
-              className="group inline-flex items-center px-8 py-4 text-white bg-slate-800/80 backdrop-blur-xl border-2 border-slate-600 rounded-lg font-semibold hover:bg-slate-700/80 hover:border-slate-500 transition-all duration-300 shadow-xl"
+              className="btn-secondary group"
             >
               Mehr über unsere Leistungen
               <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
