@@ -20,10 +20,10 @@ export default function Layout({ children, title, description }) {
         <Head>
           <title>Loading...</title>
         </Head>
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+        <div className="min-h-screen flex items-center justify-center bg-bg-primary">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-slate-400 mx-auto mb-4"></div>
-            <p className="text-slate-300">Loading...</p>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-marine-400 mx-auto mb-4"></div>
+            <p className="text-text-secondary">Loading...</p>
           </div>
         </div>
       </>
@@ -56,34 +56,36 @@ const defaultTitle = 'DENCK Solutions - KI-Beratung für den Mittelstand'
         <meta name="twitter:description" content={pageDescription} />
         
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#1e293b" />
+        <meta name="theme-color" content="#193559" />
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-slate-900 relative overflow-hidden">
-        {/* Global Animated Background */}
+      <div className="min-h-screen flex flex-col bg-bg-primary relative overflow-hidden">
+        {/* Professional Global Background */}
         <div className="fixed inset-0 z-0">
-          {/* Gradient Background Layers */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,#3b82f640_0%,transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,#8b5cf640_0%,transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,#ec489940_0%,transparent_50%)]" />
+          {/* Subtle Professional Grid Pattern with Squares */}
+          <div className="absolute inset-0">
+            <svg className="w-full h-full opacity-[0.025]">
+              <defs>
+                <pattern id="professional-squares" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="60" height="60" fill="none" stroke="#193559" strokeWidth="0.5" opacity="0.4" />
+                  <rect x="15" y="15" width="30" height="30" fill="none" stroke="#C99412" strokeWidth="0.3" opacity="0.2" />
+                  <circle cx="30" cy="30" r="1" fill="#193559" opacity="0.6" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#professional-squares)" />
+            </svg>
+          </div>
           
-          {/* Grid Pattern */}
-          <div 
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `linear-gradient(to right, #64748b 1px, transparent 1px), linear-gradient(to bottom, #64748b 1px, transparent 1px)`,
-              backgroundSize: '50px 50px'
-            }}
-          />
+          {/* Very Subtle Brand Color Accents */}
+          <div className="absolute top-20 left-1/4 w-64 h-64 bg-marine-200 rounded-full filter blur-[150px] opacity-[0.04] animate-breathe" />
+          <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gold-200 rounded-full filter blur-[160px] opacity-[0.03] animate-breathe" style={{ animationDelay: '4s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-marine-100 rounded-full filter blur-[180px] opacity-[0.02] animate-breathe" style={{ animationDelay: '8s' }} />
           
-          {/* Floating Orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full filter blur-[100px] opacity-20 animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full filter blur-[120px] opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-yellow-500 rounded-full filter blur-[100px] opacity-10 animate-pulse" style={{ animationDelay: '4s' }} />
-          
-          {/* Additional floating elements for more depth */}
-          <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-green-500 rounded-full filter blur-[80px] opacity-10 animate-pulse" style={{ animationDelay: '3s' }} />
-          <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-pink-500 rounded-full filter blur-[90px] opacity-15 animate-pulse" style={{ animationDelay: '5s' }} />
+          {/* Subtle floating elements */}  
+          <div className="absolute top-16 left-16 w-1.5 h-1.5 bg-marine-300 rounded-full opacity-20 animate-float" />
+          <div className="absolute top-32 right-24 w-2 h-2 bg-gold-300 rounded-full opacity-15 animate-float" style={{ animationDelay: '2s' }} />
+          <div className="absolute bottom-24 left-1/3 w-1 h-1 bg-marine-400 rounded-full opacity-25 animate-float" style={{ animationDelay: '4s' }} />
+          <div className="absolute bottom-16 right-1/4 w-2.5 h-2.5 bg-gold-400 rounded-full opacity-12 animate-float" style={{ animationDelay: '6s' }} />
         </div>
         
         {/* Content */}

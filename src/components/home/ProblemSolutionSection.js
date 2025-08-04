@@ -24,26 +24,26 @@ export default function ProblemSolutionSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-              <Lightbulb className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400" />
-              <span className="font-medium bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 text-transparent bg-clip-text animate-gradient bg-300%">
+            <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gold-100 border border-gold-200 rounded-full shadow-lg">
+              <Lightbulb className="w-6 h-6 text-gold-600" />
+              <span className="font-medium text-gold-700">
                 Problem & Lösung
               </span>
             </div>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-marine-900">
             Von{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
+            <span className="text-red-600">
               Herausforderungen
             </span>{' '}
             zu{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+            <span className="gradient-text">
               Chancen
             </span>
           </h2>
           
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Erkennen Sie die Probleme und entdecken Sie die Lösungen
           </p>
         </div>
@@ -54,14 +54,14 @@ export default function ProblemSolutionSection() {
             {/* Problem Card */}
             <div className="group relative">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-2xl" />
               
-              <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 h-full hover:border-red-500/50 transition-all duration-300">
+              <div className="card h-full hover:border-red-300 transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <AlertTriangle className="h-6 w-6 text-red-400" />
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:bg-red-200 transition-all duration-300">
+                    <AlertTriangle className="h-6 w-6 text-red-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Das Problem</h3>
+                  <h3 className="text-2xl font-bold text-marine-900">Das Problem</h3>
                 </div>
                 
                 <div className="space-y-4">
@@ -70,7 +70,7 @@ export default function ProblemSolutionSection() {
                       <div className="flex-shrink-0 mt-1">
                         <X className="h-5 w-5 text-red-400 group-hover/item:scale-110 transition-transform duration-200" />
                       </div>
-                      <p className="text-slate-300 leading-relaxed group-hover/item:text-white transition-colors duration-200">
+                      <p className="text-text-secondary leading-relaxed group-hover/item:text-marine-800 transition-colors duration-200">
                         {problem}
                       </p>
                     </div>
@@ -78,15 +78,15 @@ export default function ProblemSolutionSection() {
                 </div>
 
                 {/* Problem Stats */}
-                <div className="mt-6 pt-6 border-t border-slate-700">
+                <div className="mt-6 pt-6 border-t border-marine-200">
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-2xl font-bold text-red-400">78%</div>
-                      <div className="text-xs text-slate-500">Ineffiziente Prozesse</div>
+                      <div className="text-2xl font-bold text-red-600">78%</div>
+                      <div className="text-xs text-text-muted">Ineffiziente Prozesse</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-orange-400">-25%</div>
-                      <div className="text-xs text-slate-500">Produktivitätsverlust</div>
+                      <div className="text-2xl font-bold text-orange-600">-25%</div>
+                      <div className="text-xs text-text-muted">Produktivitätsverlust</div>
                     </div>
                   </div>
                 </div>
@@ -96,23 +96,23 @@ export default function ProblemSolutionSection() {
             {/* Solution Card */}
             <div className="group relative">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 to-gold-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-2xl" />
               
-              <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 h-full hover:border-green-500/50 transition-all duration-300">
+              <div className="card h-full hover:border-gold-300 transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <CheckCircle className="h-6 w-6 text-green-400" />
+                  <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:bg-gold-200 transition-all duration-300">
+                    <CheckCircle className="h-6 w-6 text-gold-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Die Lösung</h3>
+                  <h3 className="text-2xl font-bold text-marine-900">Die Lösung</h3>
                 </div>
                 
                 <div className="space-y-4">
                   {solutions.map((solution, index) => (
                     <div key={index} className="flex items-start space-x-3 group/item">
                       <div className="flex-shrink-0 mt-1">
-                        <CheckCircle className="h-5 w-5 text-green-400 group-hover/item:scale-110 transition-transform duration-200" />
+                        <CheckCircle className="h-5 w-5 text-gold-600 group-hover/item:scale-110 transition-transform duration-200" />
                       </div>
-                      <p className="text-slate-300 leading-relaxed group-hover/item:text-white transition-colors duration-200">
+                      <p className="text-text-secondary leading-relaxed group-hover/item:text-marine-800 transition-colors duration-200">
                         {solution}
                       </p>
                     </div>
@@ -120,15 +120,15 @@ export default function ProblemSolutionSection() {
                 </div>
 
                 {/* Solution Stats */}
-                <div className="mt-6 pt-6 border-t border-slate-700">
+                <div className="mt-6 pt-6 border-t border-marine-200">
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-2xl font-bold text-green-400">+40%</div>
-                      <div className="text-xs text-slate-500">Effizienzsteigerung</div>
+                      <div className="text-2xl font-bold text-gold-600">+40%</div>
+                      <div className="text-xs text-text-muted">Effizienzsteigerung</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-emerald-400">-30%</div>
-                      <div className="text-xs text-slate-500">Kostensenkung</div>
+                      <div className="text-2xl font-bold text-marine-600">-30%</div>
+                      <div className="text-xs text-text-muted">Kostensenkung</div>
                     </div>
                   </div>
                 </div>
@@ -138,9 +138,9 @@ export default function ProblemSolutionSection() {
 
           {/* Transformation Arrow */}
           <div className="flex justify-center my-8">
-            <div className="bg-slate-800/80 backdrop-blur-xl border border-slate-600/50 rounded-full p-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
-                <svg className="w-4 h-4 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
+            <div className="bg-white border border-marine-200 rounded-full p-4 shadow-sm">
+              <div className="w-8 h-8 bg-gradient-to-r from-gold-500 to-gold-600 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </div>
@@ -149,21 +149,20 @@ export default function ProblemSolutionSection() {
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="inline-block mb-8 px-8 py-4 bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50">
-              <p className="text-lg text-slate-300">
+            <div className="inline-block mb-8 px-8 py-4 bg-white/80 backdrop-blur-xl rounded-2xl border border-marine-200 shadow-sm">
+              <p className="text-lg text-marine-700">
                 Verwandeln Sie Ihre Herausforderungen in Wettbewerbsvorteile
               </p>
             </div>
             
             <a
               href="/kontakt"
-              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-green-500/25"
+              className="btn-primary group"
             >
-              <span className="relative z-10 flex items-center">
+              <span className="flex items-center">
                 Jetzt Transformation starten
                 <CheckCircle className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
             </a>
           </div>
         </div>

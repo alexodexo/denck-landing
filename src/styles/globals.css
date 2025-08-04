@@ -6,29 +6,43 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* CSS Variables for DENCK Consulting Brand Colors */
+/* CSS Variables for DENCK Solutions Brand Colors */
 :root {
-  /* Primary Navy Blue Palette */
-  --navy-900: #0f172a;
-  --navy-800: #1e293b;
-  --navy-700: #334155;
-  --navy-600: #475569;
-  --navy-500: #64748b;
-  --navy-400: #94a3b8;
-  --navy-300: #cbd5e1;
-  --navy-200: #e2e8f0;
-  --navy-100: #f1f5f9;
-  --navy-50: #f8fafc;
+  /* Primary Marine Blue Palette */
+  --marine-primary: #193559;
+  --marine-light: #2A4A6B;
+  --marine-dark: #0f2440;
   
-  /* Accent Colors */
-  --accent-blue: #3b82f6;
-  --accent-teal: #14b8a6;
-  --accent-gold: #f59e0b;
+  /* Background Colors */
+  --bg-primary: #F8F9FA;
+  --bg-white: #FFFFFF;
   
-  /* Success/Warning/Error */
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ef4444;
+  /* Gold Accent Colors */
+  --gold-primary: #C99412;
+  --gold-light: #E8B547;
+  --gold-dark: #A67A0E;
+  
+  /* Text Colors */
+  --text-primary: #2D3748;
+  --text-secondary: #718096;
+  --text-muted: #A0AEC0;
+  
+  /* System Colors */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  
+  /* Legacy Navy Mapping for Compatibility */
+  --navy-900: #2D3748;
+  --navy-800: #193559;
+  --navy-700: #2A4A6B;
+  --navy-600: #718096;
+  --navy-500: #A0AEC0;
+  --navy-400: #CBD5E0;
+  --navy-300: #E2E8F0;
+  --navy-200: #EDF2F7;
+  --navy-100: #F7FAFC;
+  --navy-50: #F8F9FA;
 }
 
 /* Base Styles */
@@ -38,8 +52,8 @@ html {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: var(--navy-900);
-  background-color: #ffffff;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
-  color: var(--navy-900);
+  color: var(--text-primary);
 }
 
 .btn-primary {
@@ -58,26 +72,53 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding: 0.75rem 1.5rem;
   color: white;
-  background: linear-gradient(to right, var(--navy-700), var(--navy-900));
+  background-color: var(--gold-primary);
   border-radius: 0.5rem;
   font-weight: 600;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transform: scale(1);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px -2px rgba(201, 148, 18, 0.25);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  background: linear-gradient(to right, var(--navy-800), var(--navy-900));
-  transform: scale(1.05);
+  background-color: var(--gold-dark);
+  box-shadow: 0 8px 16px -4px rgba(201, 148, 18, 0.35);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  @apply inline-flex items-center px-6 py-3 text-navy-700 bg-white border-2 border-navy-200 rounded-lg font-semibold hover:bg-navy-50 hover:border-navy-300 transition-all duration-200;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: var(--marine-primary);
+  background-color: white;
+  border: 2px solid var(--navy-200);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+  background-color: var(--navy-50);
+  border-color: var(--marine-light);
+  transform: translateY(-1px);
 }
 
 .btn-outline {
-  @apply inline-flex items-center px-6 py-3 text-navy-700 bg-transparent border-2 border-navy-700 rounded-lg font-semibold hover:bg-navy-700 hover:text-white transition-all duration-200;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: var(--marine-primary);
+  background-color: transparent;
+  border: 2px solid var(--marine-primary);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline:hover {
+  background-color: var(--marine-primary);
+  color: white;
+  transform: translateY(-1px);
 }
 
 /* Section Padding */
@@ -92,7 +133,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Cards */
 .card {
-  @apply bg-white rounded-xl shadow-sm border border-navy-100 p-8 hover:shadow-lg transition-shadow duration-300;
+  background-color: var(--bg-white);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--navy-100);
+  padding: 2rem;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Use Cases Section Scrollbar */
@@ -105,21 +155,21 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: none;
 }
 
-/* Use Case Card Animation */
-@keyframes glow {
+/* Subtle Card Highlight Animation */
+@keyframes subtle-glow {
   0% {
-    box-shadow: 0 0 5px rgba(251, 191, 36, 0.5);
+    box-shadow: 0 4px 12px -2px rgba(201, 148, 18, 0.15);
   }
   50% {
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.6);
+    box-shadow: 0 8px 16px -4px rgba(201, 148, 18, 0.25);
   }
   100% {
-    box-shadow: 0 0 5px rgba(251, 191, 36, 0.5);
+    box-shadow: 0 4px 12px -2px rgba(201, 148, 18, 0.15);
   }
 }
 
 .use-case-glow:hover {
-  animation: glow 2s infinite;
+  animation: subtle-glow 3s ease-in-out infinite;
 }
 
 /* Animations */
@@ -170,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
   animation-delay: 2s;
 }
 
-/* Gradient Text Animation */
+/* Subtle Gradient Text Animation */
 @keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
@@ -182,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-gradient {
   background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
+  animation: gradient-shift 8s ease-in-out infinite;
 }
 
 .bg-300\% {
@@ -233,13 +283,19 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-/* Floating Animation for Icons */
+/* Subtle Floating Animation */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-8px) translateX(2px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-4px) translateX(-2px);
+  }
+  75% {
+    transform: translateY(-12px) translateX(1px);
   }
 }
 
@@ -247,20 +303,20 @@ h1, h2, h3, h4, h5, h6 {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Pulse Animation for Background Elements */
-@keyframes pulse-slow {
+/* Subtle Breathing Animation for Background Elements */
+@keyframes breathe {
   0%, 100% {
-    opacity: 0.2;
+    opacity: 0.03;
     transform: scale(1);
   }
   50% {
-    opacity: 0.3;
-    transform: scale(1.05);
+    opacity: 0.06;
+    transform: scale(1.02);
   }
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
+.animate-breathe {
+  animation: breathe 8s ease-in-out infinite;
 }
 
 /* Background Wrapper Utilities */
@@ -271,8 +327,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection */
 ::selection {
-  background-color: var(--navy-700);
-  color: white;
+  background-color: var(--gold-light);
+  color: var(--marine-primary);
 }
 
 /* Focus Styles */
@@ -292,15 +348,22 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.5s ease-in-out;
 }
 
-/* Enhanced gradients for consistency */
+/* Professional Brand Gradients */
 .gradient-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--marine-primary) 0%, var(--marine-light) 100%);
 }
 
 .gradient-secondary {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, var(--marine-light) 0%, var(--gold-light) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--marine-primary) 0%, var(--gold-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

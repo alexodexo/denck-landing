@@ -8,11 +8,11 @@ export default function SectionHeader({
   centered = true,
   variant = 'dark' // 'dark' | 'light'
 }) {
-  const textColor = variant === 'light' ? 'text-slate-900' : 'text-white'
-  const subtitleColor = variant === 'light' ? 'text-slate-600' : 'text-slate-300'
+  const textColor = variant === 'light' ? 'text-marine-900' : 'text-marine-900'
+  const subtitleColor = variant === 'light' ? 'text-text-secondary' : 'text-text-secondary'
   const badgeColor = variant === 'light' 
-    ? 'bg-slate-800/80 border-slate-600/50 text-slate-200' 
-    : 'bg-slate-800/80 border-slate-600/50 text-white'
+    ? 'bg-gold-100 border-gold-200 text-gold-700' 
+    : 'bg-gold-100 border-gold-200 text-gold-700'
 
   const renderTitle = () => {
     if (highlightedWords.length === 0) {
@@ -22,10 +22,10 @@ export default function SectionHeader({
     let processedTitle = title
     highlightedWords.forEach((word, index) => {
       const gradients = [
-        'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400',
-        'text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400',
-        'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400',
-        'text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400'
+        'gradient-text',
+        'text-gold-600',
+        'text-marine-700',
+        'gradient-text'
       ]
       const gradientClass = gradients[index % gradients.length]
       processedTitle = processedTitle.replace(
@@ -41,9 +41,9 @@ export default function SectionHeader({
     <div className={`${centered ? 'text-center' : ''} mb-16`}>
       {badge && (
         <div className="inline-block mb-6">
-          <div className={`flex items-center justify-center space-x-3 px-6 py-3 ${badgeColor} backdrop-blur-xl border rounded-full shadow-2xl`}>
-            {BadgeIcon && <BadgeIcon className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400" />}
-            <span className="font-medium bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 text-transparent bg-clip-text animate-gradient bg-300%">
+          <div className={`flex items-center justify-center space-x-3 px-6 py-3 ${badgeColor} backdrop-blur-xl border rounded-full shadow-lg`}>
+            {BadgeIcon && <BadgeIcon className="w-6 h-6 text-gold-600" />}
+            <span className="font-medium">
               {badge}
             </span>
           </div>
