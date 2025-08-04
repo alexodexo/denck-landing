@@ -1,6 +1,7 @@
 // src/components/home/StatisticsSection.js
 import { useEffect, useState, useRef } from 'react'
 import { TrendingUp, Users, Building2, DollarSign, Phone, Megaphone, BarChart3 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function StatisticsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -69,13 +70,15 @@ export default function StatisticsSection() {
       { threshold: 0.1 }
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+    const currentSectionRef = sectionRef.current
+
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef)
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef)
       }
     }
   }, [])
@@ -204,7 +207,7 @@ export default function StatisticsSection() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <Link
               href="/kontakt"
               className="btn-primary group"
             >
@@ -214,9 +217,9 @@ export default function StatisticsSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-            </a>
+            </Link>
             
-            <a
+            <Link
               href="/leistungen"
               className="btn-secondary group"
             >
@@ -224,7 +227,7 @@ export default function StatisticsSection() {
               <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

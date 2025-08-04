@@ -1,6 +1,7 @@
 // src/components/home/ProcessSection.js
 import { ChevronRight, Target, Brain, Zap, CheckCircle } from 'lucide-react'
 import SectionHeader from '../common/SectionHeader'
+import Link from 'next/link'
 
 export default function ProcessSection() {
   const processSteps = [
@@ -123,7 +124,7 @@ export default function ProcessSection() {
             </p>
           </div>
           
-          <a
+          <Link
             href="/kontakt"
             className="btn-primary group"
           >
@@ -131,7 +132,7 @@ export default function ProcessSection() {
               Prozess starten
               <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

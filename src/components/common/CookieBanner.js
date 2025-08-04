@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { X, Cookie, Settings, Check, Shield } from 'lucide-react'
+import Link from 'next/link'
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false)
@@ -171,9 +172,9 @@ export default function CookieBanner() {
                     
                     <p className="text-xs text-gray-500 mt-4">
                       Weitere Informationen finden Sie in unserer{' '}
-                      <a href="/datenschutz" className="text-primary-600 hover:text-primary-700 underline">
+                      <Link href="/datenschutz" className="text-primary-600 hover:text-primary-700 underline">
                         Datenschutzerklärung
-                      </a>
+                      </Link>
                     </p>
                   </div>
                   
