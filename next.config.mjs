@@ -94,7 +94,6 @@ const nextConfig = {
 
   // Optimierte Build-Konfiguration
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
   },
 

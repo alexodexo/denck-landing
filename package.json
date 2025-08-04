@@ -18,11 +18,11 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
     "@types/node": "22.15.21",
     "@types/react": "19.1.5",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
+    "critters": "^0.0.20",
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.3.0",
     "postcss": "^8.4.47",
