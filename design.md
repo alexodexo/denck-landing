@@ -128,8 +128,7 @@ Das Vorbild für das moderne Design von Denck Solutions ist Apple mit seinem IOS
 - Keine kalten, sterilen Designs
 - Nicht übertechnisch werden
 - Keine unrealistischen Versprechen
-- Nie das Gold als Haupthintergrund
-- Farbverlauf von Gold zu Blau!!!
+- Kein Farbverlauf von Gold zu Blau!!!
 
 ---
 

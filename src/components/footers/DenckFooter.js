@@ -1,14 +1,16 @@
 // src/components/footers/DenckFooter.js
 import Link from 'next/link'
-import { Mail, MapPin, Linkedin, Twitter, Bot } from 'lucide-react'
+import { Mail, MapPin, Linkedin, Twitter, Bot, Network, Workflow, Phone, MessageSquare, FileText } from 'lucide-react'
 
 export default function DenckFooter() {
   const footerLinks = {
     leistungen: [
-      { name: 'KI-Strategieberatung', href: '/leistungen#ki-strategie' },
-      { name: 'Prozessautomatisierung', href: '/leistungen#automatisierung' },
-      { name: 'Daten & Analytics', href: '/leistungen#analytics' },
-      { name: 'KI-Governance', href: '/leistungen#governance' }
+      { name: 'KI-Agenten Netzwerke', href: '/leistungen#agents', icon: Network },
+      { name: 'Prozess-Automatisierung', href: '/leistungen#automation', icon: Workflow },
+      { name: 'KI-Telefon Agenten', href: '/leistungen#phone', icon: Phone },
+      { name: 'Omnichannel Chatbots', href: '/leistungen#chat', icon: MessageSquare },
+      { name: 'E-Mail Intelligence', href: '/leistungen#email', icon: Mail },
+      { name: 'KI-Report Generator', href: '/leistungen#reports', icon: FileText }
     ],
     unternehmen: [
       { name: 'Kontakt', href: '/kontakt' },
@@ -53,13 +55,20 @@ export default function DenckFooter() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Leistungen</h3>
             <ul className="space-y-2">
-              {footerLinks.leistungen.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-text-secondary hover:text-marine-700 transition-colors text-sm">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              {footerLinks.leistungen.map((link) => {
+                const Icon = link.icon
+                return (
+                  <li key={link.name}>
+                    <Link 
+                      href={link.href} 
+                      className="group flex items-center text-text-secondary hover:text-marine-700 transition-colors text-sm"
+                    >
+                      <Icon className="h-3 w-3 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                      {link.name}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
 
@@ -81,8 +90,8 @@ export default function DenckFooter() {
             <div className="space-y-2 text-sm">
               <p className="flex items-start text-text-secondary">
                 <Mail className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@denck.com" className="hover:text-marine-700 transition-colors">
-                  info@denck.com
+                <a href="mailto:alex@denck.com" className="hover:text-marine-700 transition-colors">
+                  alex@denck.com
                 </a>
               </p>
               <p className="flex items-start text-text-secondary">

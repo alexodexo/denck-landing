@@ -220,25 +220,6 @@ h1, h2, h3, h4, h5, h6 {
   animation-delay: 2s;
 }
 
-/* Subtle Gradient Text Animation */
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 8s ease-in-out infinite;
-}
-
-.bg-300\% {
-  background-size: 300% 300%;
-}
-
 /* Number Counter Animation */
 .number-counter {
   display: inline-block;
@@ -271,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
   inset: -2px;
   border-radius: 1rem;
   padding: 2px;
-  background: linear-gradient(45deg, transparent, var(--glow-color, #3b82f6), transparent);
+  background: var(--gold-primary);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -319,12 +300,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: breathe 8s ease-in-out infinite;
 }
 
-/* Background Wrapper Utilities */
-.bg-gradient-x {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
-}
-
 /* Selection */
 ::selection {
   background-color: var(--gold-light);
@@ -346,24 +321,4 @@ h1, h2, h3, h4, h5, h6 {
 /* Smooth background transitions */
 .background-transition {
   transition: background-color 0.5s ease-in-out;
-}
-
-/* Professional Brand Gradients */
-.gradient-primary {
-  background: linear-gradient(135deg, var(--marine-primary) 0%, var(--marine-light) 100%);
-}
-
-.gradient-secondary {
-  background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 100%);
-}
-
-.gradient-accent {
-  background: linear-gradient(135deg, var(--marine-light) 0%, var(--gold-light) 100%);
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--marine-primary) 0%, var(--gold-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }

@@ -10,48 +10,46 @@ import {
 } from 'lucide-react'
 
 export default function Leistungen() {
-  const [activeService, setActiveService] = useState('strategy')
+  const [activeService, setActiveService] = useState('agents')
   const [isVisible, setIsVisible] = useState(false)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const sectionRef = useRef(null)
 
-  // Services Data - Angepasst für flexible Beratung
+  // Services Data - Korrekte Services aus AIServicesSection
   const services = [
     {
-      id: 'strategy',
-      title: 'KI-Strategieberatung',
-      icon: Brain,
-      gradient: 'from-purple-400 to-pink-400',
-      description: 'Gemeinsam entwickeln wir Ihre maßgeschneiderte KI-Roadmap für nachhaltigen Erfolg',
+      id: 'agents',
+      title: 'KI-Agenten Netzwerke',
+      icon: Network,
+      description: 'Intelligente Agenten-Systeme die autonom zusammenarbeiten',
       features: [
-        'Individuelle KI-Potentialanalyse',
-        'Use Case Workshop & Priorisierung', 
-        'Konkrete ROI-Bewertung',
-        'Flexible Umsetzungsstrategien',
-        'Persönliche Begleitung',
-        'Praxisnahe Handlungsempfehlungen'
+        'Multi-Agent Orchestrierung',
+        'Autonome Entscheidungsfindung',
+        'Selbstlernende Systeme',
+        '24/7 Verfügbarkeit',
+        'Intelligente Workflow-Automatisierung',
+        'Nahtlose Systemintegration'
       ],
       deliverables: [
-        'Maßgeschneiderte KI-Strategie',
-        'Priorisierte Use-Case-Liste', 
-        'Realistische ROI-Einschätzungen',
-        'Flexibler Umsetzungsplan'
+        'Funktionsfähiges KI-Agenten-Netzwerk',
+        'Automatisierte Workflows',
+        'Persönliche Einarbeitung',
+        'Dokumentation & Support'
       ],
-      approach: 'Individuell nach Ihren Bedürfnissen'
+      approach: 'Von der Konzeption bis zur vollständigen Implementierung'
     },
     {
       id: 'automation',
-      title: 'Prozessautomatisierung',
+      title: 'Prozess-Automatisierung',
       icon: Workflow,
-      gradient: 'from-blue-400 to-cyan-400', 
-      description: 'Ich helfe Ihnen dabei, wiederkehrende Aufgaben intelligent zu automatisieren',
+      description: 'End-to-End Automatisierung Ihrer Geschäftsprozesse',
       features: [
-        'Prozessanalyse & Optimierung',
-        'KI-Tool Auswahl & Setup',
-        'Workflow-Entwicklung',
-        'System-Integration', 
-        'Persönliches Training',
-        'Laufende Optimierung'
+        'Workflow-Optimierung',
+        'RPA Integration',
+        'Echtzeit-Monitoring',
+        'Fehlerfreie Ausführung',
+        'Prozessanalyse & Mapping',
+        'System-Integration'
       ],
       deliverables: [
         'Funktionsfähige Automatisierungen',
@@ -62,40 +60,80 @@ export default function Leistungen() {
       approach: 'Schrittweise Umsetzung nach Prioritäten'
     },
     {
-      id: 'agents',
-      title: 'KI-Assistenten & Chatbots',
-      icon: Bot,
-      gradient: 'from-green-400 to-emerald-400',
-      description: 'Entwicklung intelligenter Assistenten für Kundenservice und interne Prozesse',
+      id: 'phone',
+      title: 'KI-Telefon Agenten',
+      icon: Phone,
+      description: 'Sprachgesteuerte KI für perfekten Kundenservice',
       features: [
-        'Bedarfsanalyse & Konzeption',
-        'KI-Agent Entwicklung',
-        'Integration in Ihre Kanäle',
-        'Conversational Design',
-        'Testing & Optimierung',
-        'Persönliche Schulung'
+        'Natürliche Spracherkennung',
+        'Emotionale Intelligenz',
+        'Mehrsprachiger Support',
+        'Nahtlose Weiterleitung',
+        'Voice-to-Text Integration',
+        'Call-Routing & Analytics'
       ],
       deliverables: [
-        'Einsatzbereiter KI-Assistent',
-        'Integration in Ihre Plattformen',
+        'Einsatzbereiter KI-Telefon-Agent',
+        'Integration in Ihre Telefonie',
         'Persönliches Training',
         'Wartung & Weiterentwicklung'
       ],
       approach: 'Von MVP bis zur vollständigen Lösung'
     },
     {
-      id: 'analytics',
-      title: 'Datenanalyse & Insights',
-      icon: BarChart3,
-      gradient: 'from-yellow-400 to-orange-400',
-      description: 'Verwandlung Ihrer Daten in wertvolle Erkenntnisse für bessere Entscheidungen',
+      id: 'chat',
+      title: 'Omnichannel Chatbots',
+      icon: MessageSquare,
+      description: 'Ein Bot, alle Plattformen - WhatsApp, Slack, Teams & mehr',
       features: [
-        'Datenaudit & -strategie',
-        'Dashboard-Entwicklung',
+        'WhatsApp Business API',
+        'Microsoft Teams Integration',
+        'Slack Workspace Bots',
+        'Telegram & Discord',
+        'Conversational Design',
+        'Multi-Channel Management'
+      ],
+      deliverables: [
+        'Einsatzbereiter Chatbot',
+        'Integration in Ihre Kanäle',
+        'Persönliches Training',
+        'Wartung & Weiterentwicklung'
+      ],
+      approach: 'Angepasst an Ihre Kommunikationskanäle'
+    },
+    {
+      id: 'email',
+      title: 'E-Mail Intelligence',
+      icon: Mail,
+      description: 'Intelligente E-Mail Verarbeitung für Outlook & Gmail',
+      features: [
+        'Automatische Kategorisierung',
+        'Smart Reply Generation',
+        'Sentiment-Analyse',
+        'Prioritäts-Management',
+        'E-Mail Workflow Automation',
+        'Spam-Filter & Sicherheit'
+      ],
+      deliverables: [
+        'Intelligente E-Mail-Verarbeitung',
+        'Integration in Ihre E-Mail-Systeme',
+        'Persönliche Einarbeitung',
+        'Dokumentation & Support'
+      ],
+      approach: 'Iterative Entwicklung basierend auf Ihren E-Mail-Prozessen'
+    },
+    {
+      id: 'reports',
+      title: 'KI-Report Generator',
+      icon: FileText,
+      description: 'Automatische Berichte mit tiefgreifenden Insights',
+      features: [
+        'Datenvisualisierung',
         'Predictive Analytics',
-        'Visualisierung & Reporting',
-        'KI-gestützte Analysen',
-        'Interpretationshilfe'
+        'Executive Summaries',
+        'Real-Time Dashboards',
+        'Automatische Report-Generierung',
+        'Custom Analytics'
       ],
       deliverables: [
         'Interaktive Dashboards',
@@ -103,62 +141,17 @@ export default function Leistungen() {
         'Datenbasierte Empfehlungen',
         'Schulung in der Nutzung'
       ],
-      approach: 'Iterative Entwicklung basierend auf Ihren Erkenntnissen'
-    },
-    {
-      id: 'consulting',
-      title: 'KI-Beratung & Coaching',
-      icon: Users,
-      gradient: 'from-red-400 to-rose-400',
-      description: 'Persönliche Begleitung bei der KI-Transformation Ihres Unternehmens',
-      features: [
-        'Strategische Beratung',
-        'Tool-Evaluierung & -auswahl',
-        'Implementierungsbegleitung',
-        'Team-Coaching',
-        'Change Management',
-        'Ongoing Support'
-      ],
-      deliverables: [
-        'Regelmäßige Beratungsgespräche',
-        'Konkrete Handlungsempfehlungen',
-        'Tool-Empfehlungen',
-        'Persönliche Unterstützung'
-      ],
-      approach: 'Flexible Begleitung nach Ihrem Tempo'
-    },
-    {
-      id: 'workshops',
-      title: 'KI-Workshops & Training',
-      icon: Lightbulb,
-      gradient: 'from-indigo-400 to-purple-400',
-      description: 'Praxisnahe Schulungen für Sie und Ihr Team im Umgang mit KI-Tools',
-      features: [
-        'Maßgeschneiderte Workshops',
-        'Hands-on Training',
-        'Tool-spezifische Schulungen',
-        'Best Practice Sharing',
-        'Q&A Sessions',
-        'Follow-up Support'
-      ],
-      deliverables: [
-        'Praxisorientierte Workshops',
-        'Training-Materialien',
-        'Persönliche Betreuung',
-        'Nachbetreuung bei Fragen'
-      ],
-      approach: 'Angepasst an Ihr Wissenslevel und Ihre Ziele'
+      approach: 'Angepasst an Ihre Datenquellen und Reporting-Bedürfnisse'
     }
   ]
 
-  // Approach Options - Ersetzt die starren Pakete
+  // Approach Options - Flexible Zusammenarbeit
   const approaches = [
     {
       id: 'consulting',
       name: 'Beratung & Strategie',
       subtitle: 'Wenn Sie Klarheit brauchen',
       icon: Brain,
-      gradient: 'from-blue-400 to-cyan-400',
       description: 'Gemeinsam finden wir heraus, wo KI Ihrem Unternehmen am meisten helfen kann',
       includes: [
         'Persönliche Analysegespräche',
@@ -175,7 +168,6 @@ export default function Leistungen() {
       name: 'Umsetzung & Support',
       subtitle: 'Wenn Sie konkret werden wollen',
       icon: Zap,
-      gradient: 'from-purple-400 to-pink-400',
       description: 'Ich setze konkrete KI-Lösungen mit Ihnen um und begleite Sie dabei',
       includes: [
         'Konkrete Tool-Implementierung',
@@ -193,7 +185,6 @@ export default function Leistungen() {
       name: 'Langfristige Partnerschaft',
       subtitle: 'Wenn Sie einen KI-Partner brauchen',
       icon: Users,
-      gradient: 'from-yellow-400 to-orange-400',
       description: 'Ich begleite Sie kontinuierlich bei Ihrer KI-Transformation',
       includes: [
         'Regelmäßige strategische Reviews',
@@ -207,43 +198,37 @@ export default function Leistungen() {
     }
   ]
 
-  // Industries Data - Bleibt ähnlich aber weniger "corporate"
+  // Industries Data - Angepasst für die neuen Services
   const industries = [
     {
       name: 'E-Commerce & Online-Business',
       icon: TrendingUp,
-      examples: ['Kundensegmentierung', 'Personalisierung', 'Chatbot-Support', 'Preisoptimierung'],
-      gradient: 'from-blue-400 to-cyan-400'
+      examples: ['Kundensegmentierung', 'Chatbot-Support', 'E-Mail Marketing', 'Preisoptimierung'],
     },
     {
       name: 'Beratung & Services',
       icon: Users,
-      examples: ['Kundenanalyse', 'Prozessautomatisierung', 'Wissensmanagement', 'Reporting'],
-      gradient: 'from-green-400 to-emerald-400'
+      examples: ['Kundenanalyse', 'Prozessautomatisierung', 'Reporting', 'Terminmanagement'],
     },
     {
       name: 'Marketing & Vertrieb',
       icon: Target,
       examples: ['Lead-Scoring', 'Content-Automatisierung', 'Customer Journey', 'Performance-Tracking'],
-      gradient: 'from-purple-400 to-pink-400'
     },
     {
       name: 'Produktion & Handwerk',
       icon: Settings,
       examples: ['Qualitätskontrolle', 'Wartungsplanung', 'Ressourcenoptimierung', 'Dokumentation'],
-      gradient: 'from-yellow-400 to-orange-400'
     },
     {
       name: 'Gesundheit & Wellness',
       icon: Shield,
       examples: ['Patientenverwaltung', 'Terminoptimierung', 'Behandlungsplanung', 'Dokumentation'],
-      gradient: 'from-red-400 to-rose-400'
     },
     {
       name: 'Bildung & Training',
       icon: Brain,
       examples: ['Personalisiertes Lernen', 'Fortschrittstracking', 'Content-Erstellung', 'Assessment'],
-      gradient: 'from-indigo-400 to-purple-400'
     }
   ]
 
@@ -308,29 +293,29 @@ export default function Leistungen() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-20 bg-bg-primary">
         <div className="container-width relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             
             {/* Header */}
             <div className="mb-16">
               <div className="inline-block mb-6">
-                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                  <Rocket className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400" />
-                  <span className="font-medium bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 text-transparent bg-clip-text animate-gradient bg-300%">
+                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                  <Rocket className="w-6 h-6 text-marine-600" />
+                  <span className="font-medium text-marine-800">
                     Persönliche KI-Beratung
                   </span>
                 </div>
               </div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-text-primary">
                 KI-Lösungen, die zu{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 animate-gradient bg-300%">
+                <span className="text-marine-600">
                   Ihnen
                 </span>{' '}passen
               </h1>
               
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
+              <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
                 Individuelle KI-Beratung für Unternehmer, die ihre Prozesse optimieren und ihr Business voranbringen wollen.
                 Praxisnah, flexibel und ohne unnötigen Overhead.
               </p>
@@ -344,11 +329,11 @@ export default function Leistungen() {
                   { value: 'Persönlich', label: 'Ihr Ansprechpartner' }
                 ].map((benefit, index) => (
                   <div key={index} className="group">
-                    <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-4 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
-                      <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-1">
+                    <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-4 hover:border-marine-300 transition-all duration-300 hover:scale-105">
+                      <div className="text-lg font-bold text-marine-600 mb-1">
                         {benefit.value}
                       </div>
-                      <div className="text-sm text-slate-400">{benefit.label}</div>
+                      <div className="text-sm text-text-secondary">{benefit.label}</div>
                     </div>
                   </div>
                 ))}
@@ -357,17 +342,16 @@ export default function Leistungen() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/kontakt" className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25">
+              <Link href="/kontakt" className="btn-primary group">
                 <span className="relative z-10">
                   Kostenlose Erstberatung
                 </span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
               </Link>
               
               <button 
                 onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}
-                className="group inline-flex items-center px-8 py-4 text-white bg-slate-800/80 backdrop-blur-xl border-2 border-slate-600 rounded-lg font-semibold hover:bg-slate-700/80 hover:border-slate-500 transition-all duration-300 shadow-xl"
+                className="btn-secondary group"
               >
                 Wie ich helfen kann
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -378,29 +362,29 @@ export default function Leistungen() {
       </section>
 
       {/* Services Section */}
-      <section id="services" ref={sectionRef} className="py-20 relative overflow-hidden">
+      <section id="services" ref={sectionRef} className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
-              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                <Brain className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400" />
-                <span className="font-medium bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 text-transparent bg-clip-text animate-gradient bg-300%">
+              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                <Brain className="w-6 h-6 text-marine-600" />
+                <span className="font-medium text-marine-800">
                   Meine Leistungen
                 </span>
               </div>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
               Wie ich{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <span className="text-marine-600">
                 Ihnen helfen
               </span>{' '}
               kann
             </h2>
             
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Von der ersten Idee bis zur fertigen Lösung - flexibel und individuell nach Ihren Bedürfnissen
             </p>
           </div>
@@ -415,8 +399,8 @@ export default function Leistungen() {
                   onClick={() => setActiveService(service.id)}
                   className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                     activeService === service.id
-                      ? 'bg-slate-700/80 text-white border border-slate-600/50'
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+                      ? 'bg-marine-600 text-white border border-marine-500'
+                      : 'text-text-secondary hover:text-marine-600 hover:bg-marine-50'
                   }`}
                 >
                   <Icon className="h-4 w-4" />
@@ -432,55 +416,55 @@ export default function Leistungen() {
             if (service.id !== activeService) return null
             
             return (
-              <div key={service.id} className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 md:p-12">
+              <div key={service.id} className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 md:p-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   
                   {/* Left: Service Info */}
                   <div>
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className={`p-4 rounded-xl bg-gradient-to-br ${service.gradient} bg-opacity-20`}>
-                        <Icon className="h-8 w-8 text-white" />
+                      <div className="p-4 rounded-xl bg-marine-100">
+                        <Icon className="h-8 w-8 text-marine-600" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                        <p className="text-slate-300">{service.description}</p>
+                        <h3 className="text-2xl font-bold text-marine-800 mb-2">{service.title}</h3>
+                        <p className="text-text-secondary">{service.description}</p>
                       </div>
                     </div>
 
                     <div className="space-y-6">
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-4">So gehe ich vor:</h4>
+                        <h4 className="text-lg font-semibold text-marine-800 mb-4">So gehe ich vor:</h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center space-x-2 text-slate-300">
-                              <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                            <div key={idx} className="flex items-center space-x-2 text-text-secondary">
+                              <CheckCircle className="h-4 w-4 text-gold-500 flex-shrink-0" />
                               <span className="text-sm">{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
-                      <div className="bg-slate-700/40 backdrop-blur-xl border border-slate-600/30 rounded-lg p-4">
+                      <div className="bg-marine-50 border border-marine-200 rounded-lg p-4">
                         <div className="flex items-center space-x-2 mb-2">
-                          <Lightbulb className="h-4 w-4 text-yellow-400" />
-                          <span className="text-sm font-medium text-white">Mein Ansatz</span>
+                          <Lightbulb className="h-4 w-4 text-gold-500" />
+                          <span className="text-sm font-medium text-marine-800">Mein Ansatz</span>
                         </div>
-                        <p className="text-slate-300 text-sm">{service.approach}</p>
+                        <p className="text-text-secondary text-sm">{service.approach}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Right: Deliverables */}
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-6">Das bekommen Sie:</h4>
+                    <h4 className="text-lg font-semibold text-marine-800 mb-6">Das bekommen Sie:</h4>
                     <div className="space-y-4">
                       {service.deliverables.map((deliverable, idx) => (
-                        <div key={idx} className="flex items-start space-x-3 p-4 bg-slate-700/40 backdrop-blur-xl border border-slate-600/30 rounded-lg hover:border-slate-500/50 transition-all duration-300">
-                          <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${service.gradient} bg-opacity-20 flex items-center justify-center flex-shrink-0`}>
+                        <div key={idx} className="flex items-start space-x-3 p-4 bg-marine-50 border border-marine-200 rounded-lg hover:border-marine-300 transition-all duration-300">
+                          <div className="w-8 h-8 rounded-full bg-marine-600 flex items-center justify-center flex-shrink-0">
                             <span className="text-white font-bold text-sm">{idx + 1}</span>
                           </div>
                           <div>
-                            <p className="text-white font-medium mb-1">{deliverable}</p>
+                            <p className="text-marine-800 font-medium mb-1">{deliverable}</p>
                           </div>
                         </div>
                       ))}
@@ -489,7 +473,7 @@ export default function Leistungen() {
                     <div className="mt-8">
                       <Link 
                         href="/kontakt"
-                        className={`group inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.gradient} text-white rounded-lg font-semibold hover:scale-105 transition-all duration-200 shadow-lg`}
+                        className="btn-primary group"
                       >
                         Lassen Sie uns sprechen
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -504,28 +488,28 @@ export default function Leistungen() {
       </section>
 
       {/* Approaches Section - Ersetzt die starren Pakete */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
-              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                <Target className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400" />
-                <span className="font-medium bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-transparent bg-clip-text animate-gradient bg-300%">
+              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                <Target className="w-6 h-6 text-gold-600" />
+                <span className="font-medium text-marine-800">
                   Flexible Zusammenarbeit
                 </span>
               </div>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
               Wie möchten Sie{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+              <span className="text-marine-600">
                 zusammenarbeiten
               </span>?
             </h2>
             
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Jeder hat andere Bedürfnisse - deshalb passe ich meine Unterstützung individuell an Ihre Situation an
             </p>
           </div>
@@ -542,48 +526,45 @@ export default function Leistungen() {
                   {/* Popular Badge */}
                   {approach.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      <div className="bg-gold-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                         Häufig gewählt
                       </div>
                     </div>
                   )}
 
-                  {/* Glow Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${approach.gradient} opacity-0 group-hover:opacity-30 ${approach.popular ? 'opacity-20' : ''} blur-xl rounded-2xl transition-all duration-500`} />
-                  
                   {/* Card */}
-                  <div className={`relative h-full bg-slate-800/60 backdrop-blur-xl border ${approach.popular ? 'border-purple-500/50' : 'border-slate-700/50'} rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300`}>
+                  <div className={`relative h-full bg-white shadow-lg border ${approach.popular ? 'border-gold-300' : 'border-marine-100'} rounded-2xl p-8 hover:border-marine-300 transition-all duration-300`}>
                     
                     {/* Header */}
                     <div className="text-center mb-8">
-                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${approach.gradient} bg-opacity-20 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="h-8 w-8 text-white" />
+                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-marine-100 mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className="h-8 w-8 text-marine-600" />
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{approach.name}</h3>
-                      <p className="text-slate-400 mb-4">{approach.subtitle}</p>
-                      <p className="text-slate-300 text-sm leading-relaxed">{approach.description}</p>
+                      <h3 className="text-2xl font-bold text-marine-800 mb-2">{approach.name}</h3>
+                      <p className="text-text-secondary mb-4">{approach.subtitle}</p>
+                      <p className="text-text-secondary text-sm leading-relaxed">{approach.description}</p>
                     </div>
 
                     {/* Features */}
                     <div className="space-y-3 mb-8">
                       {approach.includes.map((item, idx) => (
                         <div key={idx} className="flex items-center space-x-3">
-                          <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                          <span className="text-slate-300 text-sm">{item}</span>
+                          <CheckCircle className="h-5 w-5 text-gold-500 flex-shrink-0" />
+                          <span className="text-text-secondary text-sm">{item}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* Ideal for */}
-                    <div className="bg-slate-700/40 backdrop-blur-xl border border-slate-600/30 rounded-lg p-4 mb-8">
-                      <p className="text-xs text-slate-400 uppercase tracking-wide mb-1">Ideal wenn</p>
-                      <p className="text-white font-medium text-sm">{approach.ideal}</p>
+                    <div className="bg-marine-50 border border-marine-200 rounded-lg p-4 mb-8">
+                      <p className="text-xs text-text-secondary uppercase tracking-wide mb-1">Ideal wenn</p>
+                      <p className="text-marine-800 font-medium text-sm">{approach.ideal}</p>
                     </div>
 
                     {/* CTA */}
                     <Link
                       href="/kontakt"
-                      className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${approach.gradient} text-white rounded-lg font-semibold hover:scale-105 transition-all duration-200 shadow-lg group/btn`}
+                      className="btn-primary w-full group/btn"
                     >
                       {approach.cta}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -596,20 +577,20 @@ export default function Leistungen() {
 
           {/* Custom Solution CTA */}
           <div className="mt-16 text-center">
-            <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
+            <div className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-marine-800 mb-4">
                 Nicht das Richtige dabei?{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                <span className="text-marine-600">
                   Kein Problem!
                 </span>
               </h3>
-              <p className="text-slate-300 mb-6">
+              <p className="text-text-secondary mb-6">
                 Jede Situation ist anders. Lassen Sie uns einfach sprechen und schauen, wie ich Ihnen am besten helfen kann.
                 Unverbindlich und ohne Verkaufsdruck.
               </p>
               <Link
                 href="/kontakt"
-                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-200 shadow-lg"
+                className="btn-primary group"
               >
                 Einfach mal sprechen
                 <Calendar className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -620,29 +601,29 @@ export default function Leistungen() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
-              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                <Building className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400" />
-                <span className="font-medium bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 text-transparent bg-clip-text animate-gradient bg-300%">
+              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                <Building className="w-6 h-6 text-marine-600" />
+                <span className="font-medium text-marine-800">
                   Branchen-Erfahrung
                 </span>
               </div>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
               In diesen{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+              <span className="text-marine-600">
                 Bereichen
               </span>{' '}
               helfe ich
             </h2>
             
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Jede Branche hat ihre eigenen Herausforderungen - hier einige Beispiele, wo KI besonders gut helfen kann
             </p>
           </div>
@@ -656,22 +637,19 @@ export default function Leistungen() {
                   key={index}
                   className="group relative"
                 >
-                  {/* Glow Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-30 blur-xl rounded-xl transition-all duration-500`} />
-                  
                   {/* Card */}
-                  <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-6 hover:border-slate-500/50 transition-all duration-300 hover:scale-105 h-full">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br ${industry.gradient} bg-opacity-20 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className="h-6 w-6 text-white" />
+                  <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-6 hover:border-marine-300 transition-all duration-300 hover:scale-105 h-full">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-marine-100 mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="h-6 w-6 text-marine-600" />
                     </div>
                     
-                    <h3 className="text-lg font-bold text-white mb-4">{industry.name}</h3>
+                    <h3 className="text-lg font-bold text-marine-800 mb-4">{industry.name}</h3>
                     
                     <div className="space-y-2">
                       {industry.examples.map((example, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${industry.gradient}`} />
-                          <span className="text-slate-300 text-sm">{example}</span>
+                          <div className="w-2 h-2 rounded-full bg-marine-600" />
+                          <span className="text-text-secondary text-sm">{example}</span>
                         </div>
                       ))}
                     </div>
@@ -683,14 +661,14 @@ export default function Leistungen() {
 
           {/* Not Listed CTA */}
           <div className="mt-12 text-center">
-            <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-6 max-w-2xl mx-auto">
-              <p className="text-slate-300 mb-4">
-                <strong className="text-white">Ihre Branche nicht dabei?</strong> Kein Problem! 
+            <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-text-secondary mb-4">
+                <strong className="text-marine-800">Ihre Branche nicht dabei?</strong> Kein Problem! 
                 KI-Lösungen lassen sich in fast jeden Bereich anwenden.
               </p>
               <Link
                 href="/kontakt"
-                className="group inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                className="group inline-flex items-center text-marine-600 hover:text-marine-700 transition-colors"
               >
                 Lassen Sie uns über Ihre spezifischen Herausforderungen sprechen
                 <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -701,23 +679,23 @@ export default function Leistungen() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
-              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                <Star className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400" />
-                <span className="font-medium bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-transparent bg-clip-text animate-gradient bg-300%">
+              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                <Star className="w-6 h-6 text-gold-600" />
+                <span className="font-medium text-marine-800">
                   Erfolgsgeschichten
                 </span>
               </div>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
               Was meine{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+              <span className="text-marine-600">
                 Kunden
               </span>{' '}sagen
             </h2>
@@ -725,7 +703,7 @@ export default function Leistungen() {
 
           {/* Testimonial Carousel */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 md:p-12">
+            <div className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 md:p-12">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -735,8 +713,8 @@ export default function Leistungen() {
                 >
                   {/* Quote */}
                   <div className="text-center mb-8">
-                    <div className="text-6xl text-slate-600 mb-4">"</div>
-                    <p className="text-xl text-slate-300 leading-relaxed italic mb-6">
+                    <div className="text-6xl text-marine-200 mb-4">"</div>
+                    <p className="text-xl text-text-secondary leading-relaxed italic mb-6">
                       {testimonial.text}
                     </p>
                   </div>
@@ -744,21 +722,21 @@ export default function Leistungen() {
                   {/* Author */}
                   <div className="flex items-center justify-center space-x-8">
                     <div className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center mb-4 mx-auto">
+                      <div className="w-16 h-16 rounded-full bg-marine-600 flex items-center justify-center mb-4 mx-auto">
                         <User className="h-8 w-8 text-white" />
                       </div>
-                      <h4 className="text-white font-semibold">{testimonial.author}</h4>
-                      <p className="text-slate-400 text-sm">{testimonial.position}</p>
-                      <p className="text-slate-500 text-xs">{testimonial.company}</p>
+                      <h4 className="text-marine-800 font-semibold">{testimonial.author}</h4>
+                      <p className="text-text-secondary text-sm">{testimonial.position}</p>
+                      <p className="text-text-muted text-xs">{testimonial.company}</p>
                     </div>
 
                     {/* Result */}
-                    <div className="bg-slate-700/40 backdrop-blur-xl border border-slate-600/30 rounded-lg p-4">
+                    <div className="bg-gold-50 border border-gold-200 rounded-lg p-4">
                       <div className="text-center">
-                        <div className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mb-1">
+                        <div className="text-lg font-bold text-gold-600 mb-1">
                           {testimonial.result}
                         </div>
-                        <div className="text-xs text-slate-400 uppercase tracking-wide">
+                        <div className="text-xs text-text-secondary uppercase tracking-wide">
                           {testimonial.industry}
                         </div>
                       </div>
@@ -775,8 +753,8 @@ export default function Leistungen() {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentTestimonial
-                        ? 'bg-purple-500'
-                        : 'bg-slate-600 hover:bg-slate-500'
+                        ? 'bg-marine-600'
+                        : 'bg-marine-200 hover:bg-marine-300'
                     }`}
                   />
                 ))}
@@ -787,29 +765,29 @@ export default function Leistungen() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             
             {/* Header */}
             <div className="mb-12">
               <div className="inline-block mb-6">
-                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-xl border border-slate-600/50 rounded-full shadow-2xl">
-                  <Rocket className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400" />
-                  <span className="font-medium bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 text-transparent bg-clip-text animate-gradient bg-300%">
+                <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
+                  <Rocket className="w-6 h-6 text-marine-600" />
+                  <span className="font-medium text-marine-800">
                     Bereit für den nächsten Schritt?
                   </span>
                 </div>
               </div>
               
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
                 Lassen Sie uns{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 animate-gradient bg-300%">
+                <span className="text-marine-600">
                   sprechen
                 </span>
               </h2>
               
-              <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
                 In einem unverbindlichen Gespräch finden wir heraus, wie KI Ihr Unternehmen voranbringen kann.
                 Kostenlos und ohne Verkaufsdruck.
               </p>
@@ -825,12 +803,12 @@ export default function Leistungen() {
                 const Icon = benefit.icon
                 return (
                   <div key={index} className="group">
-                    <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="h-6 w-6 text-purple-400" />
+                    <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-6 hover:border-marine-300 transition-all duration-300 hover:scale-105">
+                      <div className="w-12 h-12 bg-marine-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="h-6 w-6 text-marine-600" />
                       </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-slate-400 text-sm">{benefit.desc}</p>
+                      <h3 className="text-lg font-semibold text-marine-800 mb-2">{benefit.title}</h3>
+                      <p className="text-text-secondary text-sm">{benefit.desc}</p>
                     </div>
                   </div>
                 )
@@ -841,20 +819,19 @@ export default function Leistungen() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/kontakt"
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25"
+                className="btn-primary group"
               >
                 <span className="relative z-10 flex items-center">
                   Kostenloses Gespräch vereinbaren
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
               </Link>
               
               <a
                 href="https://cal.com/alexdenck/besprechung"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center px-8 py-4 text-white bg-slate-800/80 backdrop-blur-xl border-2 border-slate-600 rounded-lg font-semibold hover:bg-slate-700/80 hover:border-slate-500 transition-all duration-300 shadow-xl"
+                className="btn-secondary group"
               >
                 Direkt Termin buchen
                 <Calendar className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
