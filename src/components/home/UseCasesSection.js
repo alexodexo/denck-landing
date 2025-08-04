@@ -1,6 +1,7 @@
 // src/components/home/UseCasesSection.js
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function UseCasesSection() {
   const scrollRef1 = useRef(null)
@@ -148,21 +149,21 @@ export default function UseCasesSection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <Link
               href="/kontakt"
               className="btn-primary group"
             >
               Jetzt KI-Beratung sichern
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
             
-            <a
+            <Link
               href="/leistungen"
               className="btn-secondary group"
             >
               Alle Leistungen ansehen
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
