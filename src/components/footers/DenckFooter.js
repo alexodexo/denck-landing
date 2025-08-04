@@ -5,12 +5,12 @@ import { Mail, MapPin, Linkedin, Twitter, Bot, Network, Workflow, Phone, Message
 export default function DenckFooter() {
   const footerLinks = {
     leistungen: [
-      { name: 'KI-Agenten Netzwerke', href: '/leistungen#agents', icon: Network },
-      { name: 'Prozess-Automatisierung', href: '/leistungen#automation', icon: Workflow },
-      { name: 'KI-Telefon Agenten', href: '/leistungen#phone', icon: Phone },
-      { name: 'Omnichannel Chatbots', href: '/leistungen#chat', icon: MessageSquare },
-      { name: 'E-Mail Intelligence', href: '/leistungen#email', icon: Mail },
-      { name: 'KI-Report Generator', href: '/leistungen#reports', icon: FileText }
+      { name: 'KI-Agenten Netzwerke', href: '/leistungen?service=agents', icon: Network },
+      { name: 'Prozess-Automatisierung', href: '/leistungen?service=automation', icon: Workflow },
+      { name: 'KI-Telefon Agenten', href: '/leistungen?service=phone', icon: Phone },
+      { name: 'Omnichannel Chatbots', href: '/leistungen?service=chat', icon: MessageSquare },
+      { name: 'E-Mail Intelligence', href: '/leistungen?service=email', icon: Mail },
+      { name: 'KI-Report Generator', href: '/leistungen?service=reports', icon: FileText }
     ],
     unternehmen: [
       { name: 'Kontakt', href: '/kontakt' },

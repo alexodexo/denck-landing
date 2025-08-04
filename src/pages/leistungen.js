@@ -1,6 +1,7 @@
 // src/pages/leistungen.js
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { 
   Brain, Zap, Database, Shield, Bot, Users, Target, Workflow, 
   CheckCircle, ArrowRight, Star, Clock, DollarSign, TrendingUp,
@@ -10,9 +11,8 @@ import {
 } from 'lucide-react'
 
 export default function Leistungen() {
-  const [activeService, setActiveService] = useState('agents')
+  const router = useRouter()
   const [isVisible, setIsVisible] = useState(false)
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const sectionRef = useRef(null)
 
   // Services Data - Korrekte Services aus AIServicesSection
@@ -26,17 +26,14 @@ export default function Leistungen() {
         'Multi-Agent Orchestrierung',
         'Autonome Entscheidungsfindung',
         'Selbstlernende Systeme',
-        '24/7 Verfügbarkeit',
-        'Intelligente Workflow-Automatisierung',
-        'Nahtlose Systemintegration'
+        '24/7 Verfügbarkeit'
       ],
       deliverables: [
         'Funktionsfähiges KI-Agenten-Netzwerk',
         'Automatisierte Workflows',
         'Persönliche Einarbeitung',
         'Dokumentation & Support'
-      ],
-      approach: 'Von der Konzeption bis zur vollständigen Implementierung'
+      ]
     },
     {
       id: 'automation',
@@ -47,17 +44,14 @@ export default function Leistungen() {
         'Workflow-Optimierung',
         'RPA Integration',
         'Echtzeit-Monitoring',
-        'Fehlerfreie Ausführung',
-        'Prozessanalyse & Mapping',
-        'System-Integration'
+        'Fehlerfreie Ausführung'
       ],
       deliverables: [
         'Funktionsfähige Automatisierungen',
         'Tool-Integration in Ihre Systeme',
         'Persönliche Einarbeitung',
         'Dokumentation & Support'
-      ],
-      approach: 'Schrittweise Umsetzung nach Prioritäten'
+      ]
     },
     {
       id: 'phone',
@@ -68,17 +62,14 @@ export default function Leistungen() {
         'Natürliche Spracherkennung',
         'Emotionale Intelligenz',
         'Mehrsprachiger Support',
-        'Nahtlose Weiterleitung',
-        'Voice-to-Text Integration',
-        'Call-Routing & Analytics'
+        'Nahtlose Weiterleitung'
       ],
       deliverables: [
         'Einsatzbereiter KI-Telefon-Agent',
         'Integration in Ihre Telefonie',
         'Persönliches Training',
         'Wartung & Weiterentwicklung'
-      ],
-      approach: 'Von MVP bis zur vollständigen Lösung'
+      ]
     },
     {
       id: 'chat',
@@ -89,17 +80,14 @@ export default function Leistungen() {
         'WhatsApp Business API',
         'Microsoft Teams Integration',
         'Slack Workspace Bots',
-        'Telegram & Discord',
-        'Conversational Design',
-        'Multi-Channel Management'
+        'Telegram & Discord'
       ],
       deliverables: [
         'Einsatzbereiter Chatbot',
         'Integration in Ihre Kanäle',
         'Persönliches Training',
         'Wartung & Weiterentwicklung'
-      ],
-      approach: 'Angepasst an Ihre Kommunikationskanäle'
+      ]
     },
     {
       id: 'email',
@@ -110,17 +98,14 @@ export default function Leistungen() {
         'Automatische Kategorisierung',
         'Smart Reply Generation',
         'Sentiment-Analyse',
-        'Prioritäts-Management',
-        'E-Mail Workflow Automation',
-        'Spam-Filter & Sicherheit'
+        'Prioritäts-Management'
       ],
       deliverables: [
         'Intelligente E-Mail-Verarbeitung',
         'Integration in Ihre E-Mail-Systeme',
         'Persönliche Einarbeitung',
         'Dokumentation & Support'
-      ],
-      approach: 'Iterative Entwicklung basierend auf Ihren E-Mail-Prozessen'
+      ]
     },
     {
       id: 'reports',
@@ -131,17 +116,14 @@ export default function Leistungen() {
         'Datenvisualisierung',
         'Predictive Analytics',
         'Executive Summaries',
-        'Real-Time Dashboards',
-        'Automatische Report-Generierung',
-        'Custom Analytics'
+        'Real-Time Dashboards'
       ],
       deliverables: [
         'Interaktive Dashboards',
         'Automatisierte Reports',
         'Datenbasierte Empfehlungen',
         'Schulung in der Nutzung'
-      ],
-      approach: 'Angepasst an Ihre Datenquellen und Reporting-Bedürfnisse'
+      ]
     }
   ]
 
@@ -231,42 +213,6 @@ export default function Leistungen() {
       examples: ['Personalisiertes Lernen', 'Fortschrittstracking', 'Content-Erstellung', 'Assessment'],
     }
   ]
-
-  // Testimonials Data - Authentischer und weniger "corporate"
-  const testimonials = [
-    {
-      text: "Alex hat mir geholfen, unseren Kundenservice mit KI zu automatisieren. Jetzt spare ich täglich 3 Stunden und meine Kunden sind zufriedener als je zuvor.",
-      author: "Sandra Weber",
-      position: "Geschäftsführerin",
-      company: "Weber Consulting",
-      industry: "Beratung",
-      result: "3h täglich gespart"
-    },
-    {
-      text: "Die KI-Strategie, die wir gemeinsam entwickelt haben, hat unser Online-Business komplett transformiert. ROI war schon nach 2 Monaten positiv.",
-      author: "Michael Chen",
-      position: "Gründer", 
-      company: "TechShop24",
-      industry: "E-Commerce",
-      result: "ROI nach 2 Monaten"
-    },
-    {
-      text: "Endlich verstehe ich, wie ich KI sinnvoll nutzen kann. Die persönliche Betreuung und die praxisnahen Tipps waren Gold wert.",
-      author: "Dr. Lisa Hoffmann",
-      position: "Praxisinhaberin",
-      company: "Praxis Dr. Hoffmann",
-      industry: "Healthcare",
-      result: "Klare KI-Strategie"
-    }
-  ]
-
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial(prev => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
 
   // Intersection Observer
   useEffect(() => {
@@ -389,101 +335,76 @@ export default function Leistungen() {
             </p>
           </div>
 
-          {/* Service Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {services.map((service) => {
+          {/* Services Grid - Kompakt untereinander */}
+          <div className="space-y-6 max-w-4xl mx-auto">
+            {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <button
+                <div 
                   key={service.id}
-                  onClick={() => setActiveService(service.id)}
-                  className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                    activeService === service.id
-                      ? 'bg-marine-600 text-white border border-marine-500'
-                      : 'text-text-secondary hover:text-marine-600 hover:bg-marine-50'
+                  id={service.id}
+                  className={`bg-white shadow-lg border border-marine-100 rounded-2xl p-6 hover:border-marine-300 transition-all duration-300 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <Icon className="h-4 w-4" />
-                  <span className="text-sm font-medium">{service.title}</span>
-                </button>
-              )
-            })}
-          </div>
-
-          {/* Active Service Detail */}
-          {services.map((service) => {
-            const Icon = service.icon
-            if (service.id !== activeService) return null
-            
-            return (
-              <div key={service.id} className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 md:p-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                  
-                  {/* Left: Service Info */}
-                  <div>
-                    <div className="flex items-center space-x-4 mb-6">
-                      <div className="p-4 rounded-xl bg-marine-100">
-                        <Icon className="h-8 w-8 text-marine-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-marine-800 mb-2">{service.title}</h3>
-                        <p className="text-text-secondary">{service.description}</p>
+                  <div className="flex items-start space-x-4">
+                    {/* Icon */}
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-marine-100 rounded-xl flex items-center justify-center">
+                        <Icon className="h-6 w-6 text-marine-600" />
                       </div>
                     </div>
-
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="text-lg font-semibold text-marine-800 mb-4">So gehe ich vor:</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center space-x-2 text-text-secondary">
-                              <CheckCircle className="h-4 w-4 text-gold-500 flex-shrink-0" />
-                              <span className="text-sm">{feature}</span>
-                            </div>
-                          ))}
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-marine-800 mb-2">{service.title}</h3>
+                      <p className="text-text-secondary mb-4">{service.description}</p>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Features */}
+                        <div>
+                          <h4 className="text-sm font-semibold text-marine-800 mb-3">Features:</h4>
+                          <ul className="space-y-2">
+                            {service.features.map((feature, idx) => (
+                              <li key={idx} className="flex items-center text-sm text-text-secondary">
+                                <CheckCircle className="h-4 w-4 text-gold-500 mr-2 flex-shrink-0" />
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        {/* Deliverables */}
+                        <div>
+                          <h4 className="text-sm font-semibold text-marine-800 mb-3">Sie erhalten:</h4>
+                          <ul className="space-y-2">
+                            {service.deliverables.map((deliverable, idx) => (
+                              <li key={idx} className="flex items-center text-sm text-text-secondary">
+                                <div className="w-2 h-2 bg-marine-600 rounded-full mr-2 flex-shrink-0" />
+                                {deliverable}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
-
-                      <div className="bg-marine-50 border border-marine-200 rounded-lg p-4">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <Lightbulb className="h-4 w-4 text-gold-500" />
-                          <span className="text-sm font-medium text-marine-800">Mein Ansatz</span>
-                        </div>
-                        <p className="text-text-secondary text-sm">{service.approach}</p>
+                      
+                      {/* CTA */}
+                      <div className="mt-6">
+                        <Link 
+                          href="/kontakt"
+                          className="btn-primary group inline-flex items-center"
+                        >
+                          Lassen Sie uns sprechen
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Right: Deliverables */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-marine-800 mb-6">Das bekommen Sie:</h4>
-                    <div className="space-y-4">
-                      {service.deliverables.map((deliverable, idx) => (
-                        <div key={idx} className="flex items-start space-x-3 p-4 bg-marine-50 border border-marine-200 rounded-lg hover:border-marine-300 transition-all duration-300">
-                          <div className="w-8 h-8 rounded-full bg-marine-600 flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold text-sm">{idx + 1}</span>
-                          </div>
-                          <div>
-                            <p className="text-marine-800 font-medium mb-1">{deliverable}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-8">
-                      <Link 
-                        href="/kontakt"
-                        className="btn-primary group"
-                      >
-                        Lassen Sie uns sprechen
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
                     </div>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       </section>
 
@@ -678,92 +599,6 @@ export default function Leistungen() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-bg-primary relative">
-        <div className="container-width relative z-10">
-          
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-block mb-6">
-              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
-                <Star className="w-6 h-6 text-gold-600" />
-                <span className="font-medium text-marine-800">
-                  Erfolgsgeschichten
-                </span>
-              </div>
-            </div>
-            
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-              Was meine{' '}
-              <span className="text-marine-600">
-                Kunden
-              </span>{' '}sagen
-            </h2>
-          </div>
-
-          {/* Testimonial Carousel */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white shadow-lg border border-marine-100 rounded-2xl p-8 md:p-12">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className={`transition-all duration-500 ${
-                    index === currentTestimonial ? 'opacity-100' : 'opacity-0 absolute inset-0'
-                  }`}
-                >
-                  {/* Quote */}
-                  <div className="text-center mb-8">
-                    <div className="text-6xl text-marine-200 mb-4">"</div>
-                    <p className="text-xl text-text-secondary leading-relaxed italic mb-6">
-                      {testimonial.text}
-                    </p>
-                  </div>
-
-                  {/* Author */}
-                  <div className="flex items-center justify-center space-x-8">
-                    <div className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-marine-600 flex items-center justify-center mb-4 mx-auto">
-                        <User className="h-8 w-8 text-white" />
-                      </div>
-                      <h4 className="text-marine-800 font-semibold">{testimonial.author}</h4>
-                      <p className="text-text-secondary text-sm">{testimonial.position}</p>
-                      <p className="text-text-muted text-xs">{testimonial.company}</p>
-                    </div>
-
-                    {/* Result */}
-                    <div className="bg-gold-50 border border-gold-200 rounded-lg p-4">
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-gold-600 mb-1">
-                          {testimonial.result}
-                        </div>
-                        <div className="text-xs text-text-secondary uppercase tracking-wide">
-                          {testimonial.industry}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-              {/* Navigation Dots */}
-              <div className="flex justify-center space-x-2 mt-8">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial
-                        ? 'bg-marine-600'
-                        : 'bg-marine-200 hover:bg-marine-300'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
@@ -847,8 +682,51 @@ export default function Leistungen() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'KI-Beratungsleistungen - DENCK Solutions',
-      description: 'Individuelle KI-Beratung für Unternehmer. Flexible Unterstützung von der Strategie bis zur Umsetzung. Praxisnah, persönlich und ohne unnötigen Overhead.'
+      title: 'KI-Beratung & Automatisierung Leistungen - DENCK Solutions',
+      description: 'Entdecken Sie die KI-Beratungsleistungen von Alex Denck: Prozessautomatisierung, KI-Agenten Netzwerke, Chatbots und E-Mail Intelligence. Flexible Zusammenarbeit für Ihren Erfolg.',
+      keywords: 'DENCK Solutions Leistungen, Alex Denck KI-Beratung, Prozessautomatisierung, KI-Agenten, Chatbots, E-Mail Intelligence, KI-Telefon Agent, Business Automation',
+      openGraph: {
+        title: 'DENCK Solutions KI-Beratungsleistungen - Alex Denck',
+        description: 'Maßgeschneiderte KI-Lösungen von DENCK Solutions: Von Strategieberatung bis zur Umsetzung. Flexibel, praxisnah und ohne unnötigen Overhead.',
+        type: 'website'
+      },
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "KI-Beratung und Automatisierung",
+        "provider": {
+          "@type": "Organization",
+          "name": "DENCK Solutions",
+          "founder": {
+            "@type": "Person",
+            "name": "Alex Denck",
+            "jobTitle": "KI-Berater und Experte"
+          }
+        },
+        "serviceType": "Business Consulting",
+        "description": "Umfassende KI-Beratung und Automatisierungslösungen für Unternehmen aller Größen.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "KI-Agenten Netzwerke",
+            "description": "Intelligente Agenten-Systeme die autonom zusammenarbeiten"
+          },
+          {
+            "@type": "Offer",
+            "name": "Prozess-Automatisierung", 
+            "description": "End-to-End Automatisierung Ihrer Geschäftsprozesse"
+          },
+          {
+            "@type": "Offer",
+            "name": "KI-Telefon Agenten",
+            "description": "Sprachgesteuerte KI für perfekten Kundenservice"
+          }
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "Deutschland"
+        }
+      }
     }
   }
 }
