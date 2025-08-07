@@ -216,7 +216,7 @@ export default function Kontakt() {
                 className="space-y-6"
               >
                 {/* Formsubmit Configuration */}
-                <input type="hidden" name="_subject" value="Neue Kontaktanfrage von DENCK Solutions Website" />
+                <input type="hidden" name="_subject" value="Neue Kontaktanfrage von Denck Solutions Website" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 
@@ -367,8 +367,8 @@ export default function Kontakt() {
                     <Mail className="h-6 w-6 text-marine-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-marine-800 mb-2">E-Mail</h3>
-                  <a href="mailto:alex@denck.com" className="text-text-secondary hover:text-marine-600 transition-colors">
-                    alex@denck.com
+                                <a href="mailto:info@denck.com" className="text-text-secondary hover:text-marine-600 transition-colors">
+                info@denck.com
                   </a>
                 </div>
               </div>
@@ -410,25 +410,25 @@ export default function Kontakt() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Kontakt Alex Denck - DENCK Solutions KI-Beratung Frankfurt',
-      description: 'Kontaktieren Sie Alex Denck von DENCK Solutions für eine kostenlose KI-Beratung. Termin direkt buchen oder Nachricht senden. Antwort innerhalb 24h garantiert.',
-      keywords: 'Alex Denck Kontakt, DENCK Solutions Kontakt, KI-Beratung Frankfurt, Termin buchen, Kostenlose Beratung, KI-Berater Frankfurt',
+          title: 'Kontakt Alex Denck - Denck Solutions KI-Beratung Frankfurt',
+    description: 'Kontaktieren Sie Alex Denck von Denck Solutions für eine kostenlose KI-Beratung. Termin direkt buchen oder Nachricht senden. Antwort innerhalb 24h garantiert.',
+    keywords: 'Alex Denck Kontakt, Denck Solutions Kontakt, KI-Beratung Frankfurt, Termin buchen, Kostenlose Beratung, KI-Berater Frankfurt',
       openGraph: {
-        title: 'Alex Denck kontaktieren - DENCK Solutions',
+                  title: 'Alex Denck kontaktieren - Denck Solutions',
         description: 'Vereinbaren Sie ein kostenloses Beratungsgespräch mit Alex Denck. 30 Min für Ihre KI-Zukunft - unverbindlich und sofort buchbar.',
         type: 'website'
       },
       schema: {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Kontakt DENCK Solutions",
+        "name": "Kontakt Denck Solutions",
         "description": "Kontaktieren Sie Alex Denck für eine kostenlose KI-Beratung",
         "mainEntity": {
           "@type": "Organization",
-          "name": "DENCK Solutions",
+          "name": "Denck Solutions",
           "contactPoint": {
             "@type": "ContactPoint",
-            "email": "alex@denck.com",
+            "email": "info@denck.com",
             "contactType": "customer service",
             "areaServed": "DE",
             "availableLanguage": "German",

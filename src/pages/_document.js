@@ -5,6 +5,11 @@ export default function Document() {
   return (
     <Html lang="de">
       <Head>
+        {/* Cache-Control Headers für Development */}
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
+        
         {/* Google Fonts - Inter Font Family */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -24,16 +29,16 @@ export default function Document() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "DENCK Solutions",
+              "name": "Denck Solutions",
               "alternateName": "DENCK",
               "legalName": "ALD Beratungs und Beteiligungsgesellschaft UG",
               "url": "https://www.denck.com",
               "logo": "https://www.denck.com/logo.png",
-              "description": "DENCK Solutions ist Ihr Experte für KI-Beratung und Prozessautomatisierung. Alex Denck berät Unternehmen bei der erfolgreichen Integration von Künstlicher Intelligenz.",
+              "description": "Denck Solutions ist Ihr Experte für KI-Beratung und Prozessautomatisierung. Alex Denck berät Unternehmen bei der erfolgreichen Integration von Künstlicher Intelligenz.",
               "founder": {
                 "@type": "Person",
                 "name": "Alex Denck",
-                "jobTitle": "KI-Berater und Gründer von DENCK Solutions",
+                "jobTitle": "KI-Berater und Gründer von Denck Solutions",
                 "description": "Experte für Künstliche Intelligenz und Geschäftsprozessautomatisierung",
                 "knowsAbout": [
                   "Künstliche Intelligenz",
@@ -54,12 +59,12 @@ export default function Document() {
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "50.1109",
-                "longitude": "8.6821"
+                "latitude": 50.1109,
+                "longitude": 8.6821
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "email": "alex@denck.com",
+                "email": "info@denck.com",
                 "contactType": "customer service",
                 "areaServed": {
                   "@type": "Country",
@@ -80,7 +85,7 @@ export default function Document() {
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "KI-Beratungsleistungen von DENCK Solutions",
+                "name": "KI-Beratungsleistungen von Denck Solutions",
                 "itemListElement": [
                   {
                     "@type": "Offer",
@@ -122,10 +127,10 @@ export default function Document() {
               },
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "25",
-                "bestRating": "5",
-                "worstRating": "1"
+                "ratingValue": 5.0,
+                "reviewCount": 25,
+                "bestRating": 5,
+                "worstRating": 1
               },
               "areaServed": {
                 "@type": "State",
@@ -135,10 +140,10 @@ export default function Document() {
                 "@type": "GeoCircle",
                 "geoMidpoint": {
                   "@type": "GeoCoordinates",
-                  "latitude": "50.1109",
-                  "longitude": "8.6821"
+                  "latitude": 50.1109,
+                  "longitude": 8.6821
                 },
-                "geoRadius": "50000"
+                "geoRadius": 50000
               }
             })
           }}

@@ -70,10 +70,7 @@ export default function DenckHeader() {
               {/* Clean text logo */}
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-white group-hover:text-gold-400 transition-all duration-300">
-                  DENCK Solutions
-                </span>
-                <span className="text-xs text-gold-400 -mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  KI für Ihr Business
+                  Denck Solutions
                 </span>
               </div>
             </div>

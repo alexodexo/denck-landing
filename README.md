@@ -1,7 +1,7 @@
 // README.md
-# DENCK Solutions - KI-Beratung für den Mittelstand
+# Denck Solutions - KI-Beratung für den Mittelstand
 
-Diese Next.js Anwendung ist die offizielle Website von DENCK Solutions - Ihrem Partner für erfolgreiche KI-Integration im Mittelstand.
+Diese Next.js Anwendung ist die offizielle Website von Denck Solutions - Ihrem Partner für erfolgreiche KI-Integration im Mittelstand.
 
 ## 🚀 Tech Stack
 
@@ -88,7 +88,7 @@ Saubere URL-Struktur
 Semantisches HTML-Markup
 
 📞 Kontaktinformationen
-DENCK Solutions
+Denck Solutions
 
 ALD Beratungs und Beteiligungsgesellschaft UG
 Hannah-Arendt-Str 40

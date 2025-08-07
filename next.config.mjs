@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     domains: ['le-cdn.website-editor.net', 'images.unsplash.com', 'via.placeholder.com', 'margonline.com'],
     unoptimized: false,

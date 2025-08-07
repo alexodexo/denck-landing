@@ -9,10 +9,10 @@ export default function Datenschutz() {
       <section className="relative min-h-screen flex items-center pt-20 bg-bg-primary">
         <div className="container-width relative z-10">
           <div className="max-w-4xl mx-auto">
-            
+
             {/* Back Navigation */}
             <div className="mb-12">
-              <Link 
+              <Link
                 href="/"
                 className="inline-flex items-center text-text-secondary hover:text-marine-600 transition-colors duration-200 group"
               >
@@ -31,13 +31,13 @@ export default function Datenschutz() {
                   </span>
                 </div>
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-text-primary">
                 <span className="text-marine-600">
                   Datenschutzerklärung
                 </span>
               </h1>
-              
+
               <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
                 Ihre Privatsphäre ist uns wichtig. Hier erfahren Sie, wie wir mit Ihren Daten umgehen.
               </p>
@@ -232,7 +232,7 @@ export default function Datenschutz() {
                       </ul>
                       <p className="text-xs text-text-muted mt-2">Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO</p>
                     </div>
-                    
+
                     <div className="bg-gold-50 border border-gold-200 rounded-lg p-4">
                       <h4 className="font-semibold text-marine-800 mb-2">Funktionale Cookies</h4>
                       <p className="text-sm text-text-secondary mb-2">Diese Cookies verbessern die Nutzererfahrung:</p>
@@ -336,36 +336,36 @@ export default function Datenschutz() {
                       <h4 className="font-semibold text-marine-800 mb-2">Auskunftsrecht (Art. 15 DSGVO)</h4>
                       <p className="text-sm text-text-secondary">Sie haben das Recht auf Auskunft über die von uns verarbeiteten personenbezogenen Daten.</p>
                     </div>
-                    
+
                     <div className="bg-gold-50 border border-gold-200 rounded-lg p-4">
                       <h4 className="font-semibold text-marine-800 mb-2">Berichtigungsrecht (Art. 16 DSGVO)</h4>
                       <p className="text-sm text-text-secondary">Sie haben das Recht auf Berichtigung unrichtiger Daten.</p>
                     </div>
-                    
+
                     <div className="bg-marine-50 border border-marine-200 rounded-lg p-4">
                       <h4 className="font-semibold text-marine-800 mb-2">Löschungsrecht (Art. 17 DSGVO)</h4>
                       <p className="text-sm text-text-secondary">Sie haben das Recht auf Löschung Ihrer Daten unter bestimmten Voraussetzungen.</p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-gold-50 border border-gold-200 rounded-lg p-4">
                       <h4 className="font-semibold text-marine-800 mb-2">Einschränkungsrecht (Art. 18 DSGVO)</h4>
                       <p className="text-sm text-text-secondary">Sie haben das Recht auf Einschränkung der Verarbeitung Ihrer Daten.</p>
                     </div>
-                    
+
                     <div className="bg-marine-50 border border-marine-200 rounded-lg p-4">
                       <h4 className="font-semibold text-marine-800 mb-2">Datenübertragbarkeit (Art. 20 DSGVO)</h4>
                       <p className="text-sm text-text-secondary">Sie haben das Recht auf Übertragung Ihrer Daten in einem maschinenlesbaren Format.</p>
                     </div>
-                    
+
                     <div className="bg-gold-50 border border-gold-200 rounded-lg p-4">
                       <h4 className="font-semibold text-marine-800 mb-2">Widerspruchsrecht (Art. 21 DSGVO)</h4>
                       <p className="text-sm text-text-secondary">Sie haben das Recht, der Verarbeitung Ihrer Daten zu widersprechen.</p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-marine-50 border border-marine-200 rounded-lg p-6 mt-6">
                   <h3 className="text-lg font-semibold text-marine-800 mb-4">Wie können Sie Ihre Rechte ausüben?</h3>
                   <p className="text-text-secondary mb-4">
@@ -484,7 +484,7 @@ export default function Datenschutz() {
       <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           <div className="max-w-4xl mx-auto">
-            
+
             {/* Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
@@ -494,7 +494,7 @@ export default function Datenschutz() {
                 </span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link
                 href="/impressum"
@@ -509,7 +509,7 @@ export default function Datenschutz() {
                   </p>
                 </div>
               </Link>
-              
+
               <Link
                 href="/agb"
                 className="group relative block"
@@ -534,8 +534,8 @@ export default function Datenschutz() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Datenschutzerklärung - DENCK Solutions',
-      description: 'Datenschutzerklärung der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Solutions. Informationen zum Schutz Ihrer personenbezogenen Daten.'
+      title: 'Datenschutzerklärung - Denck Solutions',
+      description: 'Datenschutzerklärung der ALD Beratungs und Beteiligungsgesellschaft UG - Denck Solutions. Informationen zum Schutz Ihrer personenbezogenen Daten.'
     }
   }
 }
