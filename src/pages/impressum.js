@@ -94,6 +94,8 @@ export default function Impressum() {
                     <p><strong className="text-marine-800">Eintragung im Handelsregister</strong></p>
                     <p>Registergericht: Amtsgericht Frankfurt am Main</p>
                     <p>Registernummer: HRB 138616</p>
+                    <p><strong className="text-marine-800">Umsatzsteuer-ID</strong></p>
+                    <p>DE455856841</p>
                   </div>
                 </div>
               </div>
@@ -231,8 +233,8 @@ export default function Impressum() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Impressum - DENCK Solutions',
-      description: 'Impressum und rechtliche Angaben der ALD Beratungs und Beteiligungsgesellschaft UG - DENCK Solutions.'
+          title: 'Impressum - Denck Solutions',
+    description: 'Impressum und rechtliche Angaben der ALD Beratungs und Beteiligungsgesellschaft UG - Denck Solutions.'
     }
   }
 }

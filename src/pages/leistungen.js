@@ -2,8 +2,8 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { 
-  Brain, Zap, Database, Shield, Bot, Users, Target, Workflow, 
+import {
+  Brain, Zap, Database, Shield, Bot, Users, Target, Workflow,
   CheckCircle, ArrowRight, Star, Clock, DollarSign, TrendingUp,
   Phone, MessageSquare, Mail, FileText, Network, Cpu, Settings,
   Award, Lightbulb, BarChart3, Eye, Lock, Globe, Rocket,
@@ -244,7 +244,7 @@ export default function Leistungen() {
       <section className="relative min-h-screen flex items-center pt-20 bg-bg-primary">
         <div className="container-width relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            
+
             {/* Header */}
             <div className="mb-16">
               <div className="inline-block mb-6">
@@ -255,14 +255,14 @@ export default function Leistungen() {
                   </span>
                 </div>
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-text-primary">
                 KI-Lösungen, die zu{' '}
                 <span className="text-marine-600">
                   Ihnen
                 </span>{' '}passen
               </h1>
-              
+
               <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8">
                 Individuelle KI-Beratung für Unternehmer, die ihre Prozesse optimieren und ihr Business voranbringen wollen.
                 Praxisnah, flexibel und ohne unnötigen Overhead.
@@ -296,8 +296,8 @@ export default function Leistungen() {
                 </span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              
-              <button 
+
+              <button
                 onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}
                 className="btn-secondary group"
               >
@@ -312,7 +312,7 @@ export default function Leistungen() {
       {/* Services Section */}
       <section id="services" ref={sectionRef} className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
-          
+
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
@@ -323,7 +323,7 @@ export default function Leistungen() {
                 </span>
               </div>
             </div>
-            
+
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
               Wie ich{' '}
               <span className="text-marine-600">
@@ -331,7 +331,7 @@ export default function Leistungen() {
               </span>{' '}
               kann
             </h2>
-            
+
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Von der ersten Idee bis zur fertigen Lösung - flexibel und individuell nach Ihren Bedürfnissen
             </p>
@@ -342,12 +342,11 @@ export default function Leistungen() {
             {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <div 
+                <div
                   key={service.id}
                   id={service.id}
-                  className={`bg-white shadow-lg border border-marine-100 rounded-2xl p-6 hover:border-marine-300 transition-all duration-300 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
+                  className={`bg-white shadow-lg border border-marine-100 rounded-2xl p-6 hover:border-marine-300 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="flex items-start space-x-4">
@@ -357,12 +356,12 @@ export default function Leistungen() {
                         <Icon className="h-6 w-6 text-marine-600" />
                       </div>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-marine-800 mb-2">{service.title}</h3>
                       <p className="text-text-secondary mb-4">{service.description}</p>
-                      
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Features */}
                         <div>
@@ -376,7 +375,7 @@ export default function Leistungen() {
                             ))}
                           </ul>
                         </div>
-                        
+
                         {/* Deliverables */}
                         <div>
                           <h4 className="text-sm font-semibold text-marine-800 mb-3">Sie erhalten:</h4>
@@ -390,10 +389,10 @@ export default function Leistungen() {
                           </ul>
                         </div>
                       </div>
-                      
+
                       {/* CTA */}
                       <div className="mt-6">
-                        <Link 
+                        <Link
                           href="/kontakt"
                           className="btn-primary group inline-flex items-center"
                         >
@@ -413,7 +412,7 @@ export default function Leistungen() {
       {/* Approaches Section - Ersetzt die starren Pakete */}
       <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
-          
+
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
@@ -424,14 +423,14 @@ export default function Leistungen() {
                 </span>
               </div>
             </div>
-            
+
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
               Wie möchten Sie{' '}
               <span className="text-marine-600">
                 zusammenarbeiten
               </span>?
             </h2>
-            
+
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Jeder hat andere Bedürfnisse - deshalb passe ich meine Unterstützung individuell an Ihre Situation an
             </p>
@@ -442,7 +441,7 @@ export default function Leistungen() {
             {approaches.map((approach, index) => {
               const Icon = approach.icon
               return (
-                <div 
+                <div
                   key={approach.id}
                   className={`group relative ${approach.popular ? 'scale-105 z-10' : ''}`}
                 >
@@ -457,7 +456,7 @@ export default function Leistungen() {
 
                   {/* Card */}
                   <div className={`relative h-full bg-white shadow-lg border ${approach.popular ? 'border-gold-300' : 'border-marine-100'} rounded-2xl p-8 hover:border-marine-300 transition-all duration-300`}>
-                    
+
                     {/* Header */}
                     <div className="text-center mb-8">
                       <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-marine-100 mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -526,7 +525,7 @@ export default function Leistungen() {
       {/* Industries Section */}
       <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
-          
+
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
@@ -537,7 +536,7 @@ export default function Leistungen() {
                 </span>
               </div>
             </div>
-            
+
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
               In diesen{' '}
               <span className="text-marine-600">
@@ -545,7 +544,7 @@ export default function Leistungen() {
               </span>{' '}
               helfe ich
             </h2>
-            
+
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Jede Branche hat ihre eigenen Herausforderungen - hier einige Beispiele, wo KI besonders gut helfen kann
             </p>
@@ -565,9 +564,9 @@ export default function Leistungen() {
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-marine-100 mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="h-6 w-6 text-marine-600" />
                     </div>
-                    
+
                     <h3 className="text-lg font-bold text-marine-800 mb-4">{industry.name}</h3>
-                    
+
                     <div className="space-y-2">
                       {industry.examples.map((example, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
@@ -586,7 +585,7 @@ export default function Leistungen() {
           <div className="mt-12 text-center">
             <div className="bg-white shadow-lg border border-marine-100 rounded-xl p-6 max-w-2xl mx-auto">
               <p className="text-text-secondary mb-4">
-                <strong className="text-marine-800">Ihre Branche nicht dabei?</strong> Kein Problem! 
+                <strong className="text-marine-800">Ihre Branche nicht dabei?</strong> Kein Problem!
                 KI-Lösungen lassen sich in fast jeden Bereich anwenden.
               </p>
               <Link
@@ -605,7 +604,7 @@ export default function Leistungen() {
       <section className="py-20 bg-bg-primary relative">
         <div className="container-width relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            
+
             {/* Header */}
             <div className="mb-12">
               <div className="inline-block mb-6">
@@ -616,14 +615,14 @@ export default function Leistungen() {
                   </span>
                 </div>
               </div>
-              
+
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
                 Lassen Sie uns{' '}
                 <span className="text-marine-600">
                   sprechen
                 </span>
               </h2>
-              
+
               <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
                 In einem unverbindlichen Gespräch finden wir heraus, wie KI Ihr Unternehmen voranbringen kann.
                 Kostenlos und ohne Verkaufsdruck.
@@ -663,7 +662,7 @@ export default function Leistungen() {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
-              
+
               <a
                 href="https://cal.com/alexdenck/besprechung"
                 target="_blank"
@@ -684,12 +683,12 @@ export default function Leistungen() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'KI-Beratung & Automatisierung Leistungen - DENCK Solutions',
+      title: 'KI-Beratung & Automatisierung Leistungen - Denck Solutions',
       description: 'Entdecken Sie die KI-Beratungsleistungen von Alex Denck: Prozessautomatisierung, KI-Agenten Netzwerke, Chatbots und E-Mail Intelligence. Flexible Zusammenarbeit für Ihren Erfolg.',
-      keywords: 'DENCK Solutions Leistungen, Alex Denck KI-Beratung, Prozessautomatisierung, KI-Agenten, Chatbots, E-Mail Intelligence, KI-Telefon Agent, Business Automation',
+      keywords: 'Denck Solutions Leistungen, Alex Denck KI-Beratung, Prozessautomatisierung, KI-Agenten, Chatbots, E-Mail Intelligence, KI-Telefon Agent, Business Automation',
       openGraph: {
-        title: 'DENCK Solutions KI-Beratungsleistungen - Alex Denck',
-        description: 'Maßgeschneiderte KI-Lösungen von DENCK Solutions: Von Strategieberatung bis zur Umsetzung. Flexibel, praxisnah und ohne unnötigen Overhead.',
+        title: 'Denck Solutions KI-Beratungsleistungen - Alex Denck',
+        description: 'Maßgeschneiderte KI-Lösungen von Denck Solutions: Von Strategieberatung bis zur Umsetzung. Flexibel, praxisnah und ohne unnötigen Overhead.',
         type: 'website'
       },
       schema: {
@@ -698,7 +697,7 @@ export async function getStaticProps() {
         "name": "KI-Beratung und Automatisierung",
         "provider": {
           "@type": "Organization",
-          "name": "DENCK Solutions",
+          "name": "Denck Solutions",
           "founder": {
             "@type": "Person",
             "name": "Alex Denck",
@@ -715,7 +714,7 @@ export async function getStaticProps() {
           },
           {
             "@type": "Offer",
-            "name": "Prozess-Automatisierung", 
+            "name": "Prozess-Automatisierung",
             "description": "End-to-End Automatisierung Ihrer Geschäftsprozesse"
           },
           {

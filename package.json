@@ -2,7 +2,7 @@
   "name": "denck-solutions",
   "version": "1.0.0",
   "private": true,
-  "description": "DENCK Solutions Landing Page",
+  "description": "Denck Solutions Landing Page",
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 80",
     "build": "next build",
@@ -41,7 +41,7 @@
     "innovation"
   ],
   "author": {
-    "name": "DENCK Solutions",
+    "name": "Denck Solutions",
     "email": "info@denck.com",
     "url": "https://www.denck.com"
   },

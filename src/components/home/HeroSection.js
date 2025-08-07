@@ -11,19 +11,10 @@ export default function HeroSection() {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 bg-bg-primary">
+    <section className="relative min-h-screen flex items-center pt-32 bg-bg-primary">
       <div className="container-width relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-8 animate-fade-in">
-            <div className="inline-block mb-6">
-              <div className="flex items-center justify-center space-x-3 px-6 py-3 bg-white shadow-lg border border-marine-200 rounded-full">
-                <Bot className="w-6 h-6 text-marine-600" />
-                <span className="font-medium text-marine-800">
-                  🚀 KI macht Ihr Unternehmen profitabler
-                </span>
-                <Zap className="w-6 h-6 text-gold-600" />
-              </div>
-            </div>
+                      <div className="mb-8 animate-fade-in">
             
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-text-primary">
               Steigern Sie Ihre{' '}
@@ -33,12 +24,9 @@ export default function HeroSection() {
               <span className="text-gold-600">
                 senken Sie Kosten
               </span>{' '}und<br />
-              <span className="relative">
-                <span className="text-marine-700">
-                  gewinnen Sie Kunden
-                </span>
-                <Zap className="absolute -top-8 -right-8 w-6 h-6 text-gold-500 animate-float" />
-              </span>{' '}mit KI
+                              <span className="text-marine-700">
+                    gewinnen Sie Kunden
+                  </span>{' '}mit KI
             </h1>
             
             <p className="text-xl sm:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto">
@@ -55,7 +43,7 @@ export default function HeroSection() {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             
-            <Link href="#services" className="btn-secondary group">
+            <Link href="/leistungen" className="btn-secondary group">
               Mehr erfahren
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>

@@ -38,8 +38,8 @@ export default function Layout({
     )
   }
   
-  const defaultTitle = 'DENCK Solutions - KI-Beratung für den Mittelstand'
-  const defaultDescription = 'DENCK Solutions: Ihr Experte für KI-Beratung von Alex Denck. Professionelle Automatisierung und digitale Transformation für nachhaltigen Unternehmenserfolg.'
+  const defaultTitle = 'Denck Solutions - KI-Beratung für den Mittelstand'
+  const defaultDescription = 'Denck Solutions: Ihr Experte für KI-Beratung von Alex Denck. Professionelle Automatisierung und digitale Transformation für nachhaltigen Unternehmenserfolg.'
 
   const pageTitle = title ? `${title}` : defaultTitle
   const pageDescription = description || defaultDescription
@@ -55,7 +55,7 @@ export default function Layout({
     "url": currentUrl,
     "mainEntity": {
       "@type": "Organization",
-      "name": "DENCK Solutions",
+              "name": "Denck Solutions",
       "founder": {
         "@type": "Person",
         "name": "Alex Denck"
@@ -74,7 +74,7 @@ export default function Layout({
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="author" content="DENCK Solutions - Alex Denck" />
+        <meta name="author" content="Denck Solutions - Alex Denck" />
         <link rel="canonical" href={canonicalUrl} />
         
         {/* Open Graph / Facebook */}
@@ -82,7 +82,7 @@ export default function Layout({
         <meta property="og:url" content={currentUrl} />
         <meta property="og:title" content={openGraph?.title || pageTitle} />
         <meta property="og:description" content={openGraph?.description || pageDescription} />
-        <meta property="og:site_name" content={openGraph?.siteName || "DENCK Solutions"} />
+        <meta property="og:site_name" content={openGraph?.siteName || "Denck Solutions"} />
         <meta property="og:locale" content={openGraph?.locale || "de_DE"} />
         
         {/* Twitter Card */}

@@ -111,7 +111,7 @@ export default function Custom404() {
                   href="mailto:info@denck.com"
                   className="text-primary-600 hover:text-primary-700 transition-colors duration-200 text-sm"
                 >
-                  info@denck-consulting.de
+                  info@denck.com
                 </a>
               </div>
               
@@ -144,7 +144,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Seite nicht gefunden - 404',
-      description: 'Die gesuchte Seite wurde nicht gefunden. Nutzen Sie unsere Navigation oder kontaktieren Sie DENCK Consulting direkt.'
+      description: 'Die gesuchte Seite wurde nicht gefunden. Nutzen Sie unsere Navigation oder kontaktieren Sie Denck Solutions direkt.'
     }
   }
 }

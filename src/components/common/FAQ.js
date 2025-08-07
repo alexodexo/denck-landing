@@ -1,4 +1,4 @@
-// src/components/common/FAQ.js - SEO-optimierte FAQ für DENCK Solutions
+// src/components/common/FAQ.js - SEO-optimierte FAQ für Denck Solutions
 import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
@@ -8,28 +8,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Was macht DENCK Solutions und wer ist Alex Denck?",
-      answer: "DENCK Solutions ist ein spezialisiertes Beratungsunternehmen für Künstliche Intelligenz, gegründet von Alex Denck. Wir helfen Unternehmen dabei, KI-Technologien erfolgreich zu implementieren und ihre Geschäftsprozesse zu automatisieren. Alex Denck bringt jahrelange Erfahrung in der KI-Beratung mit und hat bereits zahlreiche Unternehmen bei ihrer digitalen Transformation begleitet."
+          question: "Was macht Denck Solutions und wer ist Alex Denck?",
+    answer: "Denck Solutions ist ein spezialisiertes Beratungsunternehmen für Künstliche Intelligenz, gegründet von Alex Denck. Wir helfen Unternehmen dabei, KI-Technologien erfolgreich zu implementieren und ihre Geschäftsprozesse zu automatisieren. Alex Denck bringt jahrelange Erfahrung in der KI-Beratung mit und hat bereits zahlreiche Unternehmen bei ihrer digitalen Transformation begleitet."
     },
     {
-      question: "Wie kann DENCK Solutions meinem Unternehmen helfen?",
-      answer: "DENCK Solutions bietet maßgeschneiderte KI-Lösungen: von der Strategieentwicklung über die Implementierung von KI-Agenten bis hin zur Prozessautomatisierung. Wir analysieren Ihre spezifischen Herausforderungen und entwickeln passende Lösungen, die nachweislich die Effizienz um 40% steigern und Kosten um 30% senken können."
+          question: "Wie kann Denck Solutions meinem Unternehmen helfen?",
+    answer: "Denck Solutions bietet maßgeschneiderte KI-Lösungen: von der Strategieentwicklung über die Implementierung von KI-Agenten bis hin zur Prozessautomatisierung. Wir analysieren Ihre spezifischen Herausforderungen und entwickeln passende Lösungen, die nachweislich die Effizienz um 40% steigern und Kosten um 30% senken können."
     },
     {
-      question: "Was kostet eine KI-Beratung bei DENCK Solutions?",
-      answer: "Die Erstberatung bei DENCK Solutions ist kostenlos und unverbindlich. Für weiterführende Projekte erstellen wir individuelle Angebote basierend auf Ihren spezifischen Anforderungen. Alex Denck bespricht mit Ihnen transparent alle Kosten und den erwarteten ROI Ihrer KI-Investition."
+          question: "Was kostet eine KI-Beratung bei Denck Solutions?",
+    answer: "Die Erstberatung bei Denck Solutions ist kostenlos und unverbindlich. Für weiterführende Projekte erstellen wir individuelle Angebote basierend auf Ihren spezifischen Anforderungen. Alex Denck bespricht mit Ihnen transparent alle Kosten und den erwarteten ROI Ihrer KI-Investition."
     },
     {
-      question: "Welche KI-Technologien setzt DENCK Solutions ein?",
-      answer: "DENCK Solutions arbeitet mit modernsten KI-Technologien: Machine Learning, Natural Language Processing, Computer Vision und Business Intelligence. Wir entwickeln KI-Agenten, Chatbots, Automatisierungslösungen und intelligente Datenanalysesysteme - immer angepasst an Ihre Geschäftsziele."
+          question: "Welche KI-Technologien setzt Denck Solutions ein?",
+    answer: "Denck Solutions arbeitet mit modernsten KI-Technologien: Machine Learning, Natural Language Processing, Computer Vision und Business Intelligence. Wir entwickeln KI-Agenten, Chatbots, Automatisierungslösungen und intelligente Datenanalysesysteme - immer angepasst an Ihre Geschäftsziele."
     },
     {
       question: "Wie lange dauert die Implementierung von KI-Lösungen?",
-      answer: "Die Dauer hängt vom Projektumfang ab. Einfache Chatbot-Implementierungen können innerhalb weniger Wochen realisiert werden, während komplexere KI-Systeme 2-6 Monate benötigen. DENCK Solutions arbeitet agil und liefert bereits früh erste funktionsfähige Lösungen."
+      answer: "Die Dauer hängt vom Projektumfang ab. Einfache Chatbot-Implementierungen können innerhalb weniger Wochen realisiert werden, während komplexere KI-Systeme 2-6 Monate benötigen. Denck Solutions arbeitet agil und liefert bereits früh erste funktionsfähige Lösungen."
     },
     {
-      question: "Arbeitet DENCK Solutions auch mit kleinen Unternehmen?",
-      answer: "Ja, DENCK Solutions unterstützt Unternehmen jeder Größe. Alex Denck hat flexible Beratungsansätze entwickelt, die auch für kleine und mittlere Unternehmen geeignet sind. Viele KI-Lösungen sind skalierbar und können mit dem Unternehmenswachstum mitwachsen."
+          question: "Arbeitet Denck Solutions auch mit kleinen Unternehmen?",
+    answer: "Ja, Denck Solutions unterstützt Unternehmen jeder Größe. Alex Denck hat flexible Beratungsansätze entwickelt, die auch für kleine und mittlere Unternehmen geeignet sind. Viele KI-Lösungen sind skalierbar und können mit dem Unternehmenswachstum mitwachsen."
     }
   ]
 
@@ -64,7 +64,7 @@ export default function FAQ() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Häufige Fragen zu{' '}
             <span className="text-marine-600">
-              DENCK Solutions
+              Denck Solutions
             </span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
@@ -108,7 +108,7 @@ export default function FAQ() {
         {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-text-secondary mb-6">
-            Haben Sie weitere Fragen zu DENCK Solutions oder der KI-Beratung?
+            Haben Sie weitere Fragen zu Denck Solutions oder der KI-Beratung?
           </p>
           <Link
             href="/kontakt"

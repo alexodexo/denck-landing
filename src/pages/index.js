@@ -24,22 +24,22 @@ export default function HomePage() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'DENCK Solutions - KI-Beratung & Automatisierung für Unternehmen',
-      description: 'DENCK Solutions: Ihr Experte für KI-Beratung, Prozessautomatisierung und digitale Transformation. Alex Denck berät Unternehmen bei der erfolgreichen KI-Integration. Steigern Sie Effizienz um 40% und senken Kosten um 30%.',
+      title: 'Denck Solutions - KI-Beratung & Automatisierung für Unternehmen',
+      description: 'Denck Solutions: Ihr Experte für KI-Beratung, Prozessautomatisierung und digitale Transformation. Alex Denck berät Unternehmen bei der erfolgreichen KI-Integration. Steigern Sie Effizienz um 40% und senken Kosten um 30%.',
       // Zusätzliche Meta-Tags
-      keywords: 'DENCK Solutions, Alex Denck, KI-Beratung, Künstliche Intelligenz Beratung, Prozessautomatisierung, KI-Strategieberatung, Business Automation, Digital Transformation, Frankfurt KI-Berater',
+      keywords: 'Denck Solutions, Alex Denck, KI-Beratung, Künstliche Intelligenz Beratung, Prozessautomatisierung, KI-Strategieberatung, Business Automation, Digital Transformation, Frankfurt KI-Berater',
       openGraph: {
-        title: 'DENCK Solutions - Ihr KI-Berater Alex Denck',
-        description: 'Steigern Sie Ihre Effizienz um 40% mit KI-Lösungen von DENCK Solutions. Persönliche Beratung von Alex Denck für nachhaltigen Unternehmenserfolg.',
+        title: 'Denck Solutions - Ihr KI-Berater Alex Denck',
+        description: 'Steigern Sie Ihre Effizienz um 40% mit KI-Lösungen von Denck Solutions. Persönliche Beratung von Alex Denck für nachhaltigen Unternehmenserfolg.',
         url: 'https://www.denck.com',
-        siteName: 'DENCK Solutions',
+        siteName: 'Denck Solutions',
         type: 'website',
         locale: 'de_DE'
       },
       schema: {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "DENCK Solutions",
+        "name": "Denck Solutions",
         "legalName": "ALD Beratungs und Beteiligungsgesellschaft UG",
         "founder": {
           "@type": "Person",
@@ -48,12 +48,12 @@ export async function getStaticProps() {
         },
         "url": "https://www.denck.com",
         "logo": "https://www.denck.com/logo.png",
-        "description": "DENCK Solutions bietet professionelle KI-Beratung und Automatisierungslösungen für Unternehmen. Spezialisiert auf Prozessoptimierung und digitale Transformation.",
+        "description": "Denck Solutions bietet professionelle KI-Beratung und Automatisierungslösungen für Unternehmen. Spezialisiert auf Prozessoptimierung und digitale Transformation.",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+49",
           "contactType": "customer service",
-          "email": "alex@denck.com",
+          "email": "info@denck.com",
           "areaServed": "DE",
           "availableLanguage": "German"
         },
@@ -80,7 +80,7 @@ export async function getStaticProps() {
               }
             },
             {
-              "@type": "Offer", 
+              "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
                 "name": "Prozessautomatisierung",

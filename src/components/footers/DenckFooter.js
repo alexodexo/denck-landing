@@ -32,7 +32,7 @@ export default function DenckFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-marine-800">DENCK Solutions</span>
+              <span className="text-2xl font-bold text-marine-800">Denck Solutions</span>
             </div>
             <p className="text-text-secondary mb-6">
               Ihr Partner für erfolgreiche KI-Integration im Mittelstand. 
@@ -90,8 +90,8 @@ export default function DenckFooter() {
             <div className="space-y-2 text-sm">
               <p className="flex items-start text-text-secondary">
                 <Mail className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                <a href="mailto:alex@denck.com" className="hover:text-marine-700 transition-colors">
-                  alex@denck.com
+                <a href="mailto:info@denck.com" className="hover:text-marine-700 transition-colors">
+                  info@denck.com
                 </a>
               </p>
               <p className="flex items-start text-text-secondary">
